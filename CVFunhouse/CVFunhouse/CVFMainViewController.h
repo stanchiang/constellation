@@ -10,6 +10,8 @@
 #import <GLKit/GLKit.h>
 #import "CVFImageProcessorDelegate.h"
 #import "CVFFlipsideViewController.h"
+#import "CVFLucasKanade.h"
+//#import "CVFLucasKanadeDelegate.h"
 
 @class CVFImageProcessor;
 
@@ -19,6 +21,7 @@
     AVCaptureVideoDataOutputSampleBufferDelegate,
     CVFImageProcessorDelegate,
     UIWebViewDelegate
+    ,CVFLucasKanadeDelegate
     >
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *fpsLabel;

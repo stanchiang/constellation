@@ -95,6 +95,9 @@
     Class class = NSClassFromString(className);
     self.imageProcessor = [[class alloc] init];
     
+    //((SelectionListViewController *)myEditController).list = listOfItems;
+    ((CVFLucasKanade *)_imageProcessor).LKdelegate = self;
+    
     NSURL *descriptionUrl = [[NSBundle mainBundle] URLForResource:className withExtension:@"html"];
     if (descriptionUrl == nil) {
         descriptionUrl = [[NSBundle mainBundle] URLForResource:@"NoDescription"
@@ -409,7 +412,12 @@
         [self.imageProcessor processImageBuffer:imageBuffer
                                   withMirroring:(_cameraDevice.position ==
                                                  AVCaptureDevicePositionFront)];
+        
     }
+}
+
+-(void) LKPositions:(NSMutableArray *)points {
+    NSLog(@"%@", points);
 }
 
 @end
