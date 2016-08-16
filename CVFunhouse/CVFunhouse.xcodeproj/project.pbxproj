@@ -126,6 +126,7 @@
 		42E60DB316BB52E500F9712B /* Demos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Demos.plist; sourceTree = "<group>"; };
 		CD7E937515BB5354004D709A /* CVFSephiaDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CVFSephiaDemo.h; path = CVFunhouse/CVFSephiaDemo.h; sourceTree = "<group>"; };
 		CD7E937615BB5354004D709A /* CVFSephiaDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CVFSephiaDemo.m; path = CVFunhouse/CVFSephiaDemo.m; sourceTree = "<group>"; };
+		F6B90FD61D63B59200EC0338 /* CVFLucasKanadeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVFLucasKanadeDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +167,7 @@
 				4285253315BF83E700622EE8 /* CVFLaplace.h */,
 				4285253415BF83FF00622EE8 /* CVFLaplace.mm */,
 				4209534115C0ABF000C37CD8 /* CVFLucasKanade.h */,
+				F6B90FD61D63B59200EC0338 /* CVFLucasKanadeDelegate.h */,
 				4209534215C0AC0600C37CD8 /* CVFLucasKanade.mm */,
 				4209534515C0BE8A00C37CD8 /* CVFMotionTemplates.h */,
 				4209534615C0BEB200C37CD8 /* CVFMotionTemplates.m */,
@@ -302,7 +304,7 @@
 				ORGANIZATIONNAME = "Jera Design LLC";
 				TargetAttributes = {
 					42AA08521508314600B379F4 = {
-						DevelopmentTeam = 2HTMSZT3TA;
+						DevelopmentTeam = 4C8V97R8N3;
 					};
 				};
 			};
@@ -504,6 +506,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,6 +519,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jera.cvfunhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -524,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -536,6 +541,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jera.cvfunhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

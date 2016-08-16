@@ -7,7 +7,10 @@
 //
 
 #import "CVFImageProcessor.h"
+#import "CVFLucasKanadeDelegate.h"
+
+@protocol CVFLucasKanadeDelegate;
 
 @interface CVFLucasKanade : CVFImageProcessor
-
+@property (nonatomic, weak) id<CVFLucasKanadeDelegate> LKdelegate;
 @end
