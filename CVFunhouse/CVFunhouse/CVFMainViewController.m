@@ -45,7 +45,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    NSLog(@"w: %f", self.view.frame.size.width);
+    NSLog(@"h: %f", self.view.frame.size.height);
     NSString *demoListPath = [[NSBundle mainBundle] pathForResource:@"Demos" ofType:@"plist"];
     _demoList = [NSArray arrayWithContentsOfFile:demoListPath];
 
