@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\Main">
+      <UniqueIdentifier>{6de0cf89-d075-41df-9f32-0317e3094868}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\ObjRecog">
+      <UniqueIdentifier>{fd64688e-ab1f-4bfb-9706-d1f8ad3f1ee6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Overlay">
+      <UniqueIdentifier>{eb88e6b0-eacd-4eff-9ae6-d18796977be6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Tracking">
+      <UniqueIdentifier>{ea1433af-c089-48ac-8228-a2046ba15b5e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main\cameraCalibration.cpp">
+      <Filter>源文件\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\commonCvFunctions.cpp">
+      <Filter>源文件\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\guiAR.cpp">
+      <Filter>源文件\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\main.cpp">
+      <Filter>源文件\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\orException.cpp">
+      <Filter>源文件\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\utilFunctions.cpp">
+      <Filter>源文件\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjRecog\controlOR.cpp">
+      <Filter>源文件\ObjRecog</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjRecog\imageDB.cpp">
+      <Filter>源文件\ObjRecog</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjRecog\visualWords.cpp">
+      <Filter>源文件\ObjRecog</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\GLMetaseq.c">
+      <Filter>源文件\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\modelObjectFactory.cpp">
+      <Filter>源文件\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\mqoModelObject.cpp">
+      <Filter>源文件\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\mqoSeqModelObject.cpp">
+      <Filter>源文件\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\slideModelObject.cpp">
+      <Filter>源文件\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\viewModel.cpp">
+      <Filter>源文件\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracking\kltTrackingOBJ.cpp">
+      <Filter>源文件\Tracking</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracking\trackingOBJ.cpp">
+      <Filter>源文件\Tracking</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main\cameraCalibration.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\commonCvFunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\guiAR.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\orException.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\utilFunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjRecog\controlOR.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjRecog\imageDB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjRecog\visualWords.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\GLMetaseq.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\modelObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\modelObjectFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\mqoModelObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\mqoSeqModelObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\slideModelObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\viewModel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracking\kltTrackingOBJ.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracking\trackingOBJ.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

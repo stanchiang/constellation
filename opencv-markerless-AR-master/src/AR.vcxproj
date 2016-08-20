@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7D492111-2662-4324-AFD0-11DCD174BB38}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AR</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin</OutDir>
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\bin</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;Main;ObjRecog;Overlay;Tracking;include\CV;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_core249d.lib;opencv_imgproc249d.lib;opencv_highgui249d.lib;opencv_calib3d249d.lib;opencv_video249d.lib;opencv_features2d249d.lib;opencv_nonfree249d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>lib;lib\CV;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;Main;ObjRecog;Overlay;Tracking;include\CV;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <AdditionalDependencies>opencv_core249.lib;opencv_imgproc249.lib;opencv_highgui249.lib;opencv_calib3d249.lib;opencv_video249.lib;opencv_features2d249.lib;opencv_nonfree249.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>lib;lib\CV;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Main\cameraCalibration.cpp" />
+    <ClCompile Include="Main\commonCvFunctions.cpp" />
+    <ClCompile Include="Main\guiAR.cpp" />
+    <ClCompile Include="Main\main.cpp" />
+    <ClCompile Include="Main\orException.cpp" />
+    <ClCompile Include="Main\utilFunctions.cpp" />
+    <ClCompile Include="ObjRecog\controlOR.cpp" />
+    <ClCompile Include="ObjRecog\imageDB.cpp" />
+    <ClCompile Include="ObjRecog\visualWords.cpp" />
+    <ClCompile Include="Overlay\GLMetaseq.c" />
+    <ClCompile Include="Overlay\modelObjectFactory.cpp" />
+    <ClCompile Include="Overlay\mqoModelObject.cpp" />
+    <ClCompile Include="Overlay\mqoSeqModelObject.cpp" />
+    <ClCompile Include="Overlay\slideModelObject.cpp" />
+    <ClCompile Include="Overlay\viewModel.cpp" />
+    <ClCompile Include="Tracking\kltTrackingOBJ.cpp" />
+    <ClCompile Include="Tracking\trackingOBJ.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main\cameraCalibration.h" />
+    <ClInclude Include="Main\commonCvFunctions.h" />
+    <ClInclude Include="Main\guiAR.h" />
+    <ClInclude Include="Main\orException.h" />
+    <ClInclude Include="Main\utilFunctions.h" />
+    <ClInclude Include="ObjRecog\controlOR.h" />
+    <ClInclude Include="ObjRecog\imageDB.h" />
+    <ClInclude Include="ObjRecog\visualWords.h" />
+    <ClInclude Include="Overlay\GLMetaseq.h" />
+    <ClInclude Include="Overlay\modelObject.h" />
+    <ClInclude Include="Overlay\modelObjectFactory.h" />
+    <ClInclude Include="Overlay\mqoModelObject.h" />
+    <ClInclude Include="Overlay\mqoSeqModelObject.h" />
+    <ClInclude Include="Overlay\slideModelObject.h" />
+    <ClInclude Include="Overlay\viewModel.h" />
+    <ClInclude Include="Tracking\kltTrackingOBJ.h" />
+    <ClInclude Include="Tracking\trackingOBJ.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
