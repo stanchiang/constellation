@@ -101,6 +101,21 @@ bool PatternDetector::findPattern(const cv::Mat& image, PatternTrackingInfo& inf
     // Extract feature points from input gray image
     extractFeatures(m_grayImg, m_queryKeypoints, m_queryDescriptors);
     
+    int maxX = 0, maxY = 0;
+    for(std::vector<cv::KeyPoint>::iterator kp = m_queryKeypoints.begin(); kp != m_queryKeypoints.end(); ++kp) {
+        if (kp->pt.x > maxX) {
+            maxX = kp->pt.x;
+        }
+        if (kp->pt.y > maxY) {
+            maxY = kp->pt.y;
+        }
+        // printf("      -\n");
+        // printf("         keypoint_id: %i\n", count);
+        
+        // printf("             %f, %f, %f, %d,\n", kp->size, kp->angle, kp->response, kp->octave);
+        // printf("             %d]\n", kp->class_id);
+     }    
+    printf("max x and y: [ %d, %d,\n", maxX, maxY);
     // Get matches with current pattern
     getMatches(m_queryDescriptors, m_matches);
 
@@ -214,18 +229,6 @@ bool PatternDetector::extractFeatures(const cv::Mat& image, std::vector<cv::KeyP
     if (keypoints.empty())
         return false;
 
-    int count = 0;
-    for(std::vector<cv::KeyPoint>::iterator kp = keypoints.begin(); kp != keypoints.end(); ++kp) {
-        printf("%i\n", count);
-        printf("%f\n", kp->pt.x);
-        printf("%f\n", kp->pt.y);
-        printf("%f\n", kp->size);
-        printf("%f\n", kp->angle);
-        printf("%f\n", kp->response);
-        printf("%d\n", kp->octave);
-        printf("%d\n", kp->class_id);
-        count++;
-     }    
     return true;
 }
 
