@@ -368,7 +368,13 @@ vector<resultInfo> imageDB::calcMatchCountResult(const vector<KeyPoint>& kp_vec,
 				prob = calcIntegBinDistribution(in_feats_num, match_num, Pp);
 
 				if(prob >= threshold){
-					result_info.img_id = img_id;
+                    printf("========\n");
+                    printf("%i\n",img_id);
+                    printf("%i\n",match_num);
+                    printf("w:%i, h:%i\n",imgInfo_map[img_id].img_size.width, imgInfo_map[img_id].img_size.width);
+					printf("%.2f\n",prob);
+                    printf("========\n");
+                    result_info.img_id = img_id;
 					result_info.matched_num = match_num;
 					result_info.img_size = imgInfo_map[img_id].img_size;
 					result_info.probability = prob;

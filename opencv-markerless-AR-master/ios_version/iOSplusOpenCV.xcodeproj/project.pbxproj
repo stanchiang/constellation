@@ -24,7 +24,7 @@
 		D83966961AD802250061012C /* camera_matrix_qcam.txt in Resources */ = {isa = PBXBuildFile; fileRef = D83966911AD802250061012C /* camera_matrix_qcam.txt */; };
 		D83966971AD802250061012C /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = D83966921AD802250061012C /* config.xml */; };
 		D83966981AD802250061012C /* image.bin in Resources */ = {isa = PBXBuildFile; fileRef = D83966931AD802250061012C /* image.bin */; };
-		D83966991AD802250061012C /* image-old.db in Resources */ = {isa = PBXBuildFile; fileRef = D83966941AD802250061012C /* image-old.db */; };
+		D83966991AD802250061012C /* image.db in Resources */ = {isa = PBXBuildFile; fileRef = D83966941AD802250061012C /* image.db */; };
 		D839669A1AD802250061012C /* image.yaml in Resources */ = {isa = PBXBuildFile; fileRef = D83966951AD802250061012C /* image.yaml */; };
 		D83966A31AD8CC990061012C /* kltTrackingOBJ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D839669F1AD8CC990061012C /* kltTrackingOBJ.cpp */; };
 		D83966A41AD8CC990061012C /* trackingOBJ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D83966A11AD8CC990061012C /* trackingOBJ.cpp */; };
@@ -36,7 +36,7 @@
 		D8FA24711ACA344600474A50 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FA24701ACA344600474A50 /* QuartzCore.framework */; };
 		D8FA24781ACA34D200474A50 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FA24721ACA346000474A50 /* libstdc++.dylib */; };
 		D8FA247A1ACA421D00474A50 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FA24791ACA421D00474A50 /* Accelerate.framework */; };
-		F66C56FE1D68DA1400D8B986 /* image.db in Resources */ = {isa = PBXBuildFile; fileRef = F66C56FD1D68DA1400D8B986 /* image.db */; };
+		F66C56FE1D68DA1400D8B986 /* image-new.db in Resources */ = {isa = PBXBuildFile; fileRef = F66C56FD1D68DA1400D8B986 /* image-new.db */; };
 		F6A2C26A1D6648D400E86E71 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6A2C2691D6648D400E86E71 /* Default-568h@2x.png */; };
 		F6A2C26C1D66491400E86E71 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A2C26B1D66491400E86E71 /* opencv2.framework */; };
 		F6A2C2711D6775B700E86E71 /* iOSplusOpenCVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4D60C13F430F5007944D5 /* iOSplusOpenCVAppDelegate.m */; };
@@ -73,7 +73,7 @@
 		D83966911AD802250061012C /* camera_matrix_qcam.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = camera_matrix_qcam.txt; sourceTree = "<group>"; };
 		D83966921AD802250061012C /* config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
 		D83966931AD802250061012C /* image.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = image.bin; sourceTree = "<group>"; };
-		D83966941AD802250061012C /* image-old.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "image-old.db"; sourceTree = "<group>"; };
+		D83966941AD802250061012C /* image.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = image.db; sourceTree = "<group>"; };
 		D83966951AD802250061012C /* image.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = image.yaml; sourceTree = "<group>"; };
 		D839669F1AD8CC990061012C /* kltTrackingOBJ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kltTrackingOBJ.cpp; sourceTree = "<group>"; };
 		D83966A01AD8CC990061012C /* kltTrackingOBJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kltTrackingOBJ.h; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		D8FA24741ACA347E00474A50 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		D8FA24761ACA349A00474A50 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		D8FA24791ACA421D00474A50 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		F66C56FD1D68DA1400D8B986 /* image.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = image.db; sourceTree = "<group>"; };
+		F66C56FD1D68DA1400D8B986 /* image-new.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "image-new.db"; sourceTree = "<group>"; };
 		F6A2C2691D6648D400E86E71 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F6A2C26B1D66491400E86E71 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = iOSplusOpenCV/opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,8 +210,8 @@
 				D83966911AD802250061012C /* camera_matrix_qcam.txt */,
 				D83966921AD802250061012C /* config.xml */,
 				D83966931AD802250061012C /* image.bin */,
-				D83966941AD802250061012C /* image-old.db */,
-				F66C56FD1D68DA1400D8B986 /* image.db */,
+				D83966941AD802250061012C /* image.db */,
+				F66C56FD1D68DA1400D8B986 /* image-new.db */,
 				D83966951AD802250061012C /* image.yaml */,
 			);
 			path = config;
@@ -280,14 +280,14 @@
 			files = (
 				8AF4D60713F430F5007944D5 /* InfoPlist.strings in Resources */,
 				8AF4D61013F430F6007944D5 /* MainStoryboard_iPhone.storyboard in Resources */,
-				F66C56FE1D68DA1400D8B986 /* image.db in Resources */,
+				F66C56FE1D68DA1400D8B986 /* image-new.db in Resources */,
 				D83966961AD802250061012C /* camera_matrix_qcam.txt in Resources */,
 				F6A2C26A1D6648D400E86E71 /* Default-568h@2x.png in Resources */,
 				D83966981AD802250061012C /* image.bin in Resources */,
 				D83966971AD802250061012C /* config.xml in Resources */,
 				D839669A1AD802250061012C /* image.yaml in Resources */,
 				8AC59D5E13F83431006598F6 /* tapme.png in Resources */,
-				D83966991AD802250061012C /* image-old.db in Resources */,
+				D83966991AD802250061012C /* image.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

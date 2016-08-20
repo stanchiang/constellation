@@ -176,6 +176,7 @@ typedef long long time_tt;
         std::cout << "recognize cost time: " << end-start << " mill" << std::endl;
         
         if(!recog_result.empty()){
+            printf("%i",recog_result[0].matched_num);
             cv::Mat pose_mat_scale = recog_result[0].pose_mat.clone();
             pose_mat_scale.row(0) *= query_scale;
             pose_mat_scale.row(1) *= query_scale;
