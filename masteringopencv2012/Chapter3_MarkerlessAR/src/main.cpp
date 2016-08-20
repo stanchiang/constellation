@@ -18,8 +18,8 @@
 ////////////////////////////////////////////////////////////////////
 // Standard includes:
 #include <opencv2/opencv.hpp>
-#include <gl/gl.h>
-#include <gl/glu.h>
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
 
 /**
  * Processes a recorded video or live view from web-camera and allows you to adjust homography refinement and 
@@ -63,7 +63,10 @@ int main(int argc, const char * argv[])
 
     if (argc == 2)
     {
-        processVideo(patternImage, calibration, cv::VideoCapture());
+        printf("nothing happens - compiler didn't like cv::VideoCapture() \n");
+        // processVideo(patternImage, calibration, cv::VideoCapture());
+        cv::VideoCapture cap;
+        processVideo(patternImage, calibration, cap);
     }
     else if (argc == 3)
     {

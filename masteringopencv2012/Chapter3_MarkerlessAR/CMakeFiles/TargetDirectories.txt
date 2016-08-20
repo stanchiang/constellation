@@ -1,0 +1,13 @@
+/Users/stan/constellation/masteringopencv2012/Chapter3_MarkerlessAR/CMakeFiles/install/strip.dir
+/Users/stan/constellation/masteringopencv2012/Chapter3_MarkerlessAR/CMakeFiles/edit_cache.dir
+/Users/stan/constellation/masteringopencv2012/Chapter3_MarkerlessAR/CMakeFiles/rebuild_cache.dir
+/Users/stan/constellation/masteringopencv2012/Chapter3_MarkerlessAR/CMakeFiles/install.dir
+/Users/stan/constellation/masteringopencv2012/Chapter3_MarkerlessAR/CMakeFiles/list_install_components.dir
+/Users/stan/constellation/masteringopencv2012/Chapter3_MarkerlessAR/CMakeFiles/install/local.dir
+/Users/stan/constellation/masteringopencv2012/Chapter3_MarkerlessAR/src/CMakeFiles/install/strip.dir
+/Users/stan/constellation/masteringopencv2012/Chapter3_MarkerlessAR/src/CMakeFiles/edit_cache.dir
+/Users/stan/constellation/masteringopencv2012/Chapter3_MarkerlessAR/src/CMakeFiles/rebuild_cache.dir
+/Users/stan/constellation/masteringopencv2012/Chapter3_MarkerlessAR/src/CMakeFiles/install.dir
+/Users/stan/constellation/masteringopencv2012/Chapter3_MarkerlessAR/src/CMakeFiles/markerless_ar_demo.dir
+/Users/stan/constellation/masteringopencv2012/Chapter3_MarkerlessAR/src/CMakeFiles/list_install_components.dir
+/Users/stan/constellation/masteringopencv2012/Chapter3_MarkerlessAR/src/CMakeFiles/install/local.dir

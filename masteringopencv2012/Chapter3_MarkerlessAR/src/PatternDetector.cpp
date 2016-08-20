@@ -214,6 +214,18 @@ bool PatternDetector::extractFeatures(const cv::Mat& image, std::vector<cv::KeyP
     if (keypoints.empty())
         return false;
 
+    int count = 0;
+    for(std::vector<cv::KeyPoint>::iterator kp = keypoints.begin(); kp != keypoints.end(); ++kp) {
+        printf("%i\n", count);
+        printf("%f\n", kp->pt.x);
+        printf("%f\n", kp->pt.y);
+        printf("%f\n", kp->size);
+        printf("%f\n", kp->angle);
+        printf("%f\n", kp->response);
+        printf("%d\n", kp->octave);
+        printf("%d\n", kp->class_id);
+        count++;
+     }    
     return true;
 }
 
