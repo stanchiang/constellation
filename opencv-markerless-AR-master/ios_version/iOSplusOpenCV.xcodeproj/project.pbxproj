@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8AC59D5013F83431006598F6 /* OpenCVImageProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8AC59D4F13F83431006598F6 /* OpenCVImageProcessor.cpp */; };
 		8AC59D5E13F83431006598F6 /* tapme.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AC59D5D13F83431006598F6 /* tapme.png */; };
 		8AF4D5FD13F430F5007944D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF4D5FC13F430F5007944D5 /* UIKit.framework */; };
 		8AF4D5FF13F430F5007944D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF4D5FE13F430F5007944D5 /* Foundation.framework */; };
@@ -43,8 +42,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8AC59D4F13F83431006598F6 /* OpenCVImageProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenCVImageProcessor.cpp; sourceTree = "<group>"; };
-		8AC59D5113F83431006598F6 /* OpenCVImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVImageProcessor.h; sourceTree = "<group>"; };
 		8AC59D5D13F83431006598F6 /* tapme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tapme.png; sourceTree = "<group>"; };
 		8AF4D5F813F430F5007944D5 /* iOSplusOpenCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSplusOpenCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AF4D5FC13F430F5007944D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -59,7 +56,6 @@
 		8AF4D60F13F430F6007944D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		8AF4D61413F430F6007944D5 /* iOSplusOpenCVViewController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = iOSplusOpenCVViewController.hpp; sourceTree = "<group>"; };
 		8AF4D61513F430F6007944D5 /* iOSplusOpenCVViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = iOSplusOpenCVViewController.mm; sourceTree = "<group>"; };
-		8AF4D61C13F4316B007944D5 /* ImageProcessingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingProtocol.h; sourceTree = "<group>"; };
 		D83965ED1AD7EF090061012C /* commonCvFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = commonCvFunctions.cpp; sourceTree = "<group>"; };
 		D83965EE1AD7EF090061012C /* commonCvFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commonCvFunctions.h; sourceTree = "<group>"; };
 		D83965EF1AD7EF090061012C /* controlOR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = controlOR.cpp; sourceTree = "<group>"; };
@@ -169,9 +165,6 @@
 				8AF4D61413F430F6007944D5 /* iOSplusOpenCVViewController.hpp */,
 				8AF4D61513F430F6007944D5 /* iOSplusOpenCVViewController.mm */,
 				8AF4D60313F430F5007944D5 /* Supporting Files */,
-				8AF4D61C13F4316B007944D5 /* ImageProcessingProtocol.h */,
-				8AC59D4F13F83431006598F6 /* OpenCVImageProcessor.cpp */,
-				8AC59D5113F83431006598F6 /* OpenCVImageProcessor.h */,
 			);
 			path = iOSplusOpenCV;
 			sourceTree = "<group>";
@@ -305,7 +298,6 @@
 				8AF4D61613F430F6007944D5 /* iOSplusOpenCVViewController.mm in Sources */,
 				D83965F91AD7EF090061012C /* imageDB.cpp in Sources */,
 				D83966A31AD8CC990061012C /* kltTrackingOBJ.cpp in Sources */,
-				8AC59D5013F83431006598F6 /* OpenCVImageProcessor.cpp in Sources */,
 				D83965F71AD7EF090061012C /* commonCvFunctions.cpp in Sources */,
 				D83966A41AD8CC990061012C /* trackingOBJ.cpp in Sources */,
 				D83965FA1AD7EF090061012C /* orException.cpp in Sources */,

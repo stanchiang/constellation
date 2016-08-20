@@ -8,10 +8,8 @@
 */
 
 #import <UIKit/UIKit.h>
-#import "ImageProcessingProtocol.h"
 
 @interface iOSplusOpenCVAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) id<ImageProcessingProtocol> imageProcessor;
 @end

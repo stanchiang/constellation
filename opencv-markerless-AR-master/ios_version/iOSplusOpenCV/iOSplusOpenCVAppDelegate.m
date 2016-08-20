@@ -12,7 +12,7 @@
 @implementation iOSplusOpenCVAppDelegate
 
 @synthesize window = _window;
-@synthesize imageProcessor;
+
 
 - (void) applicationDidFinishLaunching:(UIApplication *)application
 {
