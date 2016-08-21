@@ -173,15 +173,15 @@ typedef long long time_tt;
         std::vector<cvar::resultInfo> recog_result = ctrlOR.queryImage(query_image);
         ftime(&t);
         time_tt end = 1000 * t.time + t.millitm;
-        std::cout << "recognize cost time: " << end-start << " mill" << std::endl;
+//        std::cout << "recognize cost time: " << end-start << " mill" << std::endl;
         
         if(!recog_result.empty()){
-            printf("%i",recog_result[0].matched_num);
             cv::Mat pose_mat_scale = recog_result[0].pose_mat.clone();
+//            printf("vc matched_num: %i\n",recog_result[0].matched_num);
             pose_mat_scale.row(0) *= query_scale;
             pose_mat_scale.row(1) *= query_scale;
             std::vector<cv::Point2f> scaled = cvar::scalePoints(recog_result[0].object_position, (double)3.0);
-            printf("start tracking");
+//            printf("start tracking\n");
             trckOBJ->startTracking(frame, scaled);
             //track_f = viewMDL->setRecogId(recog_result[0].img_id, pose_mat_scale);
             track_f = true;
@@ -193,7 +193,7 @@ typedef long long time_tt;
     }else{
         timeb t;ftime(&t);
         time_tt start = 1000 * t.time + t.millitm;
-        printf("on tracking");
+//        printf("on tracking\n");
         track_f = trckOBJ->onTracking(image);
         ftime(&t);
         time_tt end = 1000 * t.time + t.millitm;
@@ -201,7 +201,7 @@ typedef long long time_tt;
         
         seq_id++;
         if (track_f){
-            std::cout << "tracking cost time: " << end-start << " mill" << std::endl;
+//            std::cout << "tracking cost time: " << end-start << " mill" << std::endl;
         }
         
     }

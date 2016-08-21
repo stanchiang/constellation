@@ -142,7 +142,7 @@ vector<resultInfo> controlOR::queryImage(const Mat& src_img, int result_num)
         extractFeatures(src_img, kp_vec, desc_vec);
         ftime(&t);
         time_tt end = 1000 * t.time + t.millitm;
-        std::cout << "  detect and compute cost time: " << end-start << " mill" << std::endl;
+//        std::cout << "  detect and compute cost time: " << end-start << " mill" << std::endl;
         
 		
 
@@ -152,17 +152,18 @@ vector<resultInfo> controlOR::queryImage(const Mat& src_img, int result_num)
 		int ret = getFeatureIdVec(desc_vec, id_list);
         ftime(&t);
         end = 1000 * t.time + t.millitm;
-        std::cout << "  getFeatureIdVec cost time: " << end-start << " mill" << std::endl;
+//        std::cout << "  getFeatureIdVec cost time: " << end-start << " mill" << std::endl;
         
-		if(ret < 0)
-			return retInfo;
+        if(ret < 0) {
+            return retInfo;
+        }
         
         ftime(&t);
         start = 1000 * t.time + t.millitm;
 		retInfo = image_db.retrieveImageId(kp_vec, id_list, src_img.size(), visual_words.getVisualWordNum(), result_num);
         ftime(&t);
         end = 1000 * t.time + t.millitm;
-        std::cout << "  retrieveImageId cost time: " << end-start << " mill" << std::endl;
+//        std::cout << "  retrieveImageId cost time: " << end-start << " mill" << std::endl;
 
 		kp_vec.clear();
 		id_list.clear();
@@ -223,6 +224,7 @@ bool controlOR::setDescriptorType(const std::string& descriptor_type)
 int controlOR::getFeatureIdVec(const cv::Mat& desc_vec, vector<int>& id_list)
 {
 	if(desc_vec.empty()){
+        printf("desc_vec is empty()");
 		return -1;
 	}
 //	vector<float> desc_point(feature_dimention);

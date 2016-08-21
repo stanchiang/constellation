@@ -3,8 +3,8 @@
 
 <visualWord>image.bin</visualWord>
 <index>image.yaml</index>
-<ObjectDB>image.db</ObjectDB>
-<!--<ObjectDB>image-new.db</ObjectDB>-->
+<!--<ObjectDB>image.db</ObjectDB>-->
+<ObjectDB>image-small.db</ObjectDB>
 
 <camera_matrix>camera_matrix_qcam.txt</camera_matrix>
 <focal_length>0.5</focal_length>

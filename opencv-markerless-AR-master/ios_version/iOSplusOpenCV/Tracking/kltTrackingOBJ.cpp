@@ -98,12 +98,19 @@ bool kltTrackingOBJ::onTracking(Mat& image)
             tr_num++;
             trackedPrePts.push_back(corners[i]);
             trackedPts.push_back(next_corners[i]);
-            
+            printf("drawing!!!\n");
             cv::circle(image, corners[i], 3, cv::Scalar(0,250,0), -1);
             cv::line(image, corners[i], next_corners[i], cv::Scalar(0,250,0));
             cv::circle(image, next_corners[i], 3, cv::Scalar(0,250,0), -1);
         }
     }
+ 
+//    printf("////////////\n");
+//    printf("track_status: %lu\n", track_status.size());
+//    printf("corners: %lu\n", corners.size());
+//    printf("next_corners: %lu\n", next_corners.size());
+//    printf("tr_num: %i\n",tr_num);
+//    printf("////////////\n");
     
 	if(tr_num < 6){
 		return false;
@@ -135,7 +142,7 @@ bool kltTrackingOBJ::onTracking(Mat& image)
             prevPyr.swap(nextPyr);
 			corners = trackedPts;
 			object_position = next_object_position;
-            
+            printf("tracked!!!\n");
             if(object_position.size() >= 4){
                 cv::line( image, object_position[0], object_position[1], cv::Scalar( 0, 255, 0 ), 4 );
                 cv::line( image, object_position[1], object_position[2], cv::Scalar( 0, 255, 0 ), 4 );

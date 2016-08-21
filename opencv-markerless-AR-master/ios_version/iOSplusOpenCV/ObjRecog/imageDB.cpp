@@ -368,12 +368,12 @@ vector<resultInfo> imageDB::calcMatchCountResult(const vector<KeyPoint>& kp_vec,
 				prob = calcIntegBinDistribution(in_feats_num, match_num, Pp);
 
 				if(prob >= threshold){
-                    printf("========\n");
-                    printf("%i\n",img_id);
-                    printf("%i\n",match_num);
-                    printf("w:%i, h:%i\n",imgInfo_map[img_id].img_size.width, imgInfo_map[img_id].img_size.width);
-					printf("%.2f\n",prob);
-                    printf("========\n");
+//                    printf("========\n");
+//                    printf("%i\n",img_id);
+//                    printf("%i\n",match_num);
+//                    printf("w:%i, h:%i\n",imgInfo_map[img_id].img_size.width, imgInfo_map[img_id].img_size.width);
+//					printf("%.2f\n",prob);
+//                    printf("========\n");
                     result_info.img_id = img_id;
 					result_info.matched_num = match_num;
 					result_info.img_size = imgInfo_map[img_id].img_size;
@@ -449,7 +449,8 @@ vector<resultInfo> imageDB::calcGeometryConsistentResult(const vector<KeyPoint>&
 			// Affine Transform regist image with poseMat, and check its shape
 			vector<Point2f> pos_points = calcAffineTransformRect(imgInfo_map[img_id].img_size, poseMat);
 			shape_valid = checkRectShape(pos_points);
-
+            printf("shape_valid = %i\n", shape_valid);
+            
 			reg_vec.clear();
 			query_vec.clear();
 
@@ -460,6 +461,7 @@ vector<resultInfo> imageDB::calcGeometryConsistentResult(const vector<KeyPoint>&
 				count++;
 			}
 		}
+//        printf("result_vec.size() = %lu \n", result_vec.size());
 		return result_vec;
 	}
 	catch(cv::Exception e){
