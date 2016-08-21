@@ -451,12 +451,11 @@ vector<resultInfo> imageDB::calcGeometryConsistentResult(const vector<KeyPoint>&
 			// Affine Transform regist image with poseMat, and check its shape
 			vector<Point2f> pos_points = calcAffineTransformRect(imgInfo_map[img_id].img_size, poseMat);
 			shape_valid = checkRectShape(pos_points);
-            printf("shape_valid = %i\n", shape_valid);
+//            printf("shape_valid = %i\n", shape_valid);
             
 			reg_vec.clear();
 			query_vec.clear();
 
-            shape_valid = true;
 			if(shape_valid){
 				result_info.pose_mat = poseMat;
 				result_info.object_position = pos_points;

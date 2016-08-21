@@ -63,10 +63,8 @@ int main(int argc, const char * argv[])
 
     if (argc == 2)
     {
-        printf("nothing happens - compiler didn't like cv::VideoCapture() \n");
-        // processVideo(patternImage, calibration, cv::VideoCapture());
-        cv::VideoCapture cap;
-        processVideo(patternImage, calibration, cap);
+        cv::VideoCapture stream1(0);
+        processVideo(patternImage, calibration, stream1);
     }
     else if (argc == 3)
     {

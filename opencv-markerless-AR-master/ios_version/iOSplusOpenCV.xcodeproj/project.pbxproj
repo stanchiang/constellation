@@ -35,6 +35,7 @@
 		D8FA24711ACA344600474A50 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FA24701ACA344600474A50 /* QuartzCore.framework */; };
 		D8FA24781ACA34D200474A50 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FA24721ACA346000474A50 /* libstdc++.dylib */; };
 		D8FA247A1ACA421D00474A50 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FA24791ACA421D00474A50 /* Accelerate.framework */; };
+		F64266D51D6A419E00C9C05B /* image-old-updated.db in Resources */ = {isa = PBXBuildFile; fileRef = F64266D41D6A419E00C9C05B /* image-old-updated.db */; };
 		F66C56FE1D68DA1400D8B986 /* image-new.db in Resources */ = {isa = PBXBuildFile; fileRef = F66C56FD1D68DA1400D8B986 /* image-new.db */; };
 		F66C57001D68FBA200D8B986 /* image-small.db in Resources */ = {isa = PBXBuildFile; fileRef = F66C56FF1D68FBA200D8B986 /* image-small.db */; };
 		F6A2C26A1D6648D400E86E71 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6A2C2691D6648D400E86E71 /* Default-568h@2x.png */; };
@@ -86,6 +87,7 @@
 		D8FA24741ACA347E00474A50 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		D8FA24761ACA349A00474A50 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		D8FA24791ACA421D00474A50 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		F64266D41D6A419E00C9C05B /* image-old-updated.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "image-old-updated.db"; sourceTree = "<group>"; };
 		F66C56FD1D68DA1400D8B986 /* image-new.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "image-new.db"; sourceTree = "<group>"; };
 		F66C56FF1D68FBA200D8B986 /* image-small.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "image-small.db"; sourceTree = "<group>"; };
 		F6A2C2691D6648D400E86E71 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				D83966921AD802250061012C /* config.xml */,
 				D83966931AD802250061012C /* image.bin */,
 				D83966941AD802250061012C /* image.db */,
+				F64266D41D6A419E00C9C05B /* image-old-updated.db */,
 				F66C56FD1D68DA1400D8B986 /* image-new.db */,
 				F66C56FF1D68FBA200D8B986 /* image-small.db */,
 				D83966951AD802250061012C /* image.yaml */,
@@ -281,6 +284,7 @@
 				F6A2C26A1D6648D400E86E71 /* Default-568h@2x.png in Resources */,
 				D83966981AD802250061012C /* image.bin in Resources */,
 				F66C57001D68FBA200D8B986 /* image-small.db in Resources */,
+				F64266D51D6A419E00C9C05B /* image-old-updated.db in Resources */,
 				D83966971AD802250061012C /* config.xml in Resources */,
 				D839669A1AD802250061012C /* image.yaml in Resources */,
 				8AC59D5E13F83431006598F6 /* tapme.png in Resources */,

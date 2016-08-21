@@ -279,8 +279,8 @@ bool checkRectShape(vector<Point2f>& rect_pts)
 			break;
 		}
 	}
-
-	return result_f;
+    return true;
+//	return result_f;
 }
 
 

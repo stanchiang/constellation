@@ -98,7 +98,7 @@ bool kltTrackingOBJ::onTracking(Mat& image)
             tr_num++;
             trackedPrePts.push_back(corners[i]);
             trackedPts.push_back(next_corners[i]);
-            printf("drawing!!!\n");
+//            printf("drawing!!!\n");
             cv::circle(image, corners[i], 3, cv::Scalar(0,250,0), -1);
             cv::line(image, corners[i], next_corners[i], cv::Scalar(0,250,0));
             cv::circle(image, next_corners[i], 3, cv::Scalar(0,250,0), -1);
@@ -130,16 +130,16 @@ bool kltTrackingOBJ::onTracking(Mat& image)
 			printf("tracking...\n");
             vector<Point2f> next_object_position = calcAffineTransformPoints(object_position, homographyMat);
 			if(!checkPtInsideImage(prevImg.size(), next_object_position)){
-                printf("step 1 broken\n");
+                printf("points outside image\n");
 				return false;
             }else {
-                printf("step 1 cleared\n");
+                printf("points inside image\n");
             }
 			if(!checkRectShape(next_object_position)){
-				printf("step 2 broken\n");
+				printf("not rect shape\n");
                 return false;
             }else {
-                printf("step 2 cleared\n");
+                printf("is rect shaped\n");
             }
 			int ret = checkInsideArea(next_corners, next_object_position, track_status);
 			if(ret < 6){
@@ -153,14 +153,24 @@ bool kltTrackingOBJ::onTracking(Mat& image)
 			corners = trackedPts;
 			object_position = next_object_position;
             
+            
+            //0 - bl
+            //1 - br
+            //2 - tr
+            //3 - tl
+            
             if(object_position.size() >= 4){
-                printf("object_position.size() = %lu\n", object_position.size());
-                cv::line( image, object_position[0], object_position[1], cv::Scalar( 0, 255, 0 ), 4 );
-                cv::line( image, object_position[1], object_position[2], cv::Scalar( 0, 255, 0 ), 4 );
-                cv::line( image, object_position[2], object_position[3], cv::Scalar( 0, 255, 0 ), 4 );
-                cv::line( image, object_position[3], object_position[0], cv::Scalar( 0, 255, 0 ), 4 );
+                cv::line( image, object_position[0], object_position[1], cv::Scalar( 0, 255, 255 ), 4 );
+//                printf("right/yellow   [0](x=%.2f,y=%.2f) ; [1](x=%.2f,y=%.2f)\n", object_position[0].x, object_position[0].y, object_position[1].x, object_position[1].y);
+                cv::line( image, object_position[1], object_position[2], cv::Scalar( 255, 255, 0 ), 4 );
+//                printf("bottom/teal [1](x=%.2f,y=%.2f) ; [2](x=%.2f,y=%.2f)\n", object_position[1].x, object_position[1].y, object_position[2].x, object_position[2].y);
+                cv::line( image, object_position[2], object_position[3], cv::Scalar( 255, 0, 255 ), 4 );
+//                printf("top/magneta [2](x=%.2f,y=%.2f) ; [3](x=%.2f,y=%.2f)\n", object_position[2].x, object_position[2].y, object_position[3].x, object_position[3].y);
+                cv::line( image, object_position[3], object_position[0], cv::Scalar( 255, 255, 255 ), 4 );
+//                printf("left/white [3](x=%.2f,y=%.2f) ; [0](x=%.2f,y=%.2f)\n", object_position[3].x, object_position[3].y, object_position[0].x, object_position[0].y);
+                
             }else {
-                printf("only %lu object positions\n", object_position.size());
+//                printf("only %lu object positions\n", object_position.size());
             }
 		}
 	}
