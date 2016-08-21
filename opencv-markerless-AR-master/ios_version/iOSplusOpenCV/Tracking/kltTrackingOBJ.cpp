@@ -109,7 +109,7 @@ bool kltTrackingOBJ::onTracking(Mat& image)
 //    printf("track_status: %lu\n", track_status.size());
 //    printf("corners: %lu\n", corners.size());
 //    printf("next_corners: %lu\n", next_corners.size());
-//    printf("tr_num: %i\n",tr_num);
+    printf("tr_num: %i\n",tr_num);
 //    printf("////////////\n");
     
 	if(tr_num < 6){
@@ -127,27 +127,40 @@ bool kltTrackingOBJ::onTracking(Mat& image)
 			return false;
 		}
 		else{
-			vector<Point2f> next_object_position = calcAffineTransformPoints(object_position, homographyMat);
+			printf("tracking...\n");
+            vector<Point2f> next_object_position = calcAffineTransformPoints(object_position, homographyMat);
 			if(!checkPtInsideImage(prevImg.size(), next_object_position)){
+                printf("step 1 broken\n");
 				return false;
-			}
+            }else {
+                printf("step 1 cleared\n");
+            }
 			if(!checkRectShape(next_object_position)){
-				return false;
-			}
+				printf("step 2 broken\n");
+                return false;
+            }else {
+                printf("step 2 cleared\n");
+            }
 			int ret = checkInsideArea(next_corners, next_object_position, track_status);
 			if(ret < 6){
+                printf("ret < 6 (%i)\n",ret);
 				return false;
-			}
+            } else {
+                printf("ret = %i\n",ret);
+            }
 			grayImg.copyTo(prevImg);
             prevPyr.swap(nextPyr);
 			corners = trackedPts;
 			object_position = next_object_position;
-            printf("tracked!!!\n");
+            
             if(object_position.size() >= 4){
+                printf("object_position.size() = %lu\n", object_position.size());
                 cv::line( image, object_position[0], object_position[1], cv::Scalar( 0, 255, 0 ), 4 );
                 cv::line( image, object_position[1], object_position[2], cv::Scalar( 0, 255, 0 ), 4 );
                 cv::line( image, object_position[2], object_position[3], cv::Scalar( 0, 255, 0 ), 4 );
                 cv::line( image, object_position[3], object_position[0], cv::Scalar( 0, 255, 0 ), 4 );
+            }else {
+                printf("only %lu object positions\n", object_position.size());
             }
 		}
 	}

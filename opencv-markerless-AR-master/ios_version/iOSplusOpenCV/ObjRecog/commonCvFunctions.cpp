@@ -210,6 +210,7 @@ vector<Point2f> calcAffineTransformRect(cv::Size& img_size, cv::Mat& transMat)
 	for(int i=0; i<4; i++){
 		pt.x = (float)(dest_mat.at<double>(0,i) / dest_mat.at<double>(2,i));
 		pt.y = (float)(dest_mat.at<double>(1,i) / dest_mat.at<double>(2,i));
+        printf("pt.x = %.2f; pt.y = %.2f\n",pt.x, pt.y);
 		ret_vec.push_back(pt);
 	}
 

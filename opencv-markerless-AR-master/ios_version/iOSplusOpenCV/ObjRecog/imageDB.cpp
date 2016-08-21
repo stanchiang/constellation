@@ -435,6 +435,8 @@ vector<resultInfo> imageDB::calcGeometryConsistentResult(const vector<KeyPoint>&
 //		float Pp, prob;
 		bool shape_valid;
 		int th_dist = (int)(sqrt(dist_diff_threshold * img_size.width * img_size.height / M_PI) + 0.5);
+        
+//        printf("s = %i, result_num = %i\n", s, result_num);
 		for(int i=0;i<s && count<result_num;i++){
 			result_info = tmp_result_vec[i];
 			img_id = result_info.img_id;
@@ -454,6 +456,7 @@ vector<resultInfo> imageDB::calcGeometryConsistentResult(const vector<KeyPoint>&
 			reg_vec.clear();
 			query_vec.clear();
 
+            shape_valid = true;
 			if(shape_valid){
 				result_info.pose_mat = poseMat;
 				result_info.object_position = pos_points;

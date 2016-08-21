@@ -224,7 +224,6 @@ bool controlOR::setDescriptorType(const std::string& descriptor_type)
 int controlOR::getFeatureIdVec(const cv::Mat& desc_vec, vector<int>& id_list)
 {
 	if(desc_vec.empty()){
-        printf("desc_vec is empty()");
 		return -1;
 	}
 //	vector<float> desc_point(feature_dimention);
