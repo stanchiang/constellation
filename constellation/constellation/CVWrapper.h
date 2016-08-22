@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CVWrapper : NSObject<UIActionSheetDelegate>
+@interface CVWrapper : NSObject<UIActionSheetDelegate> {
+    
+}
 - (void) startCamera:(UIView *) view;
 
 @end

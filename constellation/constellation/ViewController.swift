@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class ViewController: UIViewController {
     let wrapper = CVWrapper()
     
     override func viewDidLoad() {
@@ -19,6 +19,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
 
     func setupCameraSession() {
+//        self.view.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
         wrapper.startCamera(self.view)
     }
     

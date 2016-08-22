@@ -64,7 +64,7 @@ typedef long long time_tt;
     self.videoSource = [[CvVideoCamera alloc] initWithParentView:self.containerView];
     self.videoSource.defaultAVCaptureDevicePosition = AVCaptureDevicePositionBack;
     //self.videoSource.defaultAVCaptureSessionPreset = AVCaptureSessionPreset640x480;
-    //self.videoSource.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
+//    self.videoSource.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     //self.videoSource.defaultFPS = 120;
     //self.videoSource.grayscaleMode = YES;
     //self.videoSource.imageHeight = 568;

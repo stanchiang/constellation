@@ -18,14 +18,13 @@
 @property (nonatomic, strong) CvVideoCamera* videoSource;
 @end
 
-
-
 @implementation CVWrapper
 - (void) startCamera:(UIView *) view {
     _videoSource = [[CvVideoCamera alloc] initWithParentView:view];
     _videoSource.defaultAVCaptureDevicePosition = AVCaptureDevicePositionBack;
     _videoSource.delegate = self;
-    _videoSource.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
+    _videoSource.rotateVideo = true;
+//    _videoSource.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     [_videoSource start];
     printf("will process frame");
 }
