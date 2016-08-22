@@ -1,0 +1,6 @@
+First calling SwViewController.swift
+let stitchedImage:UIImage = CVWrapper.processWithArray(imageArray) as UIImage
+
+processWithArray is declared in CVWrapper.h
+then it is implemented in CVWrapper.mm
+
