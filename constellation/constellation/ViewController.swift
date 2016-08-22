@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    var imageBuffer:CVImageBufferRef!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +64,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {
+        imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
+        print("about to call process image buffer")
+        CVWrapper.processImageBuffer(imageBuffer)
         
     }
     
