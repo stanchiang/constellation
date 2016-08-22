@@ -11,6 +11,7 @@
 		F61EC3361D6AD4B3007D2B55 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61EC3351D6AD4B3007D2B55 /* opencv2.framework */; };
 		F61EC3391D6AD4D2007D2B55 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = F61EC3381D6AD4D2007D2B55 /* CVWrapper.mm */; };
 		F61EC33E1D6AD622007D2B55 /* detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EC33C1D6AD622007D2B55 /* detector.cpp */; };
+		F61EC3401D6BA88F007D2B55 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61EC33F1D6BA88F007D2B55 /* AssetsLibrary.framework */; };
 		F64266E31D6A750500C9C05B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64266E21D6A750500C9C05B /* AppDelegate.swift */; };
 		F64266E51D6A750500C9C05B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64266E41D6A750500C9C05B /* ViewController.swift */; };
 		F64266EA1D6A750500C9C05B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F64266E91D6A750500C9C05B /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		F61EC33A1D6AD4E1007D2B55 /* CVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVWrapper.h; sourceTree = "<group>"; };
 		F61EC33C1D6AD622007D2B55 /* detector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = detector.cpp; sourceTree = "<group>"; };
 		F61EC33D1D6AD622007D2B55 /* detector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = detector.hpp; sourceTree = "<group>"; };
+		F61EC33F1D6BA88F007D2B55 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		F64266DF1D6A750400C9C05B /* constellation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = constellation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64266E21D6A750500C9C05B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F64266E41D6A750500C9C05B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F61EC3401D6BA88F007D2B55 /* AssetsLibrary.framework in Frameworks */,
 				F61EC3361D6AD4B3007D2B55 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,6 +51,7 @@
 		F64266D61D6A750400C9C05B = {
 			isa = PBXGroup;
 			children = (
+				F61EC33F1D6BA88F007D2B55 /* AssetsLibrary.framework */,
 				F64266E11D6A750500C9C05B /* constellation */,
 				F64266E01D6A750400C9C05B /* Products */,
 			);

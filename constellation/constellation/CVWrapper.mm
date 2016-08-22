@@ -9,37 +9,29 @@
 #import <UIKit/UIKit.h>
 #import "CVWrapper.h"
 #import "detector.hpp"
+#import <opencv2/imgproc/imgproc.hpp>
+#import <opencv2/highgui/cap_ios.h>
+#include <iostream>
+@interface CVWrapper()<CvVideoCameraDelegate> {
+    
+}
+@property (nonatomic, strong) CvVideoCamera* videoSource;
+@end
+
+
 
 @implementation CVWrapper
-+ (bool) processImageBuffer:(CVImageBufferRef)imageBuffer {
-    // Lock the base address of the pixel buffer
-    CVPixelBufferLockBaseAddress(imageBuffer, 0);
-    
-    // Get the number of bytes per row for the pixel buffer
-    void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
-    
-    if (!baseAddress) {
-        CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
-        return false;
-    }
-    
-    // Get the pixel buffer width and height
-    int width = (int)CVPixelBufferGetWidth(imageBuffer);
-    int height = (int)CVPixelBufferGetHeight(imageBuffer);
-    
-    //  char *savedImageData = 0;
-    // create IplImage
-    cv::Mat mat(height, width, CV_8UC4, baseAddress);
-    
-    //    IplImage *flipCopy = cvCloneImage(iplimage);
-    //    cvFlip(flipCopy, flipCopy, 0);
-    cv::Mat workingCopy;
-    
-    cv::transpose(mat, workingCopy);
-    cv::flip(workingCopy, workingCopy, 1);
-
-    CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
+- (void) startCamera:(UIView *) view {
+    _videoSource = [[CvVideoCamera alloc] initWithParentView:view];
+    _videoSource.defaultAVCaptureDevicePosition = AVCaptureDevicePositionBack;
+    _videoSource.delegate = self;
+    _videoSource.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
+    [_videoSource start];
     printf("will process frame");
-    return processFrame(workingCopy);
 }
+
+- (void)processImage:(cv::Mat&)image {
+    cv::circle(image, cv::Point(50, 50), 3, cv::Scalar(0,250,0), -1 );
+}
+
 @end

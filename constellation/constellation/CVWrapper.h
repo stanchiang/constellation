@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CVWrapper : NSObject
-+ (bool) processImageBuffer:(CVImageBufferRef)imageBuffer;
+@interface CVWrapper : NSObject<UIActionSheetDelegate>
+- (void) startCamera:(UIView *) view;
 
 @end
