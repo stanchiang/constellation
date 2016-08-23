@@ -16,6 +16,10 @@
 		F61EC35C1D6CA043007D2B55 /* Pattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EC35A1D6CA043007D2B55 /* Pattern.cpp */; };
 		F61EC35F1D6CA053007D2B55 /* GeometryTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EC35D1D6CA053007D2B55 /* GeometryTypes.cpp */; };
 		F61EC3621D6CA065007D2B55 /* CameraCalibration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EC3601D6CA065007D2B55 /* CameraCalibration.cpp */; };
+		F61EC36D1D6CD4E4007D2B55 /* kltTrackingOBJ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EC3691D6CD4E4007D2B55 /* kltTrackingOBJ.cpp */; };
+		F61EC36E1D6CD4E4007D2B55 /* trackingOBJ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EC36B1D6CD4E4007D2B55 /* trackingOBJ.cpp */; };
+		F61EC3721D6CD506007D2B55 /* commonCvFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EC3701D6CD506007D2B55 /* commonCvFunctions.cpp */; };
+		F61EC3751D6CD525007D2B55 /* orException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EC3731D6CD525007D2B55 /* orException.cpp */; };
 		F64266E31D6A750500C9C05B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64266E21D6A750500C9C05B /* AppDelegate.swift */; };
 		F64266E51D6A750500C9C05B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64266E41D6A750500C9C05B /* ViewController.swift */; };
 		F64266EA1D6A750500C9C05B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F64266E91D6A750500C9C05B /* Assets.xcassets */; };
@@ -40,6 +44,14 @@
 		F61EC3601D6CA065007D2B55 /* CameraCalibration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CameraCalibration.cpp; sourceTree = "<group>"; };
 		F61EC3611D6CA065007D2B55 /* CameraCalibration.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CameraCalibration.hpp; sourceTree = "<group>"; };
 		F61EC3681D6CB128007D2B55 /* DebugHelpers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DebugHelpers.hpp; sourceTree = "<group>"; };
+		F61EC3691D6CD4E4007D2B55 /* kltTrackingOBJ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kltTrackingOBJ.cpp; sourceTree = "<group>"; };
+		F61EC36A1D6CD4E4007D2B55 /* kltTrackingOBJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kltTrackingOBJ.h; sourceTree = "<group>"; };
+		F61EC36B1D6CD4E4007D2B55 /* trackingOBJ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trackingOBJ.cpp; sourceTree = "<group>"; };
+		F61EC36C1D6CD4E4007D2B55 /* trackingOBJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trackingOBJ.h; sourceTree = "<group>"; };
+		F61EC3701D6CD506007D2B55 /* commonCvFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = commonCvFunctions.cpp; sourceTree = "<group>"; };
+		F61EC3711D6CD506007D2B55 /* commonCvFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commonCvFunctions.h; sourceTree = "<group>"; };
+		F61EC3731D6CD525007D2B55 /* orException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = orException.cpp; sourceTree = "<group>"; };
+		F61EC3741D6CD525007D2B55 /* orException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orException.h; sourceTree = "<group>"; };
 		F64266DF1D6A750400C9C05B /* constellation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = constellation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64266E21D6A750500C9C05B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F64266E41D6A750500C9C05B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,8 +108,32 @@
 				F61EC35E1D6CA053007D2B55 /* GeometryTypes.hpp */,
 				F61EC3601D6CA065007D2B55 /* CameraCalibration.cpp */,
 				F61EC3611D6CA065007D2B55 /* CameraCalibration.hpp */,
+				F61EC36F1D6CD4EC007D2B55 /* Tracking */,
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		F61EC36F1D6CD4EC007D2B55 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				F61EC3691D6CD4E4007D2B55 /* kltTrackingOBJ.cpp */,
+				F61EC36A1D6CD4E4007D2B55 /* kltTrackingOBJ.h */,
+				F61EC36B1D6CD4E4007D2B55 /* trackingOBJ.cpp */,
+				F61EC36C1D6CD4E4007D2B55 /* trackingOBJ.h */,
+				F61EC3761D6CD53D007D2B55 /* Helper */,
+			);
+			name = Tracking;
+			sourceTree = "<group>";
+		};
+		F61EC3761D6CD53D007D2B55 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F61EC3701D6CD506007D2B55 /* commonCvFunctions.cpp */,
+				F61EC3711D6CD506007D2B55 /* commonCvFunctions.h */,
+				F61EC3731D6CD525007D2B55 /* orException.cpp */,
+				F61EC3741D6CD525007D2B55 /* orException.h */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 		F64266D61D6A750400C9C05B = {
@@ -206,10 +242,14 @@
 				F61EC3561D6C9FFB007D2B55 /* ARPipeline.cpp in Sources */,
 				F61EC35C1D6CA043007D2B55 /* Pattern.cpp in Sources */,
 				F61EC3621D6CA065007D2B55 /* CameraCalibration.cpp in Sources */,
+				F61EC36E1D6CD4E4007D2B55 /* trackingOBJ.cpp in Sources */,
+				F61EC3721D6CD506007D2B55 /* commonCvFunctions.cpp in Sources */,
 				F61EC35F1D6CA053007D2B55 /* GeometryTypes.cpp in Sources */,
 				F61EC3591D6CA02F007D2B55 /* PatternDetector.cpp in Sources */,
+				F61EC3751D6CD525007D2B55 /* orException.cpp in Sources */,
 				F61EC3391D6AD4D2007D2B55 /* CVWrapper.mm in Sources */,
 				F64266E31D6A750500C9C05B /* AppDelegate.swift in Sources */,
+				F61EC36D1D6CD4E4007D2B55 /* kltTrackingOBJ.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

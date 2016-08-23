@@ -12,7 +12,7 @@
 ////////////////////////////////////////////////////////////////////
 // File includes:
 #include "PatternDetector.hpp"
-//#include "DebugHelpers.hpp"
+#include "DebugHelpers.hpp"
 
 ////////////////////////////////////////////////////////////////////
 // Standard includes:
@@ -57,8 +57,8 @@ void PatternDetector::train(const Pattern& pattern)
 
 void PatternDetector::buildPatternFromImage(const cv::Mat& image, Pattern& pattern) const
 {
-    int numImages = 4;
-    float step = sqrtf(2.0f);
+//    int numImages = 4;
+//    float step = sqrtf(2.0f);
 
     // Store original image in pattern structure
     pattern.size = cv::Size(image.cols, image.rows);
@@ -101,7 +101,7 @@ bool PatternDetector::findPattern(const cv::Mat& image, PatternTrackingInfo& inf
     // Extract feature points from input gray image
     extractFeatures(m_grayImg, m_queryKeypoints, m_queryDescriptors);
     
-    int count = 0, maxX = 0, maxY = 0;
+//    int count = 0, maxX = 0, maxY = 0;
 
 //    for(std::vector<cv::KeyPoint>::iterator kp = m_queryKeypoints.begin(); kp != m_queryKeypoints.end(); ++kp) {
         // if (kp->pt.x > maxX) {
@@ -168,9 +168,9 @@ bool PatternDetector::findPattern(const cv::Mat& image, PatternTrackingInfo& inf
                 homographyReprojectionThreshold, 
                 refinedMatches, 
                 m_refinedHomography);
-#if _DEBUG
+//#if _DEBUG
             cv::showAndSave("MatchesWithRefinedPose", getMatchesImage(m_warpedImg, m_pattern.grayImg, warpedKeypoints, m_pattern.keypoints, refinedMatches, 100));
-#endif
+//#endif
             // Get a result homography as result of matrix product of refined and rough homographies:
             info.homography = m_roughHomography * m_refinedHomography;
 

@@ -40,12 +40,13 @@
     CameraCalibration calibration(1136, 320, 1041, 240);
     ARPipeline pipeline(patternImage, calibration);
     
-    cv::Size frameSize(image.cols, image.rows);
+//    cv::Size frameSize(image.cols, image.rows);
     
     processFrame(image, pipeline);
+    
 }
 
-bool processFrame(const cv::Mat& cameraFrame, ARPipeline& pipeline) {
+bool processFrame(cv::Mat& cameraFrame, ARPipeline& pipeline) {
     // Clone image used for background (we will draw overlay on it)
     cv::Mat img = cameraFrame.clone();
     
@@ -64,7 +65,7 @@ bool processFrame(const cv::Mat& cameraFrame, ARPipeline& pipeline) {
     pipeline.getPatternLocation();
     
     // Request redraw of the window
-    cv::circle(img, cv::Point(50, 50), 3, cv::Scalar(0,250,0), -1 );
+    cv::circle(cameraFrame, cv::Point(50, 50), 3, cv::Scalar(0,250,0), -1 );
     
     return true;
 }
