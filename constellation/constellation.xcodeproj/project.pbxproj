@@ -10,8 +10,12 @@
 		F61EC3341D6ACCE1007D2B55 /* pic1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = F61EC3331D6ACCE0007D2B55 /* pic1.bmp */; };
 		F61EC3361D6AD4B3007D2B55 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61EC3351D6AD4B3007D2B55 /* opencv2.framework */; };
 		F61EC3391D6AD4D2007D2B55 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = F61EC3381D6AD4D2007D2B55 /* CVWrapper.mm */; };
-		F61EC33E1D6AD622007D2B55 /* detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EC33C1D6AD622007D2B55 /* detector.cpp */; };
 		F61EC3401D6BA88F007D2B55 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61EC33F1D6BA88F007D2B55 /* AssetsLibrary.framework */; };
+		F61EC3561D6C9FFB007D2B55 /* ARPipeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EC3541D6C9FFB007D2B55 /* ARPipeline.cpp */; };
+		F61EC3591D6CA02F007D2B55 /* PatternDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EC3571D6CA02F007D2B55 /* PatternDetector.cpp */; };
+		F61EC35C1D6CA043007D2B55 /* Pattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EC35A1D6CA043007D2B55 /* Pattern.cpp */; };
+		F61EC35F1D6CA053007D2B55 /* GeometryTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EC35D1D6CA053007D2B55 /* GeometryTypes.cpp */; };
+		F61EC3621D6CA065007D2B55 /* CameraCalibration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EC3601D6CA065007D2B55 /* CameraCalibration.cpp */; };
 		F64266E31D6A750500C9C05B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64266E21D6A750500C9C05B /* AppDelegate.swift */; };
 		F64266E51D6A750500C9C05B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64266E41D6A750500C9C05B /* ViewController.swift */; };
 		F64266EA1D6A750500C9C05B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F64266E91D6A750500C9C05B /* Assets.xcassets */; };
@@ -24,9 +28,17 @@
 		F61EC3371D6AD4D1007D2B55 /* constellation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "constellation-Bridging-Header.h"; sourceTree = "<group>"; };
 		F61EC3381D6AD4D2007D2B55 /* CVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CVWrapper.mm; sourceTree = "<group>"; };
 		F61EC33A1D6AD4E1007D2B55 /* CVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVWrapper.h; sourceTree = "<group>"; };
-		F61EC33C1D6AD622007D2B55 /* detector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = detector.cpp; sourceTree = "<group>"; };
-		F61EC33D1D6AD622007D2B55 /* detector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = detector.hpp; sourceTree = "<group>"; };
 		F61EC33F1D6BA88F007D2B55 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		F61EC3541D6C9FFB007D2B55 /* ARPipeline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ARPipeline.cpp; sourceTree = "<group>"; };
+		F61EC3551D6C9FFB007D2B55 /* ARPipeline.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ARPipeline.hpp; sourceTree = "<group>"; };
+		F61EC3571D6CA02F007D2B55 /* PatternDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PatternDetector.cpp; sourceTree = "<group>"; };
+		F61EC3581D6CA02F007D2B55 /* PatternDetector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PatternDetector.hpp; sourceTree = "<group>"; };
+		F61EC35A1D6CA043007D2B55 /* Pattern.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pattern.cpp; sourceTree = "<group>"; };
+		F61EC35B1D6CA043007D2B55 /* Pattern.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pattern.hpp; sourceTree = "<group>"; };
+		F61EC35D1D6CA053007D2B55 /* GeometryTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GeometryTypes.cpp; sourceTree = "<group>"; };
+		F61EC35E1D6CA053007D2B55 /* GeometryTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GeometryTypes.hpp; sourceTree = "<group>"; };
+		F61EC3601D6CA065007D2B55 /* CameraCalibration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CameraCalibration.cpp; sourceTree = "<group>"; };
+		F61EC3611D6CA065007D2B55 /* CameraCalibration.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CameraCalibration.hpp; sourceTree = "<group>"; };
 		F64266DF1D6A750400C9C05B /* constellation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = constellation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64266E21D6A750500C9C05B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F64266E41D6A750500C9C05B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,10 +60,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F61EC3411D6BD243007D2B55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F61EC3351D6AD4B3007D2B55 /* opencv2.framework */,
+				F61EC33F1D6BA88F007D2B55 /* AssetsLibrary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F61EC3421D6BD265007D2B55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F61EC3331D6ACCE0007D2B55 /* pic1.bmp */,
+				F64266E91D6A750500C9C05B /* Assets.xcassets */,
+				F64266EB1D6A750500C9C05B /* LaunchScreen.storyboard */,
+				F64266EE1D6A750500C9C05B /* Info.plist */,
+				F61EC3371D6AD4D1007D2B55 /* constellation-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F61EC3431D6C9841007D2B55 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F61EC3541D6C9FFB007D2B55 /* ARPipeline.cpp */,
+				F61EC3551D6C9FFB007D2B55 /* ARPipeline.hpp */,
+				F61EC3571D6CA02F007D2B55 /* PatternDetector.cpp */,
+				F61EC3581D6CA02F007D2B55 /* PatternDetector.hpp */,
+				F61EC35A1D6CA043007D2B55 /* Pattern.cpp */,
+				F61EC35B1D6CA043007D2B55 /* Pattern.hpp */,
+				F61EC35D1D6CA053007D2B55 /* GeometryTypes.cpp */,
+				F61EC35E1D6CA053007D2B55 /* GeometryTypes.hpp */,
+				F61EC3601D6CA065007D2B55 /* CameraCalibration.cpp */,
+				F61EC3611D6CA065007D2B55 /* CameraCalibration.hpp */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		F64266D61D6A750400C9C05B = {
 			isa = PBXGroup;
 			children = (
-				F61EC33F1D6BA88F007D2B55 /* AssetsLibrary.framework */,
 				F64266E11D6A750500C9C05B /* constellation */,
 				F64266E01D6A750400C9C05B /* Products */,
 			);
@@ -72,14 +121,9 @@
 				F64266E41D6A750500C9C05B /* ViewController.swift */,
 				F61EC33A1D6AD4E1007D2B55 /* CVWrapper.h */,
 				F61EC3381D6AD4D2007D2B55 /* CVWrapper.mm */,
-				F61EC33D1D6AD622007D2B55 /* detector.hpp */,
-				F61EC33C1D6AD622007D2B55 /* detector.cpp */,
-				F61EC3331D6ACCE0007D2B55 /* pic1.bmp */,
-				F61EC3351D6AD4B3007D2B55 /* opencv2.framework */,
-				F64266E91D6A750500C9C05B /* Assets.xcassets */,
-				F64266EB1D6A750500C9C05B /* LaunchScreen.storyboard */,
-				F64266EE1D6A750500C9C05B /* Info.plist */,
-				F61EC3371D6AD4D1007D2B55 /* constellation-Bridging-Header.h */,
+				F61EC3431D6C9841007D2B55 /* Core */,
+				F61EC3421D6BD265007D2B55 /* Supporting Files */,
+				F61EC3411D6BD243007D2B55 /* Frameworks */,
 			);
 			path = constellation;
 			sourceTree = "<group>";
@@ -116,6 +160,7 @@
 				TargetAttributes = {
 					F64266DE1D6A750400C9C05B = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4C8V97R8N3;
 					};
 				};
 			};
@@ -156,9 +201,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64266E51D6A750500C9C05B /* ViewController.swift in Sources */,
+				F61EC3561D6C9FFB007D2B55 /* ARPipeline.cpp in Sources */,
+				F61EC35C1D6CA043007D2B55 /* Pattern.cpp in Sources */,
+				F61EC3621D6CA065007D2B55 /* CameraCalibration.cpp in Sources */,
+				F61EC35F1D6CA053007D2B55 /* GeometryTypes.cpp in Sources */,
+				F61EC3591D6CA02F007D2B55 /* PatternDetector.cpp in Sources */,
 				F61EC3391D6AD4D2007D2B55 /* CVWrapper.mm in Sources */,
 				F64266E31D6A750500C9C05B /* AppDelegate.swift in Sources */,
-				F61EC33E1D6AD622007D2B55 /* detector.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -283,6 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
