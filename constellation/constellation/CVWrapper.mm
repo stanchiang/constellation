@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "CVWrapper.h"
+#import "kltTrackingOBJ.h"
 #import "ARPipeline.hpp"
-
+#import "commonCvFunctions.h"
 #import <opencv2/imgproc/imgproc.hpp>
 #import <opencv2/highgui/cap_ios.h>
 
 #include <iostream>
 @interface CVWrapper()<CvVideoCameraDelegate> {
-    
+    cv::Mat query_image;
+    bool track_f;
+    cvar::trackingOBJ* trckOBJ;
 }
 @property (nonatomic, strong) CvVideoCamera* videoSource;
 @end
@@ -41,12 +44,11 @@
     ARPipeline pipeline(patternImage, calibration);
     
 //    cv::Size frameSize(image.cols, image.rows);
-    
-    processFrame(image, pipeline);
-    
+
+    [self processFrame:image pipeline:pipeline];
 }
 
-bool processFrame(cv::Mat& cameraFrame, ARPipeline& pipeline) {
+-(void) processFrame: (cv::Mat&) cameraFrame pipeline: (ARPipeline&) pipeline {
     // Clone image used for background (we will draw overlay on it)
     cv::Mat img = cameraFrame.clone();
     
@@ -67,6 +69,22 @@ bool processFrame(cv::Mat& cameraFrame, ARPipeline& pipeline) {
     // Request redraw of the window
     cv::circle(cameraFrame, cv::Point(50, 50), 3, cv::Scalar(0,250,0), -1 );
     
-    return true;
+////////////
+    if(!track_f){
+        cv::Mat frame;
+        cv::cvtColor(cameraFrame, frame, cv::COLOR_BGRA2GRAY);
+        cv::resize(frame, query_image, query_image.size());
+        
+        std::vector<cvar::resultInfo> recog_result = ctrlOR.queryImage(query_image);
+        
+        if(!recog_result.empty()){
+            std::vector<cv::Point2f> scaled = cvar::scalePoints(recog_result[0].object_position, (double)3.0);
+            trckOBJ->startTracking(frame, scaled);
+            track_f = true;
+        }
+        
+    }else{
+        track_f = trckOBJ->onTracking(cameraFrame);
+    }
 }
 @end

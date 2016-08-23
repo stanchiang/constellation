@@ -160,6 +160,7 @@
 		8AF4D60213F430F5007944D5 /* iOSplusOpenCV */ = {
 			isa = PBXGroup;
 			children = (
+				8AF4D61513F430F6007944D5 /* iOSplusOpenCVViewController.mm */,
 				D839669E1AD8CC990061012C /* Tracking */,
 				D83965EC1AD7EF090061012C /* ObjRecog */,
 				8AC59D5D13F83431006598F6 /* tapme.png */,
@@ -167,7 +168,6 @@
 				8AF4D60C13F430F5007944D5 /* iOSplusOpenCVAppDelegate.m */,
 				8AF4D60E13F430F6007944D5 /* MainStoryboard_iPhone.storyboard */,
 				8AF4D61413F430F6007944D5 /* iOSplusOpenCVViewController.hpp */,
-				8AF4D61513F430F6007944D5 /* iOSplusOpenCVViewController.mm */,
 				8AF4D60313F430F5007944D5 /* Supporting Files */,
 			);
 			path = iOSplusOpenCV;
