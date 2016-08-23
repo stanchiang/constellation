@@ -39,6 +39,7 @@
 		F61EC35E1D6CA053007D2B55 /* GeometryTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GeometryTypes.hpp; sourceTree = "<group>"; };
 		F61EC3601D6CA065007D2B55 /* CameraCalibration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CameraCalibration.cpp; sourceTree = "<group>"; };
 		F61EC3611D6CA065007D2B55 /* CameraCalibration.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CameraCalibration.hpp; sourceTree = "<group>"; };
+		F61EC3681D6CB128007D2B55 /* DebugHelpers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DebugHelpers.hpp; sourceTree = "<group>"; };
 		F64266DF1D6A750400C9C05B /* constellation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = constellation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64266E21D6A750500C9C05B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F64266E41D6A750500C9C05B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +85,7 @@
 		F61EC3431D6C9841007D2B55 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F61EC3681D6CB128007D2B55 /* DebugHelpers.hpp */,
 				F61EC3541D6C9FFB007D2B55 /* ARPipeline.cpp */,
 				F61EC3551D6C9FFB007D2B55 /* ARPipeline.hpp */,
 				F61EC3571D6CA02F007D2B55 /* PatternDetector.cpp */,
