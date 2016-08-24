@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+
 #import "CVWrapper.h"
 #import "CVWrapperDelegate.h"
 #import "kltTrackingOBJ.h"
@@ -23,6 +25,11 @@
     cvar::trackingOBJ* trckOBJ;
     cv::Size frame_size;
     int query_scale;
+    
+    CGFloat cx;
+    CGFloat cy;
+    CGFloat fx;
+    CGFloat fy;
 }
 @property (nonatomic, strong) CvVideoCamera* videoSource;
 @end
@@ -34,37 +41,36 @@
     _videoSource.defaultAVCaptureSessionPreset = AVCaptureSessionPreset1280x720;
     _videoSource.delegate = self;
     _videoSource.rotateVideo = true;
-//    _videoSource.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
+    //    _videoSource.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     [_videoSource start];
     printf("will process frame");
 }
 
 - (void) setupVars {
     CGRect viewFrame = [self.delegate screenSize];
-    frame_size = cv::Size(viewFrame.size.height, viewFrame.size.width);
-    int frame_max_size;
-    if(frame_size.width > frame_size.height){
-        frame_max_size = frame_size.width;
-    }
-    else{
-        frame_max_size = frame_size.height;
-    }
+    AVCaptureDevice  * camera = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    AVCaptureDeviceFormat * format = camera.activeFormat;
     
-    int max_query_size = 320;
-    query_scale = 1;
-    while((frame_max_size / query_scale) > max_query_size){
-        query_scale*=2;
-    }
-    query_image.create(frame_size.height/query_scale, frame_size.width/query_scale, CV_8UC1);
-    trckOBJ = cvar::trackingOBJ::create(cvar::trackingOBJ::TRACKER_KLT);
+    CMFormatDescriptionRef fDesc = format.formatDescription;
+    CGSize dim = CMVideoFormatDescriptionGetPresentationDimensions(fDesc, true, true);
+    
+    cx = CGFloat(dim.width) / 2.0;
+    cy = CGFloat(dim.height) / 2.0;
+    
+    CGFloat HFOV = format.videoFieldOfView;
+    CGFloat VFOV = ((HFOV)/cx)*cy;
+    
+    fx = std::abs(CGFloat(dim.width) / (2 * tan(HFOV / 180 * CGFloat(M_PI) / 2)));
+    fy = std::abs(CGFloat(dim.height) / (2 * tan(VFOV / 180 * CGFloat(M_PI) / 2)));
+    printf("fx=%f cx=%f fy=%f cy=%f\n", fx, cx, fy, cy);
 }
 
 - (void)processImage:(cv::Mat&)image {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"pic1" ofType:@"bmp"];
     const char * cpath = [path cStringUsingEncoding:NSUTF8StringEncoding];
     cv::Mat patternImage = cv::imread( cpath, CV_LOAD_IMAGE_UNCHANGED );
-    
-    CameraCalibration calibration(1136, 320, 1041, 240);
+    //    fx=1229 cx=36 fy=1153 cy=640
+    CameraCalibration calibration(fx, cx, fy, cy);
     ARPipeline pipeline(patternImage, calibration);
     [self processFrame:image pipeline:pipeline];
 }
@@ -78,6 +84,6 @@
     
     // Request redraw of the window
     cv::circle(cameraFrame, cv::Point(50, 50), 3, cv::Scalar(0,250,0), -1 );
-
+    
 }
 @end
