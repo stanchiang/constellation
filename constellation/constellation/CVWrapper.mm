@@ -66,9 +66,6 @@
     
     CameraCalibration calibration(1136, 320, 1041, 240);
     ARPipeline pipeline(patternImage, calibration);
-    
-//    cv::Size frameSize(image.cols, image.rows);
-
     [self processFrame:image pipeline:pipeline];
 }
 
@@ -76,40 +73,11 @@
     // Clone image used for background (we will draw overlay on it)
     cv::Mat img = cameraFrame.clone();
     
-    if (pipeline.m_patternDetector.enableHomographyRefinement) {
-        printf("Pose refinement: On");
-    } else {
-        printf("Pose refinement: Off");
-    }
-    
-    printf("RANSAC threshold: %f",pipeline.m_patternDetector.homographyReprojectionThreshold);
-    
     // Find a pattern
     pipeline.processFrame(cameraFrame);
     
-    // Update a pattern pose
-    pipeline.getPatternLocation();
-    
     // Request redraw of the window
     cv::circle(cameraFrame, cv::Point(50, 50), 3, cv::Scalar(0,250,0), -1 );
-    
-////////////
-//    if(!track_f){
-//        cv::Mat frame;
-//        cv::cvtColor(cameraFrame, frame, cv::COLOR_BGRA2GRAY);
-//        cv::resize(frame, query_image, query_image.size());
-//        
-//        std::vector<cvar::resultInfo> recog_result = ctrlOR.queryImage(query_image);
-//        
-//        if(!recog_result.empty()){
-//            std::vector<cv::Point2f> scaled = cvar::scalePoints(recog_result[0].object_position, (double)3.0);
-//            trckOBJ->startTracking(frame, scaled);
-//            track_f = true;
-//        }
-//        
-//    }else{
-//        track_f = trckOBJ->onTracking(cameraFrame);
-//    }
-////////////
+
 }
 @end

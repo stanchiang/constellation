@@ -27,7 +27,7 @@ public:
      */
     PatternDetector
         (
-        cv::Ptr<cv::FeatureDetector>     detector  = new cv::ORB(576), 
+        cv::Ptr<cv::FeatureDetector>     detector  = new cv::ORB(1000), 
         cv::Ptr<cv::DescriptorExtractor> extractor = new cv::FREAK(false, false), 
         cv::Ptr<cv::DescriptorMatcher>   matcher   = new cv::BFMatcher(cv::NORM_HAMMING, true),
         bool enableRatioTest                       = false
