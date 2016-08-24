@@ -93,7 +93,7 @@ void PatternDetector::buildPatternFromImage(const cv::Mat& image, Pattern& patte
 
 
 
-bool PatternDetector::findPattern(const cv::Mat& image, PatternTrackingInfo& info)
+bool PatternDetector::findPattern( cv::Mat& image, PatternTrackingInfo& info)
 {
     // Convert input image to gray
     getGray(image, m_grayImg);
@@ -125,9 +125,9 @@ bool PatternDetector::findPattern(const cv::Mat& image, PatternTrackingInfo& inf
     cv::showAndSave("Raw matches", getMatchesImage(image, m_pattern.frame, m_queryKeypoints, m_pattern.keypoints, m_matches, 100));
 #endif
 
-#if _DEBUG
+//#if _DEBUG
     cv::Mat tmp = image.clone();
-#endif
+//#endif
 
     // Find homography transformation and detect good matches
     bool homographyFound = refineMatchesWithHomography(
@@ -168,9 +168,9 @@ bool PatternDetector::findPattern(const cv::Mat& image, PatternTrackingInfo& inf
                 homographyReprojectionThreshold, 
                 refinedMatches, 
                 m_refinedHomography);
-//#if _DEBUG
+#if _DEBUG
             cv::showAndSave("MatchesWithRefinedPose", getMatchesImage(m_warpedImg, m_pattern.grayImg, warpedKeypoints, m_pattern.keypoints, refinedMatches, 100));
-//#endif
+#endif
             // Get a result homography as result of matrix product of refined and rough homographies:
             info.homography = m_roughHomography * m_refinedHomography;
 
@@ -182,9 +182,11 @@ bool PatternDetector::findPattern(const cv::Mat& image, PatternTrackingInfo& inf
 
             // Transform contour with precise homography
             cv::perspectiveTransform(m_pattern.points2d, info.points2d, info.homography);
-#if _DEBUG
-            info.draw2dContour(tmp, CV_RGB(200,0,0));
-#endif
+//#if _DEBUG
+            printf("========\n");
+            info.draw2dContour(image, CV_RGB(200,0,0));
+            printf("========\n");
+//#endif
         }
         else
         {

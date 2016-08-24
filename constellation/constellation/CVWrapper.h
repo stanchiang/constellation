@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CVWrapperDelegate;
+
 @interface CVWrapper : NSObject<UIActionSheetDelegate> {
     
 }
+@property (nonatomic, weak) id<CVWrapperDelegate> delegate;
 - (void) startCamera:(UIView *) view;
-
+- (void) setupVars;
 @end

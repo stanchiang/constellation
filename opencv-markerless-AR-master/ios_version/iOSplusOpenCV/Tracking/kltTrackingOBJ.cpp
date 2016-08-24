@@ -166,7 +166,7 @@ bool kltTrackingOBJ::onTracking(Mat& image)
 //                printf("bottom/teal [1](x=%.2f,y=%.2f) ; [2](x=%.2f,y=%.2f)\n", object_position[1].x, object_position[1].y, object_position[2].x, object_position[2].y);
                 cv::line( image, object_position[2], object_position[3], cv::Scalar( 255, 0, 255 ), 4 );
 //                printf("top/magneta [2](x=%.2f,y=%.2f) ; [3](x=%.2f,y=%.2f)\n", object_position[2].x, object_position[2].y, object_position[3].x, object_position[3].y);
-                cv::line( image, object_position[3], object_position[0], cv::Scalar( 255, 255, 255 ), 4 );
+                cv::line( image, object_position[3], object_position[0], cv::Scalar( 255, 0, 255 ), 4 );
 //                printf("left/white [3](x=%.2f,y=%.2f) ; [0](x=%.2f,y=%.2f)\n", object_position[3].x, object_position[3].y, object_position[0].x, object_position[0].y);
                 
             }else {

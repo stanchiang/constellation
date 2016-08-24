@@ -3,3 +3,4 @@
 //
 
 #import "CVWrapper.h"
+#import "CVWrapperDelegate.h"

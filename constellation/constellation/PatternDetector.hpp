@@ -48,7 +48,7 @@ public:
     * Tries to find a @pattern object on given @image. 
     * The function returns true if succeeded and store the result (pattern 2d location, homography) in @info.
     */
-    bool findPattern(const cv::Mat& image, PatternTrackingInfo& info);
+    bool findPattern( cv::Mat& image, PatternTrackingInfo& info);
 
     bool enableRatioTest;
     bool enableHomographyRefinement;

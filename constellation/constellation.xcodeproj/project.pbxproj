@@ -52,6 +52,7 @@
 		F61EC3711D6CD506007D2B55 /* commonCvFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commonCvFunctions.h; sourceTree = "<group>"; };
 		F61EC3731D6CD525007D2B55 /* orException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = orException.cpp; sourceTree = "<group>"; };
 		F61EC3741D6CD525007D2B55 /* orException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orException.h; sourceTree = "<group>"; };
+		F61EC3791D6D3079007D2B55 /* CVWrapperDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CVWrapperDelegate.h; path = ../CVWrapperDelegate.h; sourceTree = "<group>"; };
 		F64266DF1D6A750400C9C05B /* constellation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = constellation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64266E21D6A750500C9C05B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F64266E41D6A750500C9C05B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 				F64266E41D6A750500C9C05B /* ViewController.swift */,
 				F61EC33A1D6AD4E1007D2B55 /* CVWrapper.h */,
 				F61EC3381D6AD4D2007D2B55 /* CVWrapper.mm */,
+				F61EC3791D6D3079007D2B55 /* CVWrapperDelegate.h */,
 				F61EC3431D6C9841007D2B55 /* Core */,
 				F61EC3421D6BD265007D2B55 /* Supporting Files */,
 				F61EC3411D6BD243007D2B55 /* Frameworks */,

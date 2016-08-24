@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CVWrapperDelegate {
     let wrapper = CVWrapper()
     
     override func viewDidLoad() {
@@ -20,7 +20,12 @@ class ViewController: UIViewController {
 
     func setupCameraSession() {
 //        self.view.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
+        wrapper.setupVars()
         wrapper.startCamera(self.view)
+    }
+    
+    func screenSize() -> CGRect {
+        return UIScreen.mainScreen().bounds
     }
     
 }

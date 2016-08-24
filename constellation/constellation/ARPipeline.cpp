@@ -20,7 +20,7 @@ ARPipeline::ARPipeline(const cv::Mat& patternImage, const CameraCalibration& cal
   m_patternDetector.train(m_pattern);
 }
 
-bool ARPipeline::processFrame(const cv::Mat& inputFrame)
+bool ARPipeline::processFrame( cv::Mat& inputFrame)
 {
   bool patternFound = m_patternDetector.findPattern(inputFrame, m_patternInfo);
 
