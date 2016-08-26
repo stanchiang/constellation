@@ -10,7 +10,7 @@
 
 @protocol CVWrapperDelegate;
 
-@interface CVWrapper : NSObject<UIActionSheetDelegate> {
+@interface CVWrapper : NSObject {
     
 }
 @property (nonatomic, weak) id<CVWrapperDelegate> delegate;

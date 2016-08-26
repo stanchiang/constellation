@@ -44,6 +44,17 @@ void PatternTrackingInfo::draw2dContour(cv::Mat& image, cv::Scalar color) const
 {
   for (size_t i = 0; i < points2d.size(); i++)
   {
+     printf("p%zu = (%.2f,%.2f) | p%zu = (%.2f,%.2f) \n",i, points2d[i].x, points2d[i].y,(i+1) % points2d.size(), points2d[ (i+1) % points2d.size() ].x, points2d[ (i+1) % points2d.size() ].y);
+      if (i == 0) {
+          color = cv::Scalar( 0, 255, 255 );
+      }else if (i == 1) {
+          color = cv::Scalar( 255, 255, 0 );
+      }else if (i == 2){
+          color = cv::Scalar( 255, 0, 255 );
+      }else {
+          color = cv::Scalar( 255, 255, 255 );
+      }
+
     cv::line(image, points2d[i], points2d[ (i+1) % points2d.size() ], color, 2, CV_AA);
   }
 }

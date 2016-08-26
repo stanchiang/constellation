@@ -11,9 +11,7 @@
 
 #import "CVWrapper.h"
 #import "CVWrapperDelegate.h"
-#import "kltTrackingOBJ.h"
 #import "ARPipeline.hpp"
-#import "commonCvFunctions.h"
 #import <opencv2/imgproc/imgproc.hpp>
 #import <opencv2/highgui/cap_ios.h>
 
@@ -22,7 +20,6 @@
     cv::Mat query_image;
     
     bool track_f;
-    cvar::trackingOBJ* trckOBJ;
     cv::Size frame_size;
     int query_scale;
     
@@ -70,7 +67,10 @@
     const char * cpath = [path cStringUsingEncoding:NSUTF8StringEncoding];
     cv::Mat patternImage = cv::imread( cpath, CV_LOAD_IMAGE_UNCHANGED );
     //    fx=1229 cx=36 fy=1153 cy=640
-    CameraCalibration calibration(fx, cx, fy, cy);
+    //1136, 320, 1041, 240]
+//    CameraCalibration calibration(fx, cx, fy, cy);
+    CameraCalibration calibration(1136, 320, 1041, 240);
+    
     ARPipeline pipeline(patternImage, calibration);
     [self processFrame:image pipeline:pipeline];
 }
