@@ -16,7 +16,7 @@ class ViewController: UIViewController, CVWrapperDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         wrapper.delegate = self
-//        wrapper.initImages(self.view)
+        wrapper.initImages()
         wrapper.initCamera(self.view)
         
     }

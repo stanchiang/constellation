@@ -15,5 +15,5 @@
 }
 @property (nonatomic, weak) id<CVWrapperDelegate> delegate;
 - (void) initCamera:(UIView *) view;
-- (void) initImages:(UIView *) view;
+- (void) initImages;
 @end

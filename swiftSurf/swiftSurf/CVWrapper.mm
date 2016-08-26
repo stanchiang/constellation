@@ -34,33 +34,17 @@
 
 @implementation CVWrapper
 
-- (void) initImages:(UIView *) view {
-    imageView = [[UIImageView alloc] initWithFrame:view.frame];
-    [view addSubview:imageView];
-    [view bringSubviewToFront:imageView];
-
+- (void) initImages {
+    
     //TODO: don't use cached UIImages
-    
-//    UIImage *img = [UIImage imageNamed:@"IPDCLogo.png"];
-    UIImage *img = [UIImage imageNamed:@"Altoids.png"];
-    needleIplImage = [OpenCVUtilities CreateGRAYIplImageFromUIImage:img];
-    
-//    UIImage *otherImg = [UIImage imageNamed:@"Banner.png"];
-    UIImage *otherImg = [UIImage imageNamed:@"two_Altoids_scene.png"];
-    haystackIplImage = [OpenCVUtilities CreateGRAYIplImageFromUIImage:otherImg];
-//    [self findObject];
-    
-}
-
-- (void) initCamera:(UIView *) view {
-    
-    
     UIImage *img = [UIImage imageNamed:@"Altoids.png"];
     needleIplImage = [OpenCVUtilities CreateGRAYIplImageFromUIImage:img];
     
     UIImage *img2 = [UIImage imageNamed:@"IPDCLogo.png"];
     needleIplImage2 = [OpenCVUtilities CreateGRAYIplImageFromUIImage:img2];
-    
+}
+
+- (void) initCamera:(UIView *) view {
     _videoSource = [[CvVideoCamera alloc] initWithParentView:view];
     _videoSource.defaultAVCaptureDevicePosition = AVCaptureDevicePositionBack;
     _videoSource.defaultAVCaptureSessionPreset = AVCaptureSessionPreset1280x720;
@@ -71,7 +55,6 @@
 }
 
 - (void) processImage:(cv::Mat &)image {
-//    UIImage *otherImg = [UIImage imageNamed:@"Banner.png"];
     UIImage *otherImg =  [self UIImageFromMat: &image];
     haystackIplImage = [OpenCVUtilities CreateGRAYIplImageFromUIImage:otherImg];
     cvCircle(haystackIplImage, cvPoint(50,50), 2, {{0,0,255}}, -1, 8, 0);
