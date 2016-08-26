@@ -178,7 +178,9 @@ locatePlanarObject( const CvSeq* objectKeypoints, const CvSeq* objectDescriptors
 #endif
     
     n = (int)(ptpairs.size()/2);
-    if( n < 4 )
+    printf("ptpairs.size / 2 = %i \n",n);
+    if( n < 45 )
+//    if( n < 4 )
         return 0;
     
     pt1.resize(n);

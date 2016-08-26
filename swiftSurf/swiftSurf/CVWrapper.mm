@@ -24,6 +24,7 @@
     
 @private
     IplImage* needleIplImage;
+    IplImage* needleIplImage2;
     IplImage* haystackIplImage;
 //    IplImage* output;
 }
@@ -40,19 +41,25 @@
 
     //TODO: don't use cached UIImages
     
-    UIImage *img = [UIImage imageNamed:@"IPDCLogo.png"];
+//    UIImage *img = [UIImage imageNamed:@"IPDCLogo.png"];
+    UIImage *img = [UIImage imageNamed:@"Altoids.png"];
     needleIplImage = [OpenCVUtilities CreateGRAYIplImageFromUIImage:img];
     
-    UIImage *otherImg = [UIImage imageNamed:@"Banner.png"];
+//    UIImage *otherImg = [UIImage imageNamed:@"Banner.png"];
+    UIImage *otherImg = [UIImage imageNamed:@"two_Altoids_scene.png"];
     haystackIplImage = [OpenCVUtilities CreateGRAYIplImageFromUIImage:otherImg];
-    [self findObject];
+//    [self findObject];
     
 }
 
 - (void) initCamera:(UIView *) view {
     
-    UIImage *img = [UIImage imageNamed:@"IPDCLogo.png"];
+    
+    UIImage *img = [UIImage imageNamed:@"Altoids.png"];
     needleIplImage = [OpenCVUtilities CreateGRAYIplImageFromUIImage:img];
+    
+    UIImage *img2 = [UIImage imageNamed:@"IPDCLogo.png"];
+    needleIplImage2 = [OpenCVUtilities CreateGRAYIplImageFromUIImage:img2];
     
     _videoSource = [[CvVideoCamera alloc] initWithParentView:view];
     _videoSource.defaultAVCaptureDevicePosition = AVCaptureDevicePositionBack;
@@ -68,7 +75,8 @@
     UIImage *otherImg =  [self UIImageFromMat: &image];
     haystackIplImage = [OpenCVUtilities CreateGRAYIplImageFromUIImage:otherImg];
     cvCircle(haystackIplImage, cvPoint(50,50), 2, {{0,0,255}}, -1, 8, 0);
-    [self findObject];
+    [self findObject:needleIplImage];
+    [self findObject:needleIplImage2];
     image = cv::Mat(haystackIplImage);
 }
 
@@ -133,15 +141,18 @@ static void ReleaseMatDataCallback(void *info, const void *data, size_t size)
 #pragma unused(data)
 #pragma unused(size)
     cv::Mat *mat = static_cast<cv::Mat*>(info);
-//    printf("size: %lu", size);
+
     if (size != 0) {
+        printf("deleting mat");
         delete mat;
+    }else {
+        printf("nothing to delete");
     }
     
 }
 
 //Magic
-- (void) findObject {
+- (void) findObject: (IplImage *)needleObj {
     cv::initModule_nonfree();
     CvMemStorage* storage = cvCreateMemStorage(0);
     static CvScalar colors[] =
@@ -156,15 +167,15 @@ static void ReleaseMatDataCallback(void *info, const void *data, size_t size)
         {{255,0,255}},
         {{255,255,255}}
     };
-    if( !needleIplImage || !haystackIplImage )
+    if( !needleObj || !haystackIplImage)
     {
         NSLog(@"Missing object or image");
         return;
     }
     
-    CvSize objSize = cvGetSize(needleIplImage);
+    CvSize objSize = cvGetSize(needleObj);
     IplImage* object_color = cvCreateImage(objSize, 8, 3);
-    cvCvtColor( needleIplImage, object_color, CV_GRAY2BGR );
+    cvCvtColor( needleObj, object_color, CV_GRAY2BGR );
     
     CvSeq *needleKeypoints = 0, *needleDescriptors = 0;
     CvSeq *haystackKeypoints = 0, *haystackDescriptors = 0;
@@ -174,7 +185,7 @@ static void ReleaseMatDataCallback(void *info, const void *data, size_t size)
     double tt = (double)cvGetTickCount();
 //    NSLog(@"Now finding object descriptors");
     
-    cvExtractSURF( needleIplImage, 0, &needleKeypoints, &needleDescriptors, storage, params );
+    cvExtractSURF( needleObj, 0, &needleKeypoints, &needleDescriptors, storage, params );
 //    NSLog(@"Needle Descriptors: %d", needleDescriptors->total);
     
     cvExtractSURF( haystackIplImage, 0, &haystackKeypoints, &haystackDescriptors, storage, params );
@@ -183,7 +194,7 @@ static void ReleaseMatDataCallback(void *info, const void *data, size_t size)
     tt = (double)cvGetTickCount() - tt;
 //    NSLog(@"Extraction time = %gms", tt/(cvGetTickFrequency()*1000.));
     
-    CvPoint src_corners[4] = {{0,0}, {needleIplImage->width,0}, {needleIplImage->width, needleIplImage->height}, {0, needleIplImage->height}};
+    CvPoint src_corners[4] = {{0,0}, {needleObj->width,0}, {needleObj->width, needleObj->height}, {0, needleObj->height}};
     CvPoint dst_corners[4];
 //    output = cvCreateImage(cvSize(haystackIplImage->width, haystackIplImage->height),  8,  1 );
 //    cvCopy( haystackIplImage, output );
