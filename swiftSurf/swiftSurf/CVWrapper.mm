@@ -25,7 +25,7 @@
 @private
     IplImage* needleIplImage;
     IplImage* haystackIplImage;
-    IplImage* output;
+//    IplImage* output;
 }
 
 @property (nonatomic, strong) CvVideoCamera* videoSource;
@@ -36,6 +36,8 @@
 - (void) initImages:(UIView *) view {
     imageView = [[UIImageView alloc] initWithFrame:view.frame];
     [view addSubview:imageView];
+    [view bringSubviewToFront:imageView];
+
     //TODO: don't use cached UIImages
     
     UIImage *img = [UIImage imageNamed:@"IPDCLogo.png"];
@@ -58,22 +60,88 @@
     _videoSource.delegate = self;
     _videoSource.rotateVideo = true;
     [_videoSource start];
-    printf("will process frame");
-    
-    
+//    printf("will process frame");
 }
 
-- (void)processImage:(cv::Mat &)image {
-    //    UIImage *otherImg = [UIImage imageNamed:@"Banner.png"];
-    //    haystackIplImage = [OpenCVUtilities CreateGRAYIplImageFromUIImage:otherImg];
-    //    [self findObject];
+- (void) processImage:(cv::Mat &)image {
+//    UIImage *otherImg = [UIImage imageNamed:@"Banner.png"];
+    UIImage *otherImg =  [self UIImageFromMat: &image];
+    haystackIplImage = [OpenCVUtilities CreateGRAYIplImageFromUIImage:otherImg];
+    cvCircle(haystackIplImage, cvPoint(50,50), 2, {{0,0,255}}, -1, 8, 0);
+    [self findObject];
+    image = cv::Mat(haystackIplImage);
+}
+
+-(UIImage*)UIImageFromMat:(cv::Mat *)mat
+{
+    CGImageRef cgImage = [self CGImageFromMat:mat];
+    UIImage *uiImage = [[UIImage alloc] initWithCGImage: cgImage
+                                                  scale: 1.0
+                                            orientation: UIImageOrientationUp];
+    CGImageRelease(cgImage);
+    return uiImage;
+}
+
+-(CGImageRef)CGImageFromMat:(cv::Mat *)mat
+{
+    size_t bitsPerComponent = 8;
+    size_t bytesPerRow = mat->step;
+    
+    size_t bitsPerPixel;
+    CGColorSpaceRef space;
+    
+    if (mat->channels() == 1) {
+        bitsPerPixel = 8;
+        space = CGColorSpaceCreateDeviceGray(); // must release after CGImageCreate
+    } else if (mat->channels() == 3) {
+        bitsPerPixel = 24;
+        space = CGColorSpaceCreateDeviceRGB(); // must release after CGImageCreate
+    } else if (mat->channels() == 4) {
+        bitsPerPixel = 32;
+        space = CGColorSpaceCreateDeviceRGB(); // must release after CGImageCreate
+    } else {
+        abort();
+    }
+    
+    CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaNone;
+    CGDataProviderRef provider = CGDataProviderCreateWithData(mat,
+                                                              mat->data,
+                                                              0,
+                                                              ReleaseMatDataCallback);
+    const CGFloat *decode = NULL;
+    bool shouldInterpolate = true;
+    CGColorRenderingIntent intent = kCGRenderingIntentDefault;
+    
+    CGImageRef cgImageRef = CGImageCreate(mat->cols,
+                                          mat->rows,
+                                          bitsPerComponent,
+                                          bitsPerPixel,
+                                          bytesPerRow,
+                                          space,
+                                          bitmapInfo,
+                                          provider,
+                                          decode,
+                                          shouldInterpolate,
+                                          intent);
+    CGColorSpaceRelease(space);
+    CGDataProviderRelease(provider);
+    return cgImageRef;
+}
+
+static void ReleaseMatDataCallback(void *info, const void *data, size_t size)
+{
+#pragma unused(data)
+#pragma unused(size)
+    cv::Mat *mat = static_cast<cv::Mat*>(info);
+//    printf("size: %lu", size);
+    if (size != 0) {
+        delete mat;
+    }
     
 }
 
 //Magic
-- (void)findObject
-{
-    NSLog(@"%@ %@", self, NSStringFromSelector(_cmd));
+- (void) findObject {
     cv::initModule_nonfree();
     CvMemStorage* storage = cvCreateMemStorage(0);
     static CvScalar colors[] =
@@ -104,42 +172,40 @@
     CvSURFParams params = cvSURFParams(500, 1);
     
     double tt = (double)cvGetTickCount();
-    NSLog(@"Now finding object descriptors");
+//    NSLog(@"Now finding object descriptors");
     
     cvExtractSURF( needleIplImage, 0, &needleKeypoints, &needleDescriptors, storage, params );
-    NSLog(@"Needle Descriptors: %d", needleDescriptors->total);
+//    NSLog(@"Needle Descriptors: %d", needleDescriptors->total);
     
     cvExtractSURF( haystackIplImage, 0, &haystackKeypoints, &haystackDescriptors, storage, params );
-    NSLog(@"Haystack Descriptors: %d", haystackDescriptors->total);
+//    NSLog(@"Haystack Descriptors: %d", haystackDescriptors->total);
     
     tt = (double)cvGetTickCount() - tt;
-    NSLog(@"Extraction time = %gms", tt/(cvGetTickFrequency()*1000.));
+//    NSLog(@"Extraction time = %gms", tt/(cvGetTickFrequency()*1000.));
     
     CvPoint src_corners[4] = {{0,0}, {needleIplImage->width,0}, {needleIplImage->width, needleIplImage->height}, {0, needleIplImage->height}};
     CvPoint dst_corners[4];
-    output = cvCreateImage(cvSize(haystackIplImage->width, haystackIplImage->height),  8,  1 );
-    cvCopy( haystackIplImage, output );
+//    output = cvCreateImage(cvSize(haystackIplImage->width, haystackIplImage->height),  8,  1 );
+//    cvCopy( haystackIplImage, output );
     
-    NSLog(@"Now locating Planar Object");
-#ifdef USE_FLANN
-    NSLog(@"Now using approximate nearest neighbor search");
-#endif
+//    NSLog(@"Now locating Planar Object");
     if( locatePlanarObject( needleKeypoints, needleDescriptors, haystackKeypoints,
                            haystackDescriptors, src_corners, dst_corners ))
     {
+        printf("\nlocated planar\n");
         for( i = 0; i < 4; i++ )
         {
             CvPoint r1 = dst_corners[i%4];
             CvPoint r2 = dst_corners[(i+1)%4];
-            cvLine( output, cvPoint(r1.x, r1.y),
-                   cvPoint(r2.x, r2.y), colors[8] );
+            cvLine( haystackIplImage, cvPoint(r1.x, r1.y),
+                   cvPoint(r2.x, r2.y), colors[3], 3 );
         }
     }
     
-    NSLog(@"Converting Output");
-    UIImage *convertedOutput = [OpenCVUtilities UIImageFromGRAYIplImage:output];
+//    NSLog(@"Converting Output");
+    UIImage *convertedOutput = [OpenCVUtilities UIImageFromGRAYIplImage:haystackIplImage];
     
-    NSLog(@"Opening Stuff");
+//    NSLog(@"Opening Stuff");
     [imageView setImage:convertedOutput];
     cvReleaseImage(&object_color);
 }

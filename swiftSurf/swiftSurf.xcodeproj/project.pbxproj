@@ -79,8 +79,7 @@
 				F61EC3A71D6FAEDD007D2B55 /* Info.plist */,
 				F61EC3B11D6FB429007D2B55 /* swiftSurf-Bridging-Header.h */,
 				F61EC3C01D6FB7C2007D2B55 /* CV */,
-				F61EC3B81D6FB557007D2B55 /* AssetsLibrary.framework */,
-				F61EC3B61D6FB4C6007D2B55 /* opencv2.framework */,
+				F6958B571D6FCE4A000DEFC9 /* Frameworks */,
 			);
 			path = swiftSurf;
 			sourceTree = "<group>";
@@ -94,6 +93,15 @@
 				F61EC3BD1D6FB7BB007D2B55 /* findObjOpenCV.cpp */,
 			);
 			name = CV;
+			sourceTree = "<group>";
+		};
+		F6958B571D6FCE4A000DEFC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F61EC3B81D6FB557007D2B55 /* AssetsLibrary.framework */,
+				F61EC3B61D6FB4C6007D2B55 /* opencv2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
