@@ -117,15 +117,8 @@
     
     CvPoint src_corners[4] = {{0,0}, {needleIplImage->width,0}, {needleIplImage->width, needleIplImage->height}, {0, needleIplImage->height}};
     CvPoint dst_corners[4];
-    CvSize size = cvSize(haystackIplImage->width > needleIplImage->width ? haystackIplImage->width : needleIplImage->width,
-                         needleIplImage->height+haystackIplImage->height);
-    output = cvCreateImage(size,  8,  1 );
-    cvSetImageROI( output, cvRect( 0, 0, needleIplImage->width, needleIplImage->height ) );
-    cvCopy( needleIplImage, output );
-    cvResetImageROI( output );
-    cvSetImageROI( output, cvRect( 0, needleIplImage->height, output->width, output->height ) );
+    output = cvCreateImage(cvSize(haystackIplImage->width, haystackIplImage->height),  8,  1 );
     cvCopy( haystackIplImage, output );
-    cvResetImageROI( output );
     
     NSLog(@"Now locating Planar Object");
 #ifdef USE_FLANN
@@ -138,23 +131,9 @@
         {
             CvPoint r1 = dst_corners[i%4];
             CvPoint r2 = dst_corners[(i+1)%4];
-            cvLine( output, cvPoint(r1.x, r1.y+needleIplImage->height ),
-                   cvPoint(r2.x, r2.y+needleIplImage->height ), colors[8] );
+            cvLine( output, cvPoint(r1.x, r1.y),
+                   cvPoint(r2.x, r2.y), colors[8] );
         }
-    }
-    vector<int> ptpairs;
-    NSLog(@"finding Pairs");
-#ifdef USE_FLANN
-    flannFindPairs( needleKeypoints, needleDescriptors, haystackKeypoints, haystackDescriptors, ptpairs );
-#else
-    findPairs( objectKeypoints, objectDescriptors, imageKeypoints, imageDescriptors, ptpairs );
-#endif
-    for( i = 0; i < (int)ptpairs.size(); i += 2 )
-    {
-        CvSURFPoint* r1 = (CvSURFPoint*)cvGetSeqElem( needleKeypoints, ptpairs[i] );
-        CvSURFPoint* r2 = (CvSURFPoint*)cvGetSeqElem( haystackKeypoints, ptpairs[i+1] );
-        cvLine( output, cvPointFrom32f(r1->pt),
-               cvPoint(cvRound(r2->pt.x), cvRound(r2->pt.y+needleIplImage->height)), colors[8] );
     }
     
     NSLog(@"Converting Output");
