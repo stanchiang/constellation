@@ -18,7 +18,6 @@
 #include <iostream>
 @interface CVWrapper()<CvVideoCameraDelegate> {
     cv::Mat query_image;
-    
     bool track_f;
     cv::Size frame_size;
     int query_scale;
@@ -45,7 +44,7 @@
 }
 
 - (void) setupVars {
-    CGRect viewFrame = [self.delegate screenSize];
+//    CGRect viewFrame = [self.delegate screenSize];
     AVCaptureDevice  * camera = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     AVCaptureDeviceFormat * format = camera.activeFormat;
     
@@ -65,9 +64,12 @@
 
 - (void)processImage:(cv::Mat&)image {
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"pic1" ofType:@"bmp"];
-    const char * cpath = [path cStringUsingEncoding:NSUTF8StringEncoding];
-    cv::Mat patternImage = cv::imread( cpath, CV_LOAD_IMAGE_ANYCOLOR );
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"pic1" ofType:@"bmp"];
+//    const char * cpath = [path cStringUsingEncoding:NSUTF8StringEncoding];
+//    cv::Mat patternImage = cv::imread( cpath, CV_LOAD_IMAGE_ANYCOLOR );
+    
+    UIImage *img = [UIImage imageNamed:@"Altoids.png"];
+    cv::Mat patternImage = [self cvMatFromUIImage:img];
     
     //rotate 90 degrees
     transpose(patternImage, patternImage);
@@ -77,12 +79,34 @@
 //[1136, 320, 1041, 240]
     CameraCalibration calibration(fx, cx, fy, cy);
 
-
     ARPipeline pipeline(patternImage, calibration);
 
 //    [self insertPatternIntoCameraFrame:patternImage image:image];
 
     [self processFrame: image pipeline:pipeline];
+}
+
+- (cv::Mat)cvMatFromUIImage:(UIImage *)image
+{
+    CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
+    CGFloat cols = image.size.width;
+    CGFloat rows = image.size.height;
+    
+    cv::Mat cvMat(rows, cols, CV_8UC4); // 8 bits per component, 4 channels (color channels + alpha)
+    
+    CGContextRef contextRef = CGBitmapContextCreate(cvMat.data,                 // Pointer to  data
+                                                    cols,                       // Width of bitmap
+                                                    rows,                       // Height of bitmap
+                                                    8,                          // Bits per component
+                                                    cvMat.step[0],              // Bytes per row
+                                                    colorSpace,                 // Colorspace
+                                                    kCGImageAlphaNoneSkipLast |
+                                                    kCGBitmapByteOrderDefault); // Bitmap info flags
+    
+    CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), image.CGImage);
+    CGContextRelease(contextRef);
+    
+    return cvMat;
 }
 
 - (void) insertPatternIntoCameraFrame: (cv::Mat)patternImage image:(cv::Mat)image {
@@ -97,14 +121,8 @@
 }
 
 -(void) processFrame: (cv::Mat&) cameraFrame pipeline: (ARPipeline&) pipeline {
-    // Clone image used for background (we will draw overlay on it)
-    cv::Mat img = cameraFrame.clone();
-    
     // Find a pattern
     pipeline.processFrame(cameraFrame);
-    
-    // Request redraw of the window
-    cv::circle(cameraFrame, cv::Point(50, 50), 3, cv::Scalar(0,250,0), -1 );
     
     NSDate *now = [NSDate date];
     NSTimeInterval frameDelay = [now timeIntervalSinceDate:_lastFrameTime];
