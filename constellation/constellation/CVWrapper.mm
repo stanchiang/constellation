@@ -72,10 +72,11 @@
     transpose(patternImage, patternImage);
     flip(patternImage, patternImage,1); //transpose+flip(1)=CW
     
-    //    fx=1229 cx=36 fy=1153 cy=640
-    //1136, 320, 1041, 240]
-//    CameraCalibration calibration(fx, cx, fy, cy);
-    CameraCalibration calibration(1136, 320, 1041, 240);
+//    fx=1229 cx=36 fy=1153 cy=640
+//[1136, 320, 1041, 240]
+//    CameraCalibration calibration(1136, 320, 1041, 240);
+    CameraCalibration calibration(fx, cx, fy, cy);
+
 
     ARPipeline pipeline(patternImage, calibration);
 
