@@ -148,9 +148,11 @@ bool PatternDetector::findPattern( cv::Mat& image, PatternTrackingInfo& info)
             
             // Transform contour with precise homography
             cv::perspectiveTransform(m_pattern.points2d, info.points2d, info.homography);
-            printf("========\n");
-            info.draw2dContour(image, CV_RGB(200,0,0));
-            printf("========\n");
+
+            std::cout << "Features:" << std::setw(4) << m_queryKeypoints.size() << " Matches: " << std::setw(4) << refinedMatches.size() << std::endl;
+            if (refinedMatches.size() > 100 ) {
+                info.draw2dContour(image, CV_RGB(200,0,0));
+            }
             
         }
         else
@@ -164,7 +166,7 @@ bool PatternDetector::findPattern( cv::Mat& image, PatternTrackingInfo& info)
     
 //          cv::showAndSave("Final matches", getMatchesImage(tmp, m_pattern.frame, m_queryKeypoints, m_pattern.keypoints, m_matches, 100));
 
-    std::cout << "Features:" << std::setw(4) << m_queryKeypoints.size() << " Matches: " << std::setw(4) << m_matches.size() << std::endl;
+//    std::cout << "Features:" << std::setw(4) << m_queryKeypoints.size() << " Matches: " << std::setw(4) << m_matches.size() << std::endl;
     
     return homographyFound;
 }

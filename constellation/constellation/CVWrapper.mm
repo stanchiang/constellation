@@ -23,6 +23,8 @@
     cv::Size frame_size;
     int query_scale;
     
+    NSDate *_lastFrameTime;
+    
     CGFloat cx;
     CGFloat cy;
     CGFloat fx;
@@ -38,9 +40,8 @@
     _videoSource.defaultAVCaptureSessionPreset = AVCaptureSessionPreset1280x720;
     _videoSource.delegate = self;
     _videoSource.rotateVideo = true;
-    //    _videoSource.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
+//    _videoSource.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     [_videoSource start];
-    printf("will process frame");
 }
 
 - (void) setupVars {
@@ -59,7 +60,7 @@
     
     fx = std::abs(CGFloat(dim.width) / (2 * tan(HFOV / 180 * CGFloat(M_PI) / 2)));
     fy = std::abs(CGFloat(dim.height) / (2 * tan(VFOV / 180 * CGFloat(M_PI) / 2)));
-    printf("fx=%f cx=%f fy=%f cy=%f\n", fx, cx, fy, cy);
+//    printf("fx=%f cx=%f fy=%f cy=%f\n", fx, cx, fy, cy);
 }
 
 - (void)processImage:(cv::Mat&)image {
@@ -74,23 +75,25 @@
     
 //    fx=1229 cx=36 fy=1153 cy=640
 //[1136, 320, 1041, 240]
-//    CameraCalibration calibration(1136, 320, 1041, 240);
     CameraCalibration calibration(fx, cx, fy, cy);
 
 
     ARPipeline pipeline(patternImage, calibration);
 
-//draws pattern image to the camera frame to take out frame contents as a variable in image regognition
-//    cv::Mat newPattern(cvSize(patternImage.rows, patternImage.cols), CV_MAKE_TYPE(patternImage.type(), 4));
-//    cvtColor(patternImage, newPattern, cv::COLOR_BGR2BGRA,4);
-//    IplImage patternImageIPL = newPattern;
-//    IplImage imageIPL = image;
-//    cvSetImageROI( &imageIPL, cvRect( 0, 0, patternImageIPL.width, patternImageIPL.height ) );
-//    cvCopy( &patternImageIPL, &imageIPL );
-//    cvResetImageROI( &imageIPL );
-//    image = cv::Mat(&imageIPL);
+//    [self insertPatternIntoCameraFrame:patternImage image:image];
 
     [self processFrame: image pipeline:pipeline];
+}
+
+- (void) insertPatternIntoCameraFrame: (cv::Mat)patternImage image:(cv::Mat)image {
+    cv::Mat newPattern(cvSize(patternImage.rows, patternImage.cols), CV_MAKE_TYPE(patternImage.type(), 4));
+    cvtColor(patternImage, newPattern, cv::COLOR_BGR2BGRA,4);
+    IplImage patternImageIPL = newPattern;
+    IplImage imageIPL = image;
+    cvSetImageROI( &imageIPL, cvRect( 0, 0, patternImageIPL.width, patternImageIPL.height ) );
+    cvCopy( &patternImageIPL, &imageIPL );
+    cvResetImageROI( &imageIPL );
+    image = cv::Mat(&imageIPL);
 }
 
 -(void) processFrame: (cv::Mat&) cameraFrame pipeline: (ARPipeline&) pipeline {
@@ -103,5 +106,12 @@
     // Request redraw of the window
     cv::circle(cameraFrame, cv::Point(50, 50), 3, cv::Scalar(0,250,0), -1 );
     
+    NSDate *now = [NSDate date];
+    NSTimeInterval frameDelay = [now timeIntervalSinceDate:_lastFrameTime];
+    double fps = 1.0/frameDelay;
+    
+    (fps != fps) ? printf("FPS = -\n") : printf("FPS = %.2f\n", fps);
+    
+    _lastFrameTime = now;
 }
 @end
