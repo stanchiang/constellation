@@ -63,16 +63,33 @@
 }
 
 - (void)processImage:(cv::Mat&)image {
+    
     NSString *path = [[NSBundle mainBundle] pathForResource:@"pic1" ofType:@"bmp"];
     const char * cpath = [path cStringUsingEncoding:NSUTF8StringEncoding];
-    cv::Mat patternImage = cv::imread( cpath, CV_LOAD_IMAGE_UNCHANGED );
+    cv::Mat patternImage = cv::imread( cpath, CV_LOAD_IMAGE_ANYCOLOR );
+    
+    //rotate 90 degrees
+    transpose(patternImage, patternImage);
+    flip(patternImage, patternImage,1); //transpose+flip(1)=CW
+    
     //    fx=1229 cx=36 fy=1153 cy=640
     //1136, 320, 1041, 240]
 //    CameraCalibration calibration(fx, cx, fy, cy);
     CameraCalibration calibration(1136, 320, 1041, 240);
-    
+
     ARPipeline pipeline(patternImage, calibration);
-    [self processFrame:image pipeline:pipeline];
+
+//draws pattern image to the camera frame to take out frame contents as a variable in image regognition
+//    cv::Mat newPattern(cvSize(patternImage.rows, patternImage.cols), CV_MAKE_TYPE(patternImage.type(), 4));
+//    cvtColor(patternImage, newPattern, cv::COLOR_BGR2BGRA,4);
+//    IplImage patternImageIPL = newPattern;
+//    IplImage imageIPL = image;
+//    cvSetImageROI( &imageIPL, cvRect( 0, 0, patternImageIPL.width, patternImageIPL.height ) );
+//    cvCopy( &patternImageIPL, &imageIPL );
+//    cvResetImageROI( &imageIPL );
+//    image = cv::Mat(&imageIPL);
+
+    [self processFrame: image pipeline:pipeline];
 }
 
 -(void) processFrame: (cv::Mat&) cameraFrame pipeline: (ARPipeline&) pipeline {
