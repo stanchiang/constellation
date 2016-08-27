@@ -69,6 +69,14 @@
 //    cv::Mat patternImage = cv::imread( cpath, CV_LOAD_IMAGE_ANYCOLOR );
     
     UIImage *img = [UIImage imageNamed:@"Altoids.png"];
+    [self processFrame:img image:image];
+
+    UIImage *img2 = [UIImage imageNamed:@"IPDCLogo.png"];
+    [self processFrame:img2 image:image];
+    
+}
+
+- (void) processFrame:(UIImage *) img image: (cv::Mat&)image {
     cv::Mat patternImage = [self cvMatFromUIImage:img];
     
     //rotate 90 degrees
@@ -78,12 +86,25 @@
 //    fx=1229 cx=36 fy=1153 cy=640
 //[1136, 320, 1041, 240]
     CameraCalibration calibration(fx, cx, fy, cy);
-
-    ARPipeline pipeline(patternImage, calibration);
-
+    
 //    [self insertPatternIntoCameraFrame:patternImage image:image];
+    
+    ARPipeline pipeline(patternImage, calibration);
+    pipeline.processFrame(image);
+    
+    
+    [self calcFPS];
 
-    [self processFrame: image pipeline:pipeline];
+}
+
+- (void) calcFPS {
+    NSDate *now = [NSDate date];
+    NSTimeInterval frameDelay = [now timeIntervalSinceDate:_lastFrameTime];
+    double fps = 1.0/frameDelay;
+    
+    (fps != fps) ? printf("FPS = -\n") : printf("FPS = %.2f\n", fps);
+    
+    _lastFrameTime = now;
 }
 
 - (cv::Mat)cvMatFromUIImage:(UIImage *)image
@@ -120,16 +141,4 @@
     image = cv::Mat(&imageIPL);
 }
 
--(void) processFrame: (cv::Mat&) cameraFrame pipeline: (ARPipeline&) pipeline {
-    // Find a pattern
-    pipeline.processFrame(cameraFrame);
-    
-    NSDate *now = [NSDate date];
-    NSTimeInterval frameDelay = [now timeIntervalSinceDate:_lastFrameTime];
-    double fps = 1.0/frameDelay;
-    
-    (fps != fps) ? printf("FPS = -\n") : printf("FPS = %.2f\n", fps);
-    
-    _lastFrameTime = now;
-}
 @end

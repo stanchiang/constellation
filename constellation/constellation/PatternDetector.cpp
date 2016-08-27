@@ -150,7 +150,7 @@ bool PatternDetector::findPattern( cv::Mat& image, PatternTrackingInfo& info)
             cv::perspectiveTransform(m_pattern.points2d, info.points2d, info.homography);
 
             std::cout << "Features:" << std::setw(4) << m_queryKeypoints.size() << " Matches: " << std::setw(4) << refinedMatches.size() << std::endl;
-            if (refinedMatches.size() > 100 ) {
+            if (refinedMatches.size() > 75 ) {
                 info.draw2dContour(image, CV_RGB(200,0,0));
             }
             
