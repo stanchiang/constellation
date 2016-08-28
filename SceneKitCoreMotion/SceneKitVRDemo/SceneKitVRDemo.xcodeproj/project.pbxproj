@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		99EB52111D5A1C68005402CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB52101D5A1C68005402CC /* AppDelegate.swift */; };
+		99EB52131D5A1C68005402CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB52121D5A1C68005402CC /* ViewController.swift */; };
+		99EB52161D5A1C68005402CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EB52141D5A1C68005402CC /* Main.storyboard */; };
+		99EB52181D5A1C68005402CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EB52171D5A1C68005402CC /* Assets.xcassets */; };
+		99EB521B1D5A1C68005402CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EB52191D5A1C68005402CC /* LaunchScreen.storyboard */; };
+		F6F3076E1D73976500CCADD9 /* ColorChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F3076D1D73976500CCADD9 /* ColorChooser.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		99EB520D1D5A1C68005402CC /* SceneKitVRDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneKitVRDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99EB52101D5A1C68005402CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		99EB52121D5A1C68005402CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99EB52151D5A1C68005402CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99EB52171D5A1C68005402CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99EB521A1D5A1C68005402CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99EB521C1D5A1C68005402CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6F3076D1D73976500CCADD9 /* ColorChooser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorChooser.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99EB520A1D5A1C68005402CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		99EB52041D5A1C68005402CC = {
+			isa = PBXGroup;
+			children = (
+				99EB520F1D5A1C68005402CC /* SceneKitVRDemo */,
+				99EB520E1D5A1C68005402CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		99EB520E1D5A1C68005402CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99EB520D1D5A1C68005402CC /* SceneKitVRDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99EB520F1D5A1C68005402CC /* SceneKitVRDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F6F3076D1D73976500CCADD9 /* ColorChooser.swift */,
+				99EB52101D5A1C68005402CC /* AppDelegate.swift */,
+				99EB52121D5A1C68005402CC /* ViewController.swift */,
+				99EB52141D5A1C68005402CC /* Main.storyboard */,
+				99EB52171D5A1C68005402CC /* Assets.xcassets */,
+				99EB52191D5A1C68005402CC /* LaunchScreen.storyboard */,
+				99EB521C1D5A1C68005402CC /* Info.plist */,
+			);
+			path = SceneKitVRDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99EB520C1D5A1C68005402CC /* SceneKitVRDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99EB521F1D5A1C68005402CC /* Build configuration list for PBXNativeTarget "SceneKitVRDemo" */;
+			buildPhases = (
+				99EB52091D5A1C68005402CC /* Sources */,
+				99EB520A1D5A1C68005402CC /* Frameworks */,
+				99EB520B1D5A1C68005402CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SceneKitVRDemo;
+			productName = SceneKitVRDemo;
+			productReference = 99EB520D1D5A1C68005402CC /* SceneKitVRDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99EB52051D5A1C68005402CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Sujan Vaidya";
+				TargetAttributes = {
+					99EB520C1D5A1C68005402CC = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 99EB52081D5A1C68005402CC /* Build configuration list for PBXProject "SceneKitVRDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 99EB52041D5A1C68005402CC;
+			productRefGroup = 99EB520E1D5A1C68005402CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99EB520C1D5A1C68005402CC /* SceneKitVRDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99EB520B1D5A1C68005402CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99EB521B1D5A1C68005402CC /* LaunchScreen.storyboard in Resources */,
+				99EB52181D5A1C68005402CC /* Assets.xcassets in Resources */,
+				99EB52161D5A1C68005402CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99EB52091D5A1C68005402CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99EB52131D5A1C68005402CC /* ViewController.swift in Sources */,
+				99EB52111D5A1C68005402CC /* AppDelegate.swift in Sources */,
+				F6F3076E1D73976500CCADD9 /* ColorChooser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		99EB52141D5A1C68005402CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99EB52151D5A1C68005402CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		99EB52191D5A1C68005402CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99EB521A1D5A1C68005402CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99EB521D1D5A1C68005402CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99EB521E1D5A1C68005402CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99EB52201D5A1C68005402CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SceneKitVRDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vsujan.SceneKitVRDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		99EB52211D5A1C68005402CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SceneKitVRDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vsujan.SceneKitVRDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99EB52081D5A1C68005402CC /* Build configuration list for PBXProject "SceneKitVRDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99EB521D1D5A1C68005402CC /* Debug */,
+				99EB521E1D5A1C68005402CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99EB521F1D5A1C68005402CC /* Build configuration list for PBXNativeTarget "SceneKitVRDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99EB52201D5A1C68005402CC /* Debug */,
+				99EB52211D5A1C68005402CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99EB52051D5A1C68005402CC /* Project object */;
+}
