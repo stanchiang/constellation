@@ -182,6 +182,10 @@ typedef long long time_tt;
 //            pose_mat_scale.row(1) *= query_scale;
             std::vector<cv::Point2f> scaled = cvar::scalePoints(recog_result[0].object_position, (double)3.0);
 //            printf("start tracking\n");
+            printf("size = %lu\n",scaled.size());
+            if (scaled.size() != 4 ){
+                printf("not4 size = %lu\n",scaled.size());
+            }
             trckOBJ->startTracking(frame, scaled);
             //track_f = viewMDL->setRecogId(recog_result[0].img_id, pose_mat_scale);
             track_f = true;

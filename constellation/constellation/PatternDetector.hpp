@@ -53,7 +53,7 @@ public:
     bool enableRatioTest;
     bool enableHomographyRefinement;
     float homographyReprojectionThreshold;
-
+    bool homographyWorthDrawing;
 protected:
 
     bool extractFeatures(const cv::Mat& image, std::vector<cv::KeyPoint>& keypoints, cv::Mat& descriptors) const;

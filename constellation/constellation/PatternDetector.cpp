@@ -149,14 +149,15 @@ bool PatternDetector::findPattern( cv::Mat& image, PatternTrackingInfo& info)
             // Transform contour with precise homography
             cv::perspectiveTransform(m_pattern.points2d, info.points2d, info.homography);
 
-            std::cout << "Features:" << std::setw(4) << m_queryKeypoints.size() << " Matches: " << std::setw(4) << refinedMatches.size() << std::endl;
+//            std::cout << "Features:" << std::setw(4) << m_queryKeypoints.size() << " Matches: " << std::setw(4) << refinedMatches.size() << std::endl;
             if (refinedMatches.size() > 75 ) {
                 info.draw2dContour(image, CV_RGB(200,0,0));
+                homographyWorthDrawing = true;
+            } else {
+                homographyWorthDrawing = false;
             }
             
-        }
-        else
-        {
+        } else {
             info.homography = m_roughHomography;
             
             // Transform contour with rough homography
@@ -168,7 +169,8 @@ bool PatternDetector::findPattern( cv::Mat& image, PatternTrackingInfo& info)
 
 //    std::cout << "Features:" << std::setw(4) << m_queryKeypoints.size() << " Matches: " << std::setw(4) << m_matches.size() << std::endl;
     
-    return homographyFound;
+//    return homographyFound;
+    return homographyWorthDrawing;
 }
 
 void PatternDetector::getGray(const cv::Mat& image, cv::Mat& gray)

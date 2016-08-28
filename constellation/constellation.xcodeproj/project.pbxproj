@@ -20,6 +20,10 @@
 		F64266E51D6A750500C9C05B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64266E41D6A750500C9C05B /* ViewController.swift */; };
 		F64266EA1D6A750500C9C05B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F64266E91D6A750500C9C05B /* Assets.xcassets */; };
 		F64266ED1D6A750500C9C05B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64266EB1D6A750500C9C05B /* LaunchScreen.storyboard */; };
+		F6F307641D72675600CCADD9 /* kltTrackingOBJ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6F307601D72675600CCADD9 /* kltTrackingOBJ.cpp */; };
+		F6F307651D72675600CCADD9 /* trackingOBJ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6F307621D72675600CCADD9 /* trackingOBJ.cpp */; };
+		F6F307681D7267E100CCADD9 /* commonCvFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6F307661D7267E100CCADD9 /* commonCvFunctions.cpp */; };
+		F6F3076B1D7267F000CCADD9 /* orException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6F307691D7267F000CCADD9 /* orException.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,14 @@
 		F64266E91D6A750500C9C05B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F64266EC1D6A750500C9C05B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F64266EE1D6A750500C9C05B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6F307601D72675600CCADD9 /* kltTrackingOBJ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kltTrackingOBJ.cpp; sourceTree = "<group>"; };
+		F6F307611D72675600CCADD9 /* kltTrackingOBJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kltTrackingOBJ.h; sourceTree = "<group>"; };
+		F6F307621D72675600CCADD9 /* trackingOBJ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trackingOBJ.cpp; sourceTree = "<group>"; };
+		F6F307631D72675600CCADD9 /* trackingOBJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trackingOBJ.h; sourceTree = "<group>"; };
+		F6F307661D7267E100CCADD9 /* commonCvFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = commonCvFunctions.cpp; sourceTree = "<group>"; };
+		F6F307671D7267E100CCADD9 /* commonCvFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commonCvFunctions.h; sourceTree = "<group>"; };
+		F6F307691D7267F000CCADD9 /* orException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = orException.cpp; sourceTree = "<group>"; };
+		F6F3076A1D7267F000CCADD9 /* orException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orException.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,7 @@
 				F61EC35E1D6CA053007D2B55 /* GeometryTypes.hpp */,
 				F61EC3601D6CA065007D2B55 /* CameraCalibration.cpp */,
 				F61EC3611D6CA065007D2B55 /* CameraCalibration.hpp */,
+				F6F3075D1D72664000CCADD9 /* Tracking */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -130,6 +143,29 @@
 				F61EC3411D6BD243007D2B55 /* Frameworks */,
 			);
 			path = constellation;
+			sourceTree = "<group>";
+		};
+		F6F3075D1D72664000CCADD9 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				F6F307601D72675600CCADD9 /* kltTrackingOBJ.cpp */,
+				F6F307611D72675600CCADD9 /* kltTrackingOBJ.h */,
+				F6F307621D72675600CCADD9 /* trackingOBJ.cpp */,
+				F6F307631D72675600CCADD9 /* trackingOBJ.h */,
+				F6F3076C1D72680A00CCADD9 /* Helper */,
+			);
+			name = Tracking;
+			sourceTree = "<group>";
+		};
+		F6F3076C1D72680A00CCADD9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F6F307661D7267E100CCADD9 /* commonCvFunctions.cpp */,
+				F6F307671D7267E100CCADD9 /* commonCvFunctions.h */,
+				F6F307691D7267F000CCADD9 /* orException.cpp */,
+				F6F3076A1D7267F000CCADD9 /* orException.h */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,14 +240,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F307641D72675600CCADD9 /* kltTrackingOBJ.cpp in Sources */,
 				F64266E51D6A750500C9C05B /* ViewController.swift in Sources */,
 				F61EC3561D6C9FFB007D2B55 /* ARPipeline.cpp in Sources */,
 				F61EC35C1D6CA043007D2B55 /* Pattern.cpp in Sources */,
 				F61EC3621D6CA065007D2B55 /* CameraCalibration.cpp in Sources */,
+				F6F307681D7267E100CCADD9 /* commonCvFunctions.cpp in Sources */,
 				F61EC35F1D6CA053007D2B55 /* GeometryTypes.cpp in Sources */,
 				F61EC3591D6CA02F007D2B55 /* PatternDetector.cpp in Sources */,
+				F6F3076B1D7267F000CCADD9 /* orException.cpp in Sources */,
 				F61EC3391D6AD4D2007D2B55 /* CVWrapper.mm in Sources */,
 				F64266E31D6A750500C9C05B /* AppDelegate.swift in Sources */,
+				F6F307651D72675600CCADD9 /* trackingOBJ.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

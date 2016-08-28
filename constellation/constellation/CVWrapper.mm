@@ -12,18 +12,25 @@
 #import "CVWrapper.h"
 #import "CVWrapperDelegate.h"
 #import "ARPipeline.hpp"
+#import "trackingOBJ.h"
+#import "commonCvFunctions.h"
+
 #import <opencv2/imgproc/imgproc.hpp>
 #import <opencv2/highgui/cap_ios.h>
 
 #include <iostream>
+
+//TODO: take still photos of needle objects to be searched for in haystack camera capture session
+//TODO: pass photos to wrapper and call find object on each landmark (needle object)
+//TODO: implement object tracking once object is recognized
 @interface CVWrapper()<CvVideoCameraDelegate> {
     cv::Mat query_image;
     bool track_f;
     cv::Size frame_size;
     int query_scale;
-    
+    bool isRecognized;
     NSDate *_lastFrameTime;
-    
+    cvar::trackingOBJ* trckOBJ;
     CGFloat cx;
     CGFloat cy;
     CGFloat fx;
@@ -60,28 +67,40 @@
     fx = std::abs(CGFloat(dim.width) / (2 * tan(HFOV / 180 * CGFloat(M_PI) / 2)));
     fy = std::abs(CGFloat(dim.height) / (2 * tan(VFOV / 180 * CGFloat(M_PI) / 2)));
 //    printf("fx=%f cx=%f fy=%f cy=%f\n", fx, cx, fy, cy);
+    
+    isRecognized = false;
+    trckOBJ = cvar::trackingOBJ::create(cvar::trackingOBJ::TRACKER_KLT);
 }
 
 - (void)processImage:(cv::Mat&)image {
     
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"pic1" ofType:@"bmp"];
-//    const char * cpath = [path cStringUsingEncoding:NSUTF8StringEncoding];
-//    cv::Mat patternImage = cv::imread( cpath, CV_LOAD_IMAGE_ANYCOLOR );
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"pic1" ofType:@"bmp"];
+    const char * cpath = [path cStringUsingEncoding:NSUTF8StringEncoding];
+    cv::Mat patternImage = cv::imread( cpath, CV_LOAD_IMAGE_ANYCOLOR );
+    [self searchByMat:patternImage image:image];
     
-    UIImage *img = [UIImage imageNamed:@"Altoids.png"];
-    [self processFrame:img image:image];
+//    UIImage *img = [UIImage imageNamed:@"Altoids.png"];
+//    [self processFrame:img image:image];
+//
+//    UIImage *img2 = [UIImage imageNamed:@"IPDCLogo.png"];
+//    [self processFrame:img2 image:image];
 
-    UIImage *img2 = [UIImage imageNamed:@"IPDCLogo.png"];
-    [self processFrame:img2 image:image];
+//note: had to scale image down considerably to get matching to work. th image was captured from the camera app and transferred to the project folder as a jpg
+//    UIImage *img = [UIImage imageNamed:@"shoe"];
+//    [self searchByUIImage:img image:image];
     
 }
 
-- (void) processFrame:(UIImage *) img image: (cv::Mat&)image {
+- (void) searchByUIImage:(UIImage *) img image: (cv::Mat&)image {
     cv::Mat patternImage = [self cvMatFromUIImage:img];
+    [self searchByMat:patternImage image:image];
+}
+
+- (void) searchByMat:(cv::Mat&) img image: (cv::Mat&)image {
     
     //rotate 90 degrees
-    transpose(patternImage, patternImage);
-    flip(patternImage, patternImage,1); //transpose+flip(1)=CW
+    transpose(img, img);
+    flip(img, img,1); //transpose+flip(1)=CW
     
 //    fx=1229 cx=36 fy=1153 cy=640
 //[1136, 320, 1041, 240]
@@ -89,9 +108,27 @@
     
 //    [self insertPatternIntoCameraFrame:patternImage image:image];
     
-    ARPipeline pipeline(patternImage, calibration);
-    pipeline.processFrame(image);
+    ARPipeline pipeline(img, calibration);
     
+    if (!isRecognized) {
+        printf("still looking...\n");
+        isRecognized = pipeline.processFrame(image);
+        if (isRecognized) {
+            cv::Mat frame;
+            cv::cvtColor(image, frame, cv::COLOR_BGRA2GRAY);
+            cv::resize(frame, frame, image.size());
+            
+            trckOBJ->startTracking(frame, pipeline.m_patternInfo.points2d);
+        }
+    } else {
+        printf("image found\n");
+        //start tracking with KLT
+        if (!trckOBJ->onTracking(image)){
+            isRecognized = false;
+        } else {
+            isRecognized = true;
+        }
+    }
     
     [self calcFPS];
 
