@@ -79,16 +79,18 @@
     cv::Mat patternImage = cv::imread( cpath, CV_LOAD_IMAGE_ANYCOLOR );
     [self searchByMat:patternImage image:image];
     
-//    UIImage *img = [UIImage imageNamed:@"Altoids.png"];
-//    [self processFrame:img image:image];
-//
-//    UIImage *img2 = [UIImage imageNamed:@"IPDCLogo.png"];
-//    [self processFrame:img2 image:image];
+    UIImage *img = [UIImage imageNamed:@"Altoids.png"];
+    [self searchByUIImage:img image:image];
 
-//note: had to scale image down considerably to get matching to work. th image was captured from the camera app and transferred to the project folder as a jpg
+//note: app can't handle searching for 2 uiimages at the same time; ocassionally crashes when searching for 1 bmp and 1 uiimage; crashes occur on solvepnp function
+//    UIImage *img2 = [UIImage imageNamed:@"IPDCLogo.png"];
+//    [self searchByUIImage:img2 image:image];
+
+//note: had to scale down the image dimentions a considerabe amount to get matching to work. the image was captured from the camera app and transferred to the project folder as a jpg
+
 //    UIImage *img = [UIImage imageNamed:@"shoe"];
 //    [self searchByUIImage:img image:image];
-    
+
 }
 
 - (void) searchByUIImage:(UIImage *) img image: (cv::Mat&)image {
