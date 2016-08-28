@@ -24,13 +24,15 @@
 //TODO: pass photos to wrapper and call find object on each landmark (needle object)
 //TODO: implement object tracking once object is recognized
 @interface CVWrapper()<CvVideoCameraDelegate> {
-    cv::Mat query_image;
-    bool track_f;
-    cv::Size frame_size;
-    int query_scale;
+    cv::Mat patternImage;
+    cv::Mat cameraImage;
+    bool shouldRotate;
+    bool trackCurrentFrame;
+    bool isTrackingCustomFrame;
     bool isRecognized;
     NSDate *_lastFrameTime;
     cvar::trackingOBJ* trckOBJ;
+    
     CGFloat cx;
     CGFloat cy;
     CGFloat fx;
@@ -68,28 +70,47 @@
     fy = std::abs(CGFloat(dim.height) / (2 * tan(VFOV / 180 * CGFloat(M_PI) / 2)));
 //    printf("fx=%f cx=%f fy=%f cy=%f\n", fx, cx, fy, cy);
     
+    trackCurrentFrame = false;
+    isTrackingCustomFrame = false;
     isRecognized = false;
+    shouldRotate = true;
     trckOBJ = cvar::trackingOBJ::create(cvar::trackingOBJ::TRACKER_KLT);
+}
+
+- (void) trackThisFrame {
+    trackCurrentFrame = true;
 }
 
 - (void)processImage:(cv::Mat&)image {
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"pic1" ofType:@"bmp"];
-    const char * cpath = [path cStringUsingEncoding:NSUTF8StringEncoding];
-    cv::Mat patternImage = cv::imread( cpath, CV_LOAD_IMAGE_ANYCOLOR );
+    if (trackCurrentFrame) {
+        cv::resize(image, cameraImage, cv::Size(image.rows/4, image.cols / 4));
+        isTrackingCustomFrame = true;
+        trackCurrentFrame = false;
+        shouldRotate = false;
+    }
+    
+    if (isTrackingCustomFrame){
+        patternImage = cameraImage;
+    } else {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"pic1" ofType:@"bmp"];
+        const char * cpath = [path cStringUsingEncoding:NSUTF8StringEncoding];
+        patternImage = cv::imread( cpath, CV_LOAD_IMAGE_ANYCOLOR );
+    }
+    
     [self searchByMat:patternImage image:image];
     
-    UIImage *img = [UIImage imageNamed:@"Altoids.png"];
-    [self searchByUIImage:img image:image];
-
-//note: app can't handle searching for 2 uiimages at the same time; ocassionally crashes when searching for 1 bmp and 1 uiimage; crashes occur on solvepnp function
-//    UIImage *img2 = [UIImage imageNamed:@"IPDCLogo.png"];
-//    [self searchByUIImage:img2 image:image];
-
-//note: had to scale down the image dimentions a considerabe amount to get matching to work. the image was captured from the camera app and transferred to the project folder as a jpg
-
-//    UIImage *img = [UIImage imageNamed:@"shoe"];
-//    [self searchByUIImage:img image:image];
+    //    UIImage *img = [UIImage imageNamed:@"Altoids.png"];
+    //    [self searchByUIImage:img image:image];
+    
+    //note: app can't handle searching for 2 uiimages at the same time; ocassionally crashes when searching for 1 bmp and 1 uiimage; crashes occur on solvepnp function
+    //    UIImage *img2 = [UIImage imageNamed:@"IPDCLogo.png"];
+    //    [self searchByUIImage:img2 image:image];
+    
+    //note: had to scale down the image dimentions a considerabe amount to get matching to work. the image was captured from the camera app and transferred to the project folder as a jpg
+    
+    //    UIImage *img = [UIImage imageNamed:@"shoe"];
+    //    [self searchByUIImage:img image:image];
 
 }
 
@@ -100,12 +121,16 @@
 
 - (void) searchByMat:(cv::Mat&) img image: (cv::Mat&)image {
     
-    //rotate 90 degrees
-    transpose(img, img);
-    flip(img, img,1); //transpose+flip(1)=CW
+    // note: don't rotate images captured from live camera;
+    if (shouldRotate){
+        //rotate 90 degrees
+        transpose(img, img);
+        flip(img, img,1); //transpose+flip(1)=CW
+    }
     
-//    fx=1229 cx=36 fy=1153 cy=640
-//[1136, 320, 1041, 240]
+    //    fx=1229 cx=36 fy=1153 cy=640
+    //[1136, 320, 1041, 240]
+    
     CameraCalibration calibration(fx, cx, fy, cy);
     
 //    [self insertPatternIntoCameraFrame:patternImage image:image];

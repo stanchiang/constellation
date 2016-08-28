@@ -16,4 +16,5 @@
 @property (nonatomic, weak) id<CVWrapperDelegate> delegate;
 - (void) startCamera:(UIView *) view;
 - (void) setupVars;
+- (void) trackThisFrame;
 @end
