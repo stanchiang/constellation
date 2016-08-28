@@ -84,7 +84,7 @@
 - (void)processImage:(cv::Mat&)image {
     
     if (trackCurrentFrame) {
-        cv::resize(image, cameraImage, cv::Size(image.rows/4, image.cols / 4));
+        cv::resize(image, cameraImage, cv::Size(image.rows * 0.99, image.cols * 0.99 ));
         isTrackingCustomFrame = true;
         trackCurrentFrame = false;
         shouldRotate = false;
@@ -140,7 +140,7 @@
     if (!isRecognized) {
         printf("still looking...\n");
         isRecognized = pipeline.processFrame(image);
-        if (isRecognized) {
+        if (isRecognized && !pipeline.m_patternInfo.points2d.empty()) {
             cv::Mat frame;
             cv::cvtColor(image, frame, cv::COLOR_BGRA2GRAY);
             cv::resize(frame, frame, image.size());
