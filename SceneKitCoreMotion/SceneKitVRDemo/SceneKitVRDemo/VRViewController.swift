@@ -15,12 +15,6 @@ class VRViewController: UIViewController {
     let scnScene = SCNScene() // a 3D scene
     let scnView = SCNView()
     
-    var boxGeometry = SCNBox() // a cube
-    var boxNode = SCNNode() // node to which the cube is attached
-    
-    var cylinderGeometry = SCNCylinder()
-    var cylinderNode = SCNNode()
-    
     // camera and node to which the camera is attached
     let Camera = SCNCamera()
     let CameraNode = SCNNode()
