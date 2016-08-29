@@ -54,4 +54,16 @@ class ColorMaterial {
         return magentaMaterial
     }
     
+    class func cyanColor() -> SCNMaterial {
+        let cyanMaterial = SCNMaterial()
+        cyanMaterial.diffuse.contents = UIColor.cyanColor()
+        return cyanMaterial
+    }
+    
+    class func brownColor() -> SCNMaterial {
+        let brownMaterial = SCNMaterial()
+        brownMaterial.diffuse.contents = UIColor.brownColor()
+        return brownMaterial
+    }
+    
 }

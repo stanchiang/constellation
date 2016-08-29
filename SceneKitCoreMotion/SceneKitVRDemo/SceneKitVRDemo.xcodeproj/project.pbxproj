@@ -8,21 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		99EB52111D5A1C68005402CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB52101D5A1C68005402CC /* AppDelegate.swift */; };
-		99EB52131D5A1C68005402CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB52121D5A1C68005402CC /* ViewController.swift */; };
-		99EB52161D5A1C68005402CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EB52141D5A1C68005402CC /* Main.storyboard */; };
+		99EB52131D5A1C68005402CC /* VRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB52121D5A1C68005402CC /* VRViewController.swift */; };
 		99EB52181D5A1C68005402CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EB52171D5A1C68005402CC /* Assets.xcassets */; };
 		99EB521B1D5A1C68005402CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EB52191D5A1C68005402CC /* LaunchScreen.storyboard */; };
+		F69FCD511D73E35000231B90 /* ZoomRotateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69FCD501D73E35000231B90 /* ZoomRotateViewController.swift */; };
+		F69FCD531D73E41700231B90 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F69FCD521D73E41700231B90 /* art.scnassets */; };
 		F6F3076E1D73976500CCADD9 /* ColorChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F3076D1D73976500CCADD9 /* ColorChooser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		99EB520D1D5A1C68005402CC /* SceneKitVRDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneKitVRDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EB52101D5A1C68005402CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		99EB52121D5A1C68005402CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		99EB52151D5A1C68005402CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99EB52121D5A1C68005402CC /* VRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRViewController.swift; sourceTree = "<group>"; };
 		99EB52171D5A1C68005402CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99EB521A1D5A1C68005402CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99EB521C1D5A1C68005402CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F69FCD501D73E35000231B90 /* ZoomRotateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomRotateViewController.swift; sourceTree = "<group>"; };
+		F69FCD521D73E41700231B90 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		F6F3076D1D73976500CCADD9 /* ColorChooser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorChooser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,9 +60,10 @@
 			children = (
 				F6F3076D1D73976500CCADD9 /* ColorChooser.swift */,
 				99EB52101D5A1C68005402CC /* AppDelegate.swift */,
-				99EB52121D5A1C68005402CC /* ViewController.swift */,
-				99EB52141D5A1C68005402CC /* Main.storyboard */,
+				99EB52121D5A1C68005402CC /* VRViewController.swift */,
+				F69FCD501D73E35000231B90 /* ZoomRotateViewController.swift */,
 				99EB52171D5A1C68005402CC /* Assets.xcassets */,
+				F69FCD521D73E41700231B90 /* art.scnassets */,
 				99EB52191D5A1C68005402CC /* LaunchScreen.storyboard */,
 				99EB521C1D5A1C68005402CC /* Info.plist */,
 			);
@@ -126,8 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				99EB521B1D5A1C68005402CC /* LaunchScreen.storyboard in Resources */,
+				F69FCD531D73E41700231B90 /* art.scnassets in Resources */,
 				99EB52181D5A1C68005402CC /* Assets.xcassets in Resources */,
-				99EB52161D5A1C68005402CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99EB52131D5A1C68005402CC /* ViewController.swift in Sources */,
+				F69FCD511D73E35000231B90 /* ZoomRotateViewController.swift in Sources */,
+				99EB52131D5A1C68005402CC /* VRViewController.swift in Sources */,
 				99EB52111D5A1C68005402CC /* AppDelegate.swift in Sources */,
 				F6F3076E1D73976500CCADD9 /* ColorChooser.swift in Sources */,
 			);
@@ -147,14 +151,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		99EB52141D5A1C68005402CC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				99EB52151D5A1C68005402CC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		99EB52191D5A1C68005402CC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
