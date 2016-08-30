@@ -14,6 +14,7 @@
 		F69FCD511D73E35000231B90 /* ZoomRotateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69FCD501D73E35000231B90 /* ZoomRotateViewController.swift */; };
 		F69FCD531D73E41700231B90 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F69FCD521D73E41700231B90 /* art.scnassets */; };
 		F6F3076E1D73976500CCADD9 /* ColorChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F3076D1D73976500CCADD9 /* ColorChooser.swift */; };
+		F6FD3CAC1D75385A00E40DDD /* CMDeviceMotionExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FD3CAB1D75385A00E40DDD /* CMDeviceMotionExtention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F69FCD501D73E35000231B90 /* ZoomRotateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomRotateViewController.swift; sourceTree = "<group>"; };
 		F69FCD521D73E41700231B90 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		F6F3076D1D73976500CCADD9 /* ColorChooser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorChooser.swift; sourceTree = "<group>"; };
+		F6FD3CAB1D75385A00E40DDD /* CMDeviceMotionExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMDeviceMotionExtention.swift; path = ../CMDeviceMotionExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				99EB52101D5A1C68005402CC /* AppDelegate.swift */,
 				99EB52121D5A1C68005402CC /* VRViewController.swift */,
 				F69FCD501D73E35000231B90 /* ZoomRotateViewController.swift */,
+				F6FD3CAB1D75385A00E40DDD /* CMDeviceMotionExtention.swift */,
 				99EB52171D5A1C68005402CC /* Assets.xcassets */,
 				F69FCD521D73E41700231B90 /* art.scnassets */,
 				99EB52191D5A1C68005402CC /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6FD3CAC1D75385A00E40DDD /* CMDeviceMotionExtention.swift in Sources */,
 				F69FCD511D73E35000231B90 /* ZoomRotateViewController.swift in Sources */,
 				99EB52131D5A1C68005402CC /* VRViewController.swift in Sources */,
 				99EB52111D5A1C68005402CC /* AppDelegate.swift in Sources */,

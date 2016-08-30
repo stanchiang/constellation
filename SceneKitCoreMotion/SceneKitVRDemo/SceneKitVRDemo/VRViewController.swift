@@ -92,16 +92,15 @@ class VRViewController: UIViewController, UIGestureRecognizerDelegate, SCNSceneR
     
     func setupMotion() {
         // time for motion update
-        motionManager.deviceMotionUpdateInterval = 1.0 / 60.0
         if motionManager.deviceMotionAvailable {
-            motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: { (devMotion, error) -> Void in
-                //change the  camera node euler angle in x, y, z axis
-                self.CameraNode.eulerAngles = SCNVector3(
-                    -Float((self.motionManager.deviceMotion?.attitude.roll)!) - Float(M_PI_2),
-                    Float((self.motionManager.deviceMotion?.attitude.yaw)!),
-                    -Float((self.motionManager.deviceMotion?.attitude.pitch)!)
-                )
-            })
+            motionManager.deviceMotionUpdateInterval = 1.0 / 60.0
+            motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue(), withHandler: deviceDidMove)
+        }
+    }
+    
+    func deviceDidMove(motion: CMDeviceMotion?, error: NSError?) {
+        if let motion = motion {
+            CameraNode.orientation = motion.gaze(atOrientation: UIApplication.sharedApplication().statusBarOrientation)
         }
     }
     
@@ -116,7 +115,7 @@ class VRViewController: UIViewController, UIGestureRecognizerDelegate, SCNSceneR
         let xVec = impulse.x * cos(angle) - impulse.z * sin(angle)
         let zVec = impulse.x * -sin(angle) - impulse.z * cos(angle)
         
-        CameraNode.position = SCNVector3(CameraNode.position.x + xVec/5, CameraNode.position.y, CameraNode.position.z + zVec/5)
+        CameraNode.position = SCNVector3(CameraNode.position.x - xVec/5, CameraNode.position.y, CameraNode.position.z - zVec/5)
     }
     
     
@@ -145,3 +144,4 @@ class VRViewController: UIViewController, UIGestureRecognizerDelegate, SCNSceneR
         }
     }
 }
+
