@@ -10,7 +10,7 @@ import UIKit
 import SceneKit // for 3D view
 import CoreMotion // for tracking device motion
 
-class VRViewController: UIViewController {
+class VRViewController: UIViewController, UIGestureRecognizerDelegate, SCNSceneRendererDelegate {
     
     let scnScene = SCNScene() // a 3D scene
     let scnView = SCNView()
@@ -26,8 +26,8 @@ class VRViewController: UIViewController {
     // motion manager instance
     let motionManager = CMMotionManager()
     
-    let forwardButton = UIButton()
-    let backwardButton = UIButton()
+    // gesture recognizers
+    var walkGesture: UIPanGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,52 +40,16 @@ class VRViewController: UIViewController {
         setupFloor()
         setupMotion()
         
-        addButtons()
+        addGestures()
     }
     override func viewDidLayoutSubviews() {
         scnView.frame = self.view.frame
-        
-        forwardButton.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor).active = true
-        forwardButton.bottomAnchor.constraintEqualToAnchor(bottomLayoutGuide.topAnchor).active = true
-        forwardButton.widthAnchor.constraintEqualToConstant(100).active = true
-        forwardButton.heightAnchor.constraintEqualToAnchor(forwardButton.widthAnchor).active = true
-        
-        backwardButton.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor).active = true
-        backwardButton.bottomAnchor.constraintEqualToAnchor(bottomLayoutGuide.topAnchor).active = true
-        backwardButton.widthAnchor.constraintEqualToConstant(100).active = true
-        backwardButton.heightAnchor.constraintEqualToAnchor(backwardButton.widthAnchor).active = true
-        
-    }
-    
-    func addButtons(){
-        forwardButton.translatesAutoresizingMaskIntoConstraints = false
-        forwardButton.addTarget(self, action: #selector(forwardAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-        forwardButton.backgroundColor = UIColor.greenColor()
-        forwardButton.setTitle("forward", forState: UIControlState.Normal)
-        view.addSubview(forwardButton)
-        
-        
-        backwardButton.translatesAutoresizingMaskIntoConstraints = false
-        backwardButton.addTarget(self, action: #selector(backwardAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-        backwardButton.backgroundColor = UIColor.redColor()
-        backwardButton.setTitle("backward", forState: UIControlState.Normal)
-        view.addSubview(backwardButton)
-
-    }
-    
-    func forwardAction(sender: UIButton) {
-        print("willMoveForward")
-        CameraNode.position = SCNVector3(CameraNode.position.x, CameraNode.position.y, CameraNode.position.z-1)
-    }
-    
-    func backwardAction(sender: UIButton) {
-        print("willMoveBackward")
-        CameraNode.position = SCNVector3(CameraNode.position.x, CameraNode.position.y, CameraNode.position.z+1)
     }
     
     //assign scene to each view
     func setupScene() {
         scnView.scene = scnScene
+        scnView.delegate = self
     }
     
     func addTestCubes(){
@@ -138,6 +102,46 @@ class VRViewController: UIViewController {
                     -Float((self.motionManager.deviceMotion?.attitude.pitch)!)
                 )
             })
+        }
+    }
+    
+    func renderer(aRenderer: SCNSceneRenderer, updateAtTime time: NSTimeInterval) {
+        //get walk gesture translation
+        let translation = walkGesture.translationInView(self.view)
+        
+        //create impulse vector for hero
+        let angle = CameraNode.rotation.w * CameraNode.rotation.y
+        let impulse = SCNVector3(x: max(-1, min(1, Float(translation.x) / 50)), y: 0, z: max(-1, min(1, Float(-translation.y) / 50)))
+        
+        let xVec = impulse.x * cos(angle) - impulse.z * sin(angle)
+        let zVec = impulse.x * -sin(angle) - impulse.z * cos(angle)
+        
+        CameraNode.position = SCNVector3(CameraNode.position.x + xVec/5, CameraNode.position.y, CameraNode.position.z + zVec/5)
+    }
+    
+    
+    //Gesture Recognizers
+    func addGestures() {
+        
+        //walk gesture
+        walkGesture = UIPanGestureRecognizer(target: self, action: #selector(VRViewController.walkGestureRecognized(_:)))
+        walkGesture.delegate = self
+        view.addGestureRecognizer(walkGesture)
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        
+        if gestureRecognizer == walkGesture {
+            return touch.locationInView(view).x < view.frame.size.width / 2
+        }
+        
+        return true
+    }
+    
+    func walkGestureRecognized(gesture: UIPanGestureRecognizer) {
+        
+        if gesture.state == UIGestureRecognizerState.Ended || gesture.state == UIGestureRecognizerState.Cancelled {
+            gesture.setTranslation(CGPointZero, inView: self.view)
         }
     }
 }
