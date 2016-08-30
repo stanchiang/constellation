@@ -1,0 +1,8 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/DCIntrospect-ARC" "${PODS_ROOT}/Headers/Public/PrettyTimestamp" "${PODS_ROOT}/Headers/Public/UIImage+PDF" "${PODS_ROOT}/Headers/Public/proj4"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/DCIntrospect-ARC" "$PODS_CONFIGURATION_BUILD_DIR/PrettyTimestamp" "$PODS_CONFIGURATION_BUILD_DIR/UIImage+PDF" "$PODS_CONFIGURATION_BUILD_DIR/proj4"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/DCIntrospect-ARC" -isystem "${PODS_ROOT}/Headers/Public/PrettyTimestamp" -isystem "${PODS_ROOT}/Headers/Public/UIImage+PDF" -isystem "${PODS_ROOT}/Headers/Public/proj4"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"DCIntrospect-ARC" -l"PrettyTimestamp" -l"UIImage+PDF" -l"proj4" -framework "CoreGraphics" -framework "Foundation" -framework "QuartzCore" -framework "UIKit"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}/Pods
