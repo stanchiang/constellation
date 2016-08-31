@@ -12,6 +12,8 @@ import CoreMotion // for tracking device motion
 
 class VRViewController: UIViewController, UIGestureRecognizerDelegate, SCNSceneRendererDelegate {
     
+    let sessionHandler = SessionHandler()
+    
     let scnScene = SCNScene() // a 3D scene
     let scnView = SCNView()
     
@@ -31,7 +33,8 @@ class VRViewController: UIViewController, UIGestureRecognizerDelegate, SCNSceneR
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        sessionHandler.openSession()
+        setupCameraLayer()
         // add view as subview of the main view
         self.view.addSubview(scnView)
         setupScene()
@@ -42,6 +45,13 @@ class VRViewController: UIViewController, UIGestureRecognizerDelegate, SCNSceneR
         
         addGestures()
     }
+    
+    func setupCameraLayer(){
+        let layer = sessionHandler.layer
+        layer.frame = self.view.bounds
+        self.view.layer.addSublayer(layer)
+    }
+    
     override func viewDidLayoutSubviews() {
         scnView.frame = self.view.frame
     }
@@ -49,6 +59,7 @@ class VRViewController: UIViewController, UIGestureRecognizerDelegate, SCNSceneR
     //assign scene to each view
     func setupScene() {
         scnView.scene = scnScene
+        scnView.backgroundColor = UIColor.clearColor()
         scnView.delegate = self
     }
     

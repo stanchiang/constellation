@@ -11,6 +11,7 @@
 		99EB52131D5A1C68005402CC /* VRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB52121D5A1C68005402CC /* VRViewController.swift */; };
 		99EB52181D5A1C68005402CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EB52171D5A1C68005402CC /* Assets.xcassets */; };
 		99EB521B1D5A1C68005402CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EB52191D5A1C68005402CC /* LaunchScreen.storyboard */; };
+		F6260AAD1D7763AF00D394A2 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6260AAC1D7763AF00D394A2 /* SessionHandler.swift */; };
 		F69FCD511D73E35000231B90 /* ZoomRotateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69FCD501D73E35000231B90 /* ZoomRotateViewController.swift */; };
 		F69FCD531D73E41700231B90 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F69FCD521D73E41700231B90 /* art.scnassets */; };
 		F6F3076E1D73976500CCADD9 /* ColorChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F3076D1D73976500CCADD9 /* ColorChooser.swift */; };
@@ -24,6 +25,7 @@
 		99EB52171D5A1C68005402CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99EB521A1D5A1C68005402CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99EB521C1D5A1C68005402CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6260AAC1D7763AF00D394A2 /* SessionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
 		F69FCD501D73E35000231B90 /* ZoomRotateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomRotateViewController.swift; sourceTree = "<group>"; };
 		F69FCD521D73E41700231B90 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		F6F3076D1D73976500CCADD9 /* ColorChooser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorChooser.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				99EB52121D5A1C68005402CC /* VRViewController.swift */,
 				F69FCD501D73E35000231B90 /* ZoomRotateViewController.swift */,
 				F6FD3CAB1D75385A00E40DDD /* CMDeviceMotionExtention.swift */,
+				F6260AAC1D7763AF00D394A2 /* SessionHandler.swift */,
 				99EB52171D5A1C68005402CC /* Assets.xcassets */,
 				F69FCD521D73E41700231B90 /* art.scnassets */,
 				99EB52191D5A1C68005402CC /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6FD3CAC1D75385A00E40DDD /* CMDeviceMotionExtention.swift in Sources */,
+				F6260AAD1D7763AF00D394A2 /* SessionHandler.swift in Sources */,
 				F69FCD511D73E35000231B90 /* ZoomRotateViewController.swift in Sources */,
 				99EB52131D5A1C68005402CC /* VRViewController.swift in Sources */,
 				99EB52111D5A1C68005402CC /* AppDelegate.swift in Sources */,
