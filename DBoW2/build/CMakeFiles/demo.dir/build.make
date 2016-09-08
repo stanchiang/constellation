@@ -98,6 +98,7 @@ demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_shape.3.1.0.dylib
 demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_photo.3.1.0.dylib
 demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_objdetect.3.1.0.dylib
 demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_calib3d.3.1.0.dylib
+demo: dependencies/install/lib/libDLib.dylib
 demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_video.3.1.0.dylib
 demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_features2d.3.1.0.dylib
 demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_ml.3.1.0.dylib

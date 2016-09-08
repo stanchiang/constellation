@@ -69,7 +69,6 @@ CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.o
  /usr/local/include/opencv2/highgui.hpp
  /usr/local/include/opencv2/highgui/highgui.hpp
  /usr/local/include/opencv2/highgui/highgui_c.h
- /usr/local/include/opencv2/imgproc.hpp
  /usr/local/include/opencv2/imgproc/imgproc.hpp
  /usr/local/include/opencv2/imgproc/types_c.h
 CMakeFiles/DLib.dir/src/DUtilsCV/GUI.cpp.o
@@ -109,9 +108,15 @@ CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o
  /usr/local/include/opencv2/core/operations.hpp
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/version.hpp
+ /usr/local/include/opencv2/features2d/features2d.hpp
+ /usr/local/include/opencv2/flann/config.h
+ /usr/local/include/opencv2/flann/defines.h
+ /usr/local/include/opencv2/flann/miniflann.hpp
  /usr/local/include/opencv2/highgui.hpp
  /usr/local/include/opencv2/highgui/highgui.hpp
  /usr/local/include/opencv2/highgui/highgui_c.h
+ /usr/local/include/opencv2/imgproc/imgproc.hpp
+ /usr/local/include/opencv2/imgproc/types_c.h
 CMakeFiles/DLib.dir/src/DUtilsCV/Mat.cpp.o
  /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtilsCV/Mat.h
  /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/Mat.cpp
@@ -315,7 +320,10 @@ CMakeFiles/DLib.dir/src/DVision/FSolver.cpp.o
  /usr/local/include/opencv2/core/operations.hpp
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/imgproc.hpp
+ /usr/local/include/opencv2/features2d/features2d.hpp
+ /usr/local/include/opencv2/flann/config.h
+ /usr/local/include/opencv2/flann/defines.h
+ /usr/local/include/opencv2/flann/miniflann.hpp
  /usr/local/include/opencv2/imgproc/imgproc.hpp
  /usr/local/include/opencv2/imgproc/types_c.h
 CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o
@@ -353,7 +361,10 @@ CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o
  /usr/local/include/opencv2/core/operations.hpp
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/imgproc.hpp
+ /usr/local/include/opencv2/features2d/features2d.hpp
+ /usr/local/include/opencv2/flann/config.h
+ /usr/local/include/opencv2/flann/defines.h
+ /usr/local/include/opencv2/flann/miniflann.hpp
  /usr/local/include/opencv2/imgproc/imgproc.hpp
  /usr/local/include/opencv2/imgproc/types_c.h
 CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o
@@ -382,6 +393,10 @@ CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o
  /usr/local/include/opencv2/core/operations.hpp
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/version.hpp
+ /usr/local/include/opencv2/features2d/features2d.hpp
+ /usr/local/include/opencv2/flann/config.h
+ /usr/local/include/opencv2/flann/defines.h
+ /usr/local/include/opencv2/flann/miniflann.hpp
  /usr/local/include/opencv2/imgproc.hpp
  /usr/local/include/opencv2/imgproc/imgproc.hpp
  /usr/local/include/opencv2/imgproc/types_c.h
@@ -395,7 +410,6 @@ CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o
  /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtilsCV/Transformations.h
  /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtilsCV/Types.h
  /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DVision/Matches.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DVision/SurfSet.h
  /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/Matches.cpp
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/core.hpp
@@ -404,7 +418,6 @@ CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o
  /usr/local/include/opencv2/core/operations.hpp
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann/config.h
  /usr/local/include/opencv2/flann/defines.h
@@ -412,7 +425,6 @@ CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o
  /usr/local/include/opencv2/highgui.hpp
  /usr/local/include/opencv2/highgui/highgui.hpp
  /usr/local/include/opencv2/highgui/highgui_c.h
- /usr/local/include/opencv2/imgproc.hpp
  /usr/local/include/opencv2/imgproc/imgproc.hpp
  /usr/local/include/opencv2/imgproc/types_c.h
 CMakeFiles/DLib.dir/src/DVision/PLYFile.cpp.o
@@ -465,38 +477,3 @@ CMakeFiles/DLib.dir/src/DVision/PixelPointFile.cpp.o
  /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/Timestamp.h
  /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DVision/PixelPointFile.h
  /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/PixelPointFile.cpp
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/BinaryFile.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/ConfigFile.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/DException.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/DUtils.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/DebugFunctions.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/FileFunctions.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/FileModes.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/LUT.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/LineFile.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/Math.hpp
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/Profiler.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/Random.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/STL.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/StringFunctions.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/TimeManager.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/Timestamp.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DVision/SurfSet.h
- /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/SurfSet.cpp
- /usr/local/include/opencv2/core.hpp
- /usr/local/include/opencv2/core/core.hpp
- /usr/local/include/opencv2/core/core_c.h
- /usr/local/include/opencv2/core/mat.hpp
- /usr/local/include/opencv2/core/operations.hpp
- /usr/local/include/opencv2/core/types_c.h
- /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/features2d.hpp
- /usr/local/include/opencv2/features2d/features2d.hpp
- /usr/local/include/opencv2/flann/config.h
- /usr/local/include/opencv2/flann/defines.h
- /usr/local/include/opencv2/flann/miniflann.hpp
- /usr/local/include/opencv2/highgui.hpp
- /usr/local/include/opencv2/highgui/highgui.hpp
- /usr/local/include/opencv2/highgui/highgui_c.h
- /usr/local/include/opencv2/xfeatures2d/nonfree.hpp

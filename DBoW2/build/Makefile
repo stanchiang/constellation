@@ -155,19 +155,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named DLib
-
-# Build rule for target.
-DLib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 DLib
-.PHONY : DLib
-
-# fast build rule for target.
-DLib/fast:
-	$(MAKE) -f CMakeFiles/DLib.dir/build.make CMakeFiles/DLib.dir/build
-.PHONY : DLib/fast
-
-#=============================================================================
 # Target rules for targets named demo
 
 # Build rule for target.
@@ -429,7 +416,6 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... DLib"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... install"

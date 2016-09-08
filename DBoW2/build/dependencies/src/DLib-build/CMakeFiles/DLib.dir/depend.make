@@ -68,7 +68,6 @@ CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.o: /usr/local/include/opencv2/flann
 CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.o: /usr/local/include/opencv2/highgui.hpp
 CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.o: /usr/local/include/opencv2/highgui/highgui.hpp
 CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.o: /usr/local/include/opencv2/highgui/highgui_c.h
-CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.o: /usr/local/include/opencv2/imgproc.hpp
 CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.o: /usr/local/include/opencv2/imgproc/imgproc.hpp
 CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.o: /usr/local/include/opencv2/imgproc/types_c.h
 
@@ -108,9 +107,15 @@ CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: /usr/local/include/opencv2/core/mat.h
 CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: /usr/local/include/opencv2/core/operations.hpp
 CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: /usr/local/include/opencv2/core/types_c.h
 CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: /usr/local/include/opencv2/core/version.hpp
+CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: /usr/local/include/opencv2/features2d/features2d.hpp
+CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: /usr/local/include/opencv2/flann/config.h
+CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: /usr/local/include/opencv2/flann/defines.h
+CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: /usr/local/include/opencv2/flann/miniflann.hpp
 CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: /usr/local/include/opencv2/highgui.hpp
 CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: /usr/local/include/opencv2/highgui/highgui.hpp
 CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: /usr/local/include/opencv2/highgui/highgui_c.h
+CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: /usr/local/include/opencv2/imgproc/imgproc.hpp
+CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: /usr/local/include/opencv2/imgproc/types_c.h
 
 CMakeFiles/DLib.dir/src/DUtilsCV/Mat.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtilsCV/Mat.h
 CMakeFiles/DLib.dir/src/DUtilsCV/Mat.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/Mat.cpp
@@ -314,7 +319,10 @@ CMakeFiles/DLib.dir/src/DVision/FSolver.cpp.o: /usr/local/include/opencv2/core/m
 CMakeFiles/DLib.dir/src/DVision/FSolver.cpp.o: /usr/local/include/opencv2/core/operations.hpp
 CMakeFiles/DLib.dir/src/DVision/FSolver.cpp.o: /usr/local/include/opencv2/core/types_c.h
 CMakeFiles/DLib.dir/src/DVision/FSolver.cpp.o: /usr/local/include/opencv2/core/version.hpp
-CMakeFiles/DLib.dir/src/DVision/FSolver.cpp.o: /usr/local/include/opencv2/imgproc.hpp
+CMakeFiles/DLib.dir/src/DVision/FSolver.cpp.o: /usr/local/include/opencv2/features2d/features2d.hpp
+CMakeFiles/DLib.dir/src/DVision/FSolver.cpp.o: /usr/local/include/opencv2/flann/config.h
+CMakeFiles/DLib.dir/src/DVision/FSolver.cpp.o: /usr/local/include/opencv2/flann/defines.h
+CMakeFiles/DLib.dir/src/DVision/FSolver.cpp.o: /usr/local/include/opencv2/flann/miniflann.hpp
 CMakeFiles/DLib.dir/src/DVision/FSolver.cpp.o: /usr/local/include/opencv2/imgproc/imgproc.hpp
 CMakeFiles/DLib.dir/src/DVision/FSolver.cpp.o: /usr/local/include/opencv2/imgproc/types_c.h
 
@@ -352,7 +360,10 @@ CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o: /usr/local/include/opencv2/core/m
 CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o: /usr/local/include/opencv2/core/operations.hpp
 CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o: /usr/local/include/opencv2/core/types_c.h
 CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o: /usr/local/include/opencv2/core/version.hpp
-CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o: /usr/local/include/opencv2/imgproc.hpp
+CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o: /usr/local/include/opencv2/features2d/features2d.hpp
+CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o: /usr/local/include/opencv2/flann/config.h
+CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o: /usr/local/include/opencv2/flann/defines.h
+CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o: /usr/local/include/opencv2/flann/miniflann.hpp
 CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o: /usr/local/include/opencv2/imgproc/imgproc.hpp
 CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o: /usr/local/include/opencv2/imgproc/types_c.h
 
@@ -381,6 +392,10 @@ CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o: /usr/local/include/opencv2
 CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o: /usr/local/include/opencv2/core/operations.hpp
 CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o: /usr/local/include/opencv2/core/types_c.h
 CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o: /usr/local/include/opencv2/core/version.hpp
+CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o: /usr/local/include/opencv2/features2d/features2d.hpp
+CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o: /usr/local/include/opencv2/flann/config.h
+CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o: /usr/local/include/opencv2/flann/defines.h
+CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o: /usr/local/include/opencv2/flann/miniflann.hpp
 CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o: /usr/local/include/opencv2/imgproc.hpp
 CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o: /usr/local/include/opencv2/imgproc/imgproc.hpp
 CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o: /usr/local/include/opencv2/imgproc/types_c.h
@@ -394,7 +409,6 @@ CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /Users/stan/constellation/DBoW2/b
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtilsCV/Transformations.h
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtilsCV/Types.h
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DVision/Matches.h
-CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DVision/SurfSet.h
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/Matches.cpp
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/core.hpp
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/core/core.hpp
@@ -403,7 +417,6 @@ CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/core/m
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/core/operations.hpp
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/core/types_c.h
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/core/version.hpp
-CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/features2d.hpp
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/features2d/features2d.hpp
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/flann/config.h
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/flann/defines.h
@@ -411,7 +424,6 @@ CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/flann/
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/highgui.hpp
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/highgui/highgui.hpp
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/highgui/highgui_c.h
-CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/imgproc.hpp
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/imgproc/imgproc.hpp
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /usr/local/include/opencv2/imgproc/types_c.h
 
@@ -464,39 +476,4 @@ CMakeFiles/DLib.dir/src/DVision/PixelPointFile.cpp.o: /Users/stan/constellation/
 CMakeFiles/DLib.dir/src/DVision/PixelPointFile.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/Timestamp.h
 CMakeFiles/DLib.dir/src/DVision/PixelPointFile.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DVision/PixelPointFile.h
 CMakeFiles/DLib.dir/src/DVision/PixelPointFile.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/PixelPointFile.cpp
-
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/BinaryFile.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/ConfigFile.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/DException.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/DUtils.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/DebugFunctions.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/FileFunctions.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/FileModes.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/LUT.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/LineFile.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/Math.hpp
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/Profiler.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/Random.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/STL.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/StringFunctions.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/TimeManager.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtils/Timestamp.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DVision/SurfSet.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/SurfSet.cpp
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/core.hpp
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/core/core.hpp
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/core/core_c.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/core/mat.hpp
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/core/operations.hpp
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/core/types_c.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/core/version.hpp
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/features2d.hpp
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/features2d/features2d.hpp
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/flann/config.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/flann/defines.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/flann/miniflann.hpp
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/highgui.hpp
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/highgui/highgui.hpp
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/highgui/highgui_c.h
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
 

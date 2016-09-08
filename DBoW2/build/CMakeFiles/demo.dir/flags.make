@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Pl
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /usr/local/include/opencv -isystem /usr/local/include -I/Users/stan/constellation/DBoW2/include/DBoW2 
+CXX_INCLUDES = -isystem /usr/local/include/opencv -isystem /usr/local/include -I/Users/stan/constellation/DBoW2/build/dependencies/install/include/DLib -I/Users/stan/constellation/DBoW2/build/dependencies/install/include/DLib/.. -I/Users/stan/constellation/DBoW2/build/dependencies/install/include/DLib/../DUtils -I/Users/stan/constellation/DBoW2/build/dependencies/install/include/DLib/../DUtilsCV -I/Users/stan/constellation/DBoW2/build/dependencies/install/include/DLib/../DVision -I/Users/stan/constellation/DBoW2/include/DBoW2 
 

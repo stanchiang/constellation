@@ -194,13 +194,19 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 DBoW2_BINARY_DIR:STATIC=/Users/stan/constellation/DBoW2/build
 
 //Dependencies for the target
-DBoW2_LIB_DEPENDS:STATIC=general;opencv_videostab;general;opencv_videoio;general;opencv_video;general;opencv_superres;general;opencv_stitching;general;opencv_shape;general;opencv_photo;general;opencv_objdetect;general;opencv_ml;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_highgui;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_calib3d;
+DBoW2_LIB_DEPENDS:STATIC=general;opencv_videostab;general;opencv_videoio;general;opencv_video;general;opencv_superres;general;opencv_stitching;general;opencv_shape;general;opencv_photo;general;opencv_objdetect;general;opencv_ml;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_highgui;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_calib3d;general;/Users/stan/constellation/DBoW2/build/dependencies/install/lib/libDLib.dylib;
 
 //Value Computed by CMake
 DBoW2_SOURCE_DIR:STATIC=/Users/stan/constellation/DBoW2
 
 //The directory containing a CMake configuration file for DLib.
-DLib_DIR:PATH=DLib_DIR-NOTFOUND
+DLib_DIR:PATH=/Users/stan/constellation/DBoW2/build/dependencies/install/lib/cmake/DLib
+
+//Path to a file.
+DLib_INCLUDE_DIR:PATH=/Users/stan/constellation/DBoW2/build/dependencies/install/include/DLib
+
+//Path to a library.
+DLib_LIBRARY:FILEPATH=/Users/stan/constellation/DBoW2/build/dependencies/install/lib/libDLib.dylib
 
 //Download DLib dependency
 DOWNLOAD_DLib_dependency:BOOL=ON

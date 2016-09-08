@@ -253,6 +253,7 @@ libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_shape.3.1.0.dyli
 libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_photo.3.1.0.dylib
 libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_objdetect.3.1.0.dylib
 libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_calib3d.3.1.0.dylib
+libDBoW2.dylib: dependencies/install/lib/libDLib.dylib
 libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_features2d.3.1.0.dylib
 libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_ml.3.1.0.dylib
 libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_highgui.3.1.0.dylib

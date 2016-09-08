@@ -1,5 +1,4 @@
 /Users/stan/constellation/DBoW2/build/CMakeFiles/install/strip.dir
-/Users/stan/constellation/DBoW2/build/CMakeFiles/DLib.dir
 /Users/stan/constellation/DBoW2/build/CMakeFiles/edit_cache.dir
 /Users/stan/constellation/DBoW2/build/CMakeFiles/rebuild_cache.dir
 /Users/stan/constellation/DBoW2/build/CMakeFiles/install.dir

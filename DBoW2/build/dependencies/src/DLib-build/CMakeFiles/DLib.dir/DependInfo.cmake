@@ -32,7 +32,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/PMVSCamera.cpp" "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles/DLib.dir/src/DVision/PMVSCamera.cpp.o"
   "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/PatchFile.cpp" "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles/DLib.dir/src/DVision/PatchFile.cpp.o"
   "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/PixelPointFile.cpp" "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles/DLib.dir/src/DVision/PixelPointFile.cpp.o"
-  "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/SurfSet.cpp" "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

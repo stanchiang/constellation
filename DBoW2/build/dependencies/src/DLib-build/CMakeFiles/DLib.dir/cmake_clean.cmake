@@ -4,7 +4,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o"
   "CMakeFiles/DLib.dir/src/DVision/PLYFile.cpp.o"
   "CMakeFiles/DLib.dir/src/DVision/PatchFile.cpp.o"
-  "CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o"
   "CMakeFiles/DLib.dir/src/DVision/BundleCamera.cpp.o"
   "CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o"
   "CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o"

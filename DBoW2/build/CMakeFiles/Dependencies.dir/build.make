@@ -53,10 +53,6 @@ CMAKE_BINARY_DIR = /Users/stan/constellation/DBoW2/build
 # Include the progress variables for this target.
 include CMakeFiles/Dependencies.dir/progress.make
 
-CMakeFiles/Dependencies:
-	/Applications/CMake.app/Contents/bin/cmake /Users/stan/constellation/DBoW2
-
-Dependencies: CMakeFiles/Dependencies
 Dependencies: CMakeFiles/Dependencies.dir/build.make
 
 .PHONY : Dependencies

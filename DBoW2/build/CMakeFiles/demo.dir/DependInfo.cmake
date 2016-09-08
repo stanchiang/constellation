@@ -12,6 +12,11 @@ set(CMAKE_CXX_COMPILER_ID "Clang")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/local/include/opencv"
   "/usr/local/include"
+  "dependencies/install/include/DLib"
+  "dependencies/install/include/DLib/.."
+  "dependencies/install/include/DLib/../DUtils"
+  "dependencies/install/include/DLib/../DUtilsCV"
+  "dependencies/install/include/DLib/../DVision"
   "../include/DBoW2"
   )
 

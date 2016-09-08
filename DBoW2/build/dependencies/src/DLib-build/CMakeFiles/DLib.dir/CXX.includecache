@@ -181,7 +181,9 @@ vector
 -
 opencv2/core.hpp
 -
-opencv2/imgproc.hpp
+opencv2/imgproc/imgproc.hpp
+-
+opencv2/features2d/features2d.hpp
 -
 
 /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DUtilsCV/GUI.h
@@ -204,6 +206,10 @@ iostream
 vector
 -
 opencv2/core.hpp
+-
+opencv2/imgproc/imgproc.hpp
+-
+opencv2/features2d/features2d.hpp
 -
 string
 -
@@ -263,14 +269,16 @@ FSolver.h
 /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DVision/ImageFunctions.h
 opencv2/core.hpp
 -
+opencv2/imgproc/imgproc.hpp
+-
+opencv2/features2d/features2d.hpp
+-
 
 /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DVision/Matches.h
 vector
 -
 string
 -
-SurfSet.h
-/Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DVision/SurfSet.h
 
 /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DVision/PLYFile.h
 string
@@ -294,16 +302,6 @@ vector
 
 /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DVision/PixelPointFile.h
 vector
--
-
-/Users/stan/constellation/DBoW2/build/dependencies/src/DLib/include/DVision/SurfSet.h
-opencv2/core.hpp
--
-opencv2/features2d.hpp
--
-vector
--
-string
 -
 
 /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/BinaryFile.cpp
@@ -511,6 +509,10 @@ opencv2/core.hpp
 -
 opencv2/highgui.hpp
 -
+opencv2/imgproc/imgproc.hpp
+-
+opencv2/features2d/features2d.hpp
+-
 string
 -
 IO.h
@@ -681,26 +683,6 @@ PixelPointFile.h
 /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/PixelPointFile.h
 DUtils.h
 /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/DUtils.h
-
-/Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/SurfSet.cpp
-SurfSet.h
-/Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/SurfSet.h
-iostream
--
-fstream
--
-string
--
-vector
--
-DUtils.h
-/Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/DUtils.h
-opencv2/core.hpp
--
-opencv2/highgui.hpp
--
-opencv2/xfeatures2d/nonfree.hpp
--
 
 /usr/local/include/boost/assert.hpp
 boost/config.hpp
@@ -1506,10 +1488,6 @@ emmintrin.h
 
 /usr/local/include/opencv2/core/version.hpp
 
-/usr/local/include/opencv2/features2d.hpp
-opencv2/features2d/features2d.hpp
-/usr/local/include/opencv2/opencv2/features2d/features2d.hpp
-
 /usr/local/include/opencv2/features2d/features2d.hpp
 opencv2/core/core.hpp
 /usr/local/include/opencv2/features2d/opencv2/core/core.hpp
@@ -1557,8 +1535,4 @@ opencv2/imgproc/types_c.h
 /usr/local/include/opencv2/imgproc/types_c.h
 opencv2/core/core_c.h
 /usr/local/include/opencv2/imgproc/opencv2/core/core_c.h
-
-/usr/local/include/opencv2/xfeatures2d/nonfree.hpp
-opencv2/features2d.hpp
-/usr/local/include/opencv2/xfeatures2d/opencv2/features2d.hpp
 

@@ -12,7 +12,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/CMakeGenericSystem.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake"
-  "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/CMakeParseArguments.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/Compiler/AppleClang-C.cmake"
@@ -21,9 +20,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/Compiler/GNU.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/ExternalProject.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/FindBoost.cmake"
-  "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/FindGit.cmake"
-  "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/FindPackageHandleStandardArgs.cmake"
-  "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/FindPackageMessage.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/Platform/Darwin-AppleClang-C.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/Platform/Darwin-AppleClang-CXX.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/Platform/Darwin-Clang-C.cmake"
@@ -32,12 +28,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/Platform/Darwin-Initialize.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/Platform/Darwin.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/Platform/UnixPaths.cmake"
-  "/Applications/CMake.app/Contents/share/cmake-3.6/Modules/RepositoryInfo.txt.in"
   "../CMakeLists.txt"
   "CMakeFiles/3.6.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.6.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.6.1/CMakeSystem.cmake"
-  "dependencies/tmp/DLib-cfgcmd.txt.in"
+  "dependencies/install/lib/cmake/DLib/DLibConfig.cmake"
   "../src/DBoW2.cmake.in"
   "/usr/local/Cellar/opencv3/3.1.0_3/share/OpenCV/OpenCVConfig-version.cmake"
   "/usr/local/Cellar/opencv3/3.1.0_3/share/OpenCV/OpenCVConfig.cmake"
@@ -53,15 +48,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "dependencies/src/DLib-stamp/DLib-gitinfo.txt"
-  "dependencies/tmp/DLib-cfgcmd.txt"
   "DBoW2Config.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/DLib.dir/DependInfo.cmake"
   "CMakeFiles/demo.dir/DependInfo.cmake"
   "CMakeFiles/Dependencies.dir/DependInfo.cmake"
   "CMakeFiles/DBoW2.dir/DependInfo.cmake"

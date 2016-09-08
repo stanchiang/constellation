@@ -177,33 +177,9 @@ CMakeFiles/DLib.dir/src/DVision/PatchFile.cpp.o.provides: CMakeFiles/DLib.dir/sr
 CMakeFiles/DLib.dir/src/DVision/PatchFile.cpp.o.provides.build: CMakeFiles/DLib.dir/src/DVision/PatchFile.cpp.o
 
 
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: CMakeFiles/DLib.dir/flags.make
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/SurfSet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/SurfSet.cpp
-
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/SurfSet.cpp > CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.i
-
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/SurfSet.cpp -o CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.s
-
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o.requires:
-
-.PHONY : CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o.requires
-
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o.provides: CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o.requires
-	$(MAKE) -f CMakeFiles/DLib.dir/build.make CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o.provides.build
-.PHONY : CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o.provides
-
-CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o.provides.build: CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o
-
-
 CMakeFiles/DLib.dir/src/DVision/BundleCamera.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DVision/BundleCamera.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/BundleCamera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DLib.dir/src/DVision/BundleCamera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DLib.dir/src/DVision/BundleCamera.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DVision/BundleCamera.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/BundleCamera.cpp
 
 CMakeFiles/DLib.dir/src/DVision/BundleCamera.cpp.i: cmake_force
@@ -227,7 +203,7 @@ CMakeFiles/DLib.dir/src/DVision/BundleCamera.cpp.o.provides.build: CMakeFiles/DL
 
 CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/HSolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/HSolver.cpp
 
 CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.i: cmake_force
@@ -251,7 +227,7 @@ CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o.provides.build: CMakeFiles/DLib.di
 
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/Matches.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/Matches.cpp
 
 CMakeFiles/DLib.dir/src/DVision/Matches.cpp.i: cmake_force
@@ -275,7 +251,7 @@ CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o.provides.build: CMakeFiles/DLib.di
 
 CMakeFiles/DLib.dir/src/DVision/PMVSCamera.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DVision/PMVSCamera.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/PMVSCamera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/DLib.dir/src/DVision/PMVSCamera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/DLib.dir/src/DVision/PMVSCamera.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DVision/PMVSCamera.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/PMVSCamera.cpp
 
 CMakeFiles/DLib.dir/src/DVision/PMVSCamera.cpp.i: cmake_force
@@ -299,7 +275,7 @@ CMakeFiles/DLib.dir/src/DVision/PMVSCamera.cpp.o.provides.build: CMakeFiles/DLib
 
 CMakeFiles/DLib.dir/src/DVision/PixelPointFile.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DVision/PixelPointFile.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/PixelPointFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/DLib.dir/src/DVision/PixelPointFile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/DLib.dir/src/DVision/PixelPointFile.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DVision/PixelPointFile.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DVision/PixelPointFile.cpp
 
 CMakeFiles/DLib.dir/src/DVision/PixelPointFile.cpp.i: cmake_force
@@ -323,7 +299,7 @@ CMakeFiles/DLib.dir/src/DVision/PixelPointFile.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/Drawing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/Drawing.cpp
 
 CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.i: cmake_force
@@ -347,7 +323,7 @@ CMakeFiles/DLib.dir/src/DUtilsCV/Drawing.cpp.o.provides.build: CMakeFiles/DLib.d
 
 CMakeFiles/DLib.dir/src/DUtilsCV/Geometry.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtilsCV/Geometry.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/Geometry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/DLib.dir/src/DUtilsCV/Geometry.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/DLib.dir/src/DUtilsCV/Geometry.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtilsCV/Geometry.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/Geometry.cpp
 
 CMakeFiles/DLib.dir/src/DUtilsCV/Geometry.cpp.i: cmake_force
@@ -371,7 +347,7 @@ CMakeFiles/DLib.dir/src/DUtilsCV/Geometry.cpp.o.provides.build: CMakeFiles/DLib.
 
 CMakeFiles/DLib.dir/src/DUtilsCV/Mat.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtilsCV/Mat.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/Mat.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/DLib.dir/src/DUtilsCV/Mat.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/DLib.dir/src/DUtilsCV/Mat.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtilsCV/Mat.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/Mat.cpp
 
 CMakeFiles/DLib.dir/src/DUtilsCV/Mat.cpp.i: cmake_force
@@ -395,7 +371,7 @@ CMakeFiles/DLib.dir/src/DUtilsCV/Mat.cpp.o.provides.build: CMakeFiles/DLib.dir/s
 
 CMakeFiles/DLib.dir/src/DUtilsCV/Types.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtilsCV/Types.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/Types.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/DLib.dir/src/DUtilsCV/Types.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/DLib.dir/src/DUtilsCV/Types.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtilsCV/Types.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/Types.cpp
 
 CMakeFiles/DLib.dir/src/DUtilsCV/Types.cpp.i: cmake_force
@@ -419,7 +395,7 @@ CMakeFiles/DLib.dir/src/DUtilsCV/Types.cpp.o.provides.build: CMakeFiles/DLib.dir
 
 CMakeFiles/DLib.dir/src/DUtilsCV/GUI.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtilsCV/GUI.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/GUI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/DLib.dir/src/DUtilsCV/GUI.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/DLib.dir/src/DUtilsCV/GUI.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtilsCV/GUI.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/GUI.cpp
 
 CMakeFiles/DLib.dir/src/DUtilsCV/GUI.cpp.i: cmake_force
@@ -443,7 +419,7 @@ CMakeFiles/DLib.dir/src/DUtilsCV/GUI.cpp.o.provides.build: CMakeFiles/DLib.dir/s
 
 CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/IO.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/IO.cpp
 
 CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.i: cmake_force
@@ -467,7 +443,7 @@ CMakeFiles/DLib.dir/src/DUtilsCV/IO.cpp.o.provides.build: CMakeFiles/DLib.dir/sr
 
 CMakeFiles/DLib.dir/src/DUtilsCV/Transformations.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtilsCV/Transformations.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/Transformations.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/DLib.dir/src/DUtilsCV/Transformations.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/DLib.dir/src/DUtilsCV/Transformations.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtilsCV/Transformations.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtilsCV/Transformations.cpp
 
 CMakeFiles/DLib.dir/src/DUtilsCV/Transformations.cpp.i: cmake_force
@@ -491,7 +467,7 @@ CMakeFiles/DLib.dir/src/DUtilsCV/Transformations.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/DLib.dir/src/DUtils/BinaryFile.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtils/BinaryFile.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/BinaryFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/BinaryFile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/BinaryFile.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtils/BinaryFile.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/BinaryFile.cpp
 
 CMakeFiles/DLib.dir/src/DUtils/BinaryFile.cpp.i: cmake_force
@@ -515,7 +491,7 @@ CMakeFiles/DLib.dir/src/DUtils/BinaryFile.cpp.o.provides.build: CMakeFiles/DLib.
 
 CMakeFiles/DLib.dir/src/DUtils/DebugFunctions.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtils/DebugFunctions.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/DebugFunctions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/DebugFunctions.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/DebugFunctions.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtils/DebugFunctions.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/DebugFunctions.cpp
 
 CMakeFiles/DLib.dir/src/DUtils/DebugFunctions.cpp.i: cmake_force
@@ -539,7 +515,7 @@ CMakeFiles/DLib.dir/src/DUtils/DebugFunctions.cpp.o.provides.build: CMakeFiles/D
 
 CMakeFiles/DLib.dir/src/DUtils/LUT.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtils/LUT.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/LUT.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/LUT.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/LUT.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtils/LUT.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/LUT.cpp
 
 CMakeFiles/DLib.dir/src/DUtils/LUT.cpp.i: cmake_force
@@ -563,7 +539,7 @@ CMakeFiles/DLib.dir/src/DUtils/LUT.cpp.o.provides.build: CMakeFiles/DLib.dir/src
 
 CMakeFiles/DLib.dir/src/DUtils/Profiler.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtils/Profiler.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/Profiler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/Profiler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/Profiler.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtils/Profiler.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/Profiler.cpp
 
 CMakeFiles/DLib.dir/src/DUtils/Profiler.cpp.i: cmake_force
@@ -587,7 +563,7 @@ CMakeFiles/DLib.dir/src/DUtils/Profiler.cpp.o.provides.build: CMakeFiles/DLib.di
 
 CMakeFiles/DLib.dir/src/DUtils/StringFunctions.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtils/StringFunctions.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/StringFunctions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/StringFunctions.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/StringFunctions.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtils/StringFunctions.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/StringFunctions.cpp
 
 CMakeFiles/DLib.dir/src/DUtils/StringFunctions.cpp.i: cmake_force
@@ -611,7 +587,7 @@ CMakeFiles/DLib.dir/src/DUtils/StringFunctions.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/DLib.dir/src/DUtils/Timestamp.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtils/Timestamp.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/Timestamp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/Timestamp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/Timestamp.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtils/Timestamp.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/Timestamp.cpp
 
 CMakeFiles/DLib.dir/src/DUtils/Timestamp.cpp.i: cmake_force
@@ -635,7 +611,7 @@ CMakeFiles/DLib.dir/src/DUtils/Timestamp.cpp.o.provides.build: CMakeFiles/DLib.d
 
 CMakeFiles/DLib.dir/src/DUtils/ConfigFile.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtils/ConfigFile.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/ConfigFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/ConfigFile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/ConfigFile.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtils/ConfigFile.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/ConfigFile.cpp
 
 CMakeFiles/DLib.dir/src/DUtils/ConfigFile.cpp.i: cmake_force
@@ -659,7 +635,7 @@ CMakeFiles/DLib.dir/src/DUtils/ConfigFile.cpp.o.provides.build: CMakeFiles/DLib.
 
 CMakeFiles/DLib.dir/src/DUtils/FileFunctions.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtils/FileFunctions.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/FileFunctions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/FileFunctions.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/FileFunctions.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtils/FileFunctions.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/FileFunctions.cpp
 
 CMakeFiles/DLib.dir/src/DUtils/FileFunctions.cpp.i: cmake_force
@@ -683,7 +659,7 @@ CMakeFiles/DLib.dir/src/DUtils/FileFunctions.cpp.o.provides.build: CMakeFiles/DL
 
 CMakeFiles/DLib.dir/src/DUtils/LineFile.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtils/LineFile.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/LineFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/LineFile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/LineFile.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtils/LineFile.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/LineFile.cpp
 
 CMakeFiles/DLib.dir/src/DUtils/LineFile.cpp.i: cmake_force
@@ -707,7 +683,7 @@ CMakeFiles/DLib.dir/src/DUtils/LineFile.cpp.o.provides.build: CMakeFiles/DLib.di
 
 CMakeFiles/DLib.dir/src/DUtils/Random.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtils/Random.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/Random.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/Random.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/Random.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtils/Random.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/Random.cpp
 
 CMakeFiles/DLib.dir/src/DUtils/Random.cpp.i: cmake_force
@@ -731,7 +707,7 @@ CMakeFiles/DLib.dir/src/DUtils/Random.cpp.o.provides.build: CMakeFiles/DLib.dir/
 
 CMakeFiles/DLib.dir/src/DUtils/TimeManager.cpp.o: CMakeFiles/DLib.dir/flags.make
 CMakeFiles/DLib.dir/src/DUtils/TimeManager.cpp.o: /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/TimeManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/TimeManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/DLib.dir/src/DUtils/TimeManager.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DLib.dir/src/DUtils/TimeManager.cpp.o -c /Users/stan/constellation/DBoW2/build/dependencies/src/DLib/src/DUtils/TimeManager.cpp
 
 CMakeFiles/DLib.dir/src/DUtils/TimeManager.cpp.i: cmake_force
@@ -760,7 +736,6 @@ DLib_OBJECTS = \
 "CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o" \
 "CMakeFiles/DLib.dir/src/DVision/PLYFile.cpp.o" \
 "CMakeFiles/DLib.dir/src/DVision/PatchFile.cpp.o" \
-"CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o" \
 "CMakeFiles/DLib.dir/src/DVision/BundleCamera.cpp.o" \
 "CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o" \
 "CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o" \
@@ -793,7 +768,6 @@ libDLib.dylib: CMakeFiles/DLib.dir/src/DVision/FSolver.cpp.o
 libDLib.dylib: CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o
 libDLib.dylib: CMakeFiles/DLib.dir/src/DVision/PLYFile.cpp.o
 libDLib.dylib: CMakeFiles/DLib.dir/src/DVision/PatchFile.cpp.o
-libDLib.dylib: CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o
 libDLib.dylib: CMakeFiles/DLib.dir/src/DVision/BundleCamera.cpp.o
 libDLib.dylib: CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o
 libDLib.dylib: CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o
@@ -838,7 +812,7 @@ libDLib.dylib: /usr/local/lib/libopencv_imgproc.2.4.13.dylib
 libDLib.dylib: /usr/local/lib/libopencv_flann.2.4.13.dylib
 libDLib.dylib: /usr/local/lib/libopencv_core.2.4.13.dylib
 libDLib.dylib: CMakeFiles/DLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX shared library libDLib.dylib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Linking CXX shared library libDLib.dylib"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DLib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -851,7 +825,6 @@ CMakeFiles/DLib.dir/requires: CMakeFiles/DLib.dir/src/DVision/FSolver.cpp.o.requ
 CMakeFiles/DLib.dir/requires: CMakeFiles/DLib.dir/src/DVision/ImageFunctions.cpp.o.requires
 CMakeFiles/DLib.dir/requires: CMakeFiles/DLib.dir/src/DVision/PLYFile.cpp.o.requires
 CMakeFiles/DLib.dir/requires: CMakeFiles/DLib.dir/src/DVision/PatchFile.cpp.o.requires
-CMakeFiles/DLib.dir/requires: CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o.requires
 CMakeFiles/DLib.dir/requires: CMakeFiles/DLib.dir/src/DVision/BundleCamera.cpp.o.requires
 CMakeFiles/DLib.dir/requires: CMakeFiles/DLib.dir/src/DVision/HSolver.cpp.o.requires
 CMakeFiles/DLib.dir/requires: CMakeFiles/DLib.dir/src/DVision/Matches.cpp.o.requires

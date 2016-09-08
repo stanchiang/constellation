@@ -923,33 +923,6 @@ src/DVision/PixelPointFile.cpp.s:
 	$(MAKE) -f CMakeFiles/DLib.dir/build.make CMakeFiles/DLib.dir/src/DVision/PixelPointFile.cpp.s
 .PHONY : src/DVision/PixelPointFile.cpp.s
 
-src/DVision/SurfSet.o: src/DVision/SurfSet.cpp.o
-
-.PHONY : src/DVision/SurfSet.o
-
-# target to build an object file
-src/DVision/SurfSet.cpp.o:
-	$(MAKE) -f CMakeFiles/DLib.dir/build.make CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.o
-.PHONY : src/DVision/SurfSet.cpp.o
-
-src/DVision/SurfSet.i: src/DVision/SurfSet.cpp.i
-
-.PHONY : src/DVision/SurfSet.i
-
-# target to preprocess a source file
-src/DVision/SurfSet.cpp.i:
-	$(MAKE) -f CMakeFiles/DLib.dir/build.make CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.i
-.PHONY : src/DVision/SurfSet.cpp.i
-
-src/DVision/SurfSet.s: src/DVision/SurfSet.cpp.s
-
-.PHONY : src/DVision/SurfSet.s
-
-# target to generate assembly for a file
-src/DVision/SurfSet.cpp.s:
-	$(MAKE) -f CMakeFiles/DLib.dir/build.make CMakeFiles/DLib.dir/src/DVision/SurfSet.cpp.s
-.PHONY : src/DVision/SurfSet.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1047,9 +1020,6 @@ help:
 	@echo "... src/DVision/PixelPointFile.o"
 	@echo "... src/DVision/PixelPointFile.i"
 	@echo "... src/DVision/PixelPointFile.s"
-	@echo "... src/DVision/SurfSet.o"
-	@echo "... src/DVision/SurfSet.i"
-	@echo "... src/DVision/SurfSet.s"
 .PHONY : help
 
 
