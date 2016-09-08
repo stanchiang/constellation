@@ -60,15 +60,15 @@ include CMakeFiles/DBoW2.dir/flags.make
 CMakeFiles/DBoW2.dir/src/BowVector.cpp.o: CMakeFiles/DBoW2.dir/flags.make
 CMakeFiles/DBoW2.dir/src/BowVector.cpp.o: ../src/BowVector.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DBoW2.dir/src/BowVector.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/BowVector.cpp.o -c /Users/stan/constellation/DBoW2/src/BowVector.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/BowVector.cpp.o -c /Users/stan/constellation/DBoW2/src/BowVector.cpp
 
 CMakeFiles/DBoW2.dir/src/BowVector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBoW2.dir/src/BowVector.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/src/BowVector.cpp > CMakeFiles/DBoW2.dir/src/BowVector.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/src/BowVector.cpp > CMakeFiles/DBoW2.dir/src/BowVector.cpp.i
 
 CMakeFiles/DBoW2.dir/src/BowVector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBoW2.dir/src/BowVector.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/src/BowVector.cpp -o CMakeFiles/DBoW2.dir/src/BowVector.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/src/BowVector.cpp -o CMakeFiles/DBoW2.dir/src/BowVector.cpp.s
 
 CMakeFiles/DBoW2.dir/src/BowVector.cpp.o.requires:
 
@@ -84,15 +84,15 @@ CMakeFiles/DBoW2.dir/src/BowVector.cpp.o.provides.build: CMakeFiles/DBoW2.dir/sr
 CMakeFiles/DBoW2.dir/src/FBrief.cpp.o: CMakeFiles/DBoW2.dir/flags.make
 CMakeFiles/DBoW2.dir/src/FBrief.cpp.o: ../src/FBrief.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DBoW2.dir/src/FBrief.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/FBrief.cpp.o -c /Users/stan/constellation/DBoW2/src/FBrief.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/FBrief.cpp.o -c /Users/stan/constellation/DBoW2/src/FBrief.cpp
 
 CMakeFiles/DBoW2.dir/src/FBrief.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBoW2.dir/src/FBrief.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/src/FBrief.cpp > CMakeFiles/DBoW2.dir/src/FBrief.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/src/FBrief.cpp > CMakeFiles/DBoW2.dir/src/FBrief.cpp.i
 
 CMakeFiles/DBoW2.dir/src/FBrief.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBoW2.dir/src/FBrief.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/src/FBrief.cpp -o CMakeFiles/DBoW2.dir/src/FBrief.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/src/FBrief.cpp -o CMakeFiles/DBoW2.dir/src/FBrief.cpp.s
 
 CMakeFiles/DBoW2.dir/src/FBrief.cpp.o.requires:
 
@@ -108,15 +108,15 @@ CMakeFiles/DBoW2.dir/src/FBrief.cpp.o.provides.build: CMakeFiles/DBoW2.dir/src/F
 CMakeFiles/DBoW2.dir/src/FSurf64.cpp.o: CMakeFiles/DBoW2.dir/flags.make
 CMakeFiles/DBoW2.dir/src/FSurf64.cpp.o: ../src/FSurf64.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DBoW2.dir/src/FSurf64.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/FSurf64.cpp.o -c /Users/stan/constellation/DBoW2/src/FSurf64.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/FSurf64.cpp.o -c /Users/stan/constellation/DBoW2/src/FSurf64.cpp
 
 CMakeFiles/DBoW2.dir/src/FSurf64.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBoW2.dir/src/FSurf64.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/src/FSurf64.cpp > CMakeFiles/DBoW2.dir/src/FSurf64.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/src/FSurf64.cpp > CMakeFiles/DBoW2.dir/src/FSurf64.cpp.i
 
 CMakeFiles/DBoW2.dir/src/FSurf64.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBoW2.dir/src/FSurf64.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/src/FSurf64.cpp -o CMakeFiles/DBoW2.dir/src/FSurf64.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/src/FSurf64.cpp -o CMakeFiles/DBoW2.dir/src/FSurf64.cpp.s
 
 CMakeFiles/DBoW2.dir/src/FSurf64.cpp.o.requires:
 
@@ -132,15 +132,15 @@ CMakeFiles/DBoW2.dir/src/FSurf64.cpp.o.provides.build: CMakeFiles/DBoW2.dir/src/
 CMakeFiles/DBoW2.dir/src/FORB.cpp.o: CMakeFiles/DBoW2.dir/flags.make
 CMakeFiles/DBoW2.dir/src/FORB.cpp.o: ../src/FORB.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DBoW2.dir/src/FORB.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/FORB.cpp.o -c /Users/stan/constellation/DBoW2/src/FORB.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/FORB.cpp.o -c /Users/stan/constellation/DBoW2/src/FORB.cpp
 
 CMakeFiles/DBoW2.dir/src/FORB.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBoW2.dir/src/FORB.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/src/FORB.cpp > CMakeFiles/DBoW2.dir/src/FORB.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/src/FORB.cpp > CMakeFiles/DBoW2.dir/src/FORB.cpp.i
 
 CMakeFiles/DBoW2.dir/src/FORB.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBoW2.dir/src/FORB.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/src/FORB.cpp -o CMakeFiles/DBoW2.dir/src/FORB.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/src/FORB.cpp -o CMakeFiles/DBoW2.dir/src/FORB.cpp.s
 
 CMakeFiles/DBoW2.dir/src/FORB.cpp.o.requires:
 
@@ -156,15 +156,15 @@ CMakeFiles/DBoW2.dir/src/FORB.cpp.o.provides.build: CMakeFiles/DBoW2.dir/src/FOR
 CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o: CMakeFiles/DBoW2.dir/flags.make
 CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o: ../src/FeatureVector.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o -c /Users/stan/constellation/DBoW2/src/FeatureVector.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o -c /Users/stan/constellation/DBoW2/src/FeatureVector.cpp
 
 CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/src/FeatureVector.cpp > CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/src/FeatureVector.cpp > CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.i
 
 CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/src/FeatureVector.cpp -o CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/src/FeatureVector.cpp -o CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.s
 
 CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o.requires:
 
@@ -180,15 +180,15 @@ CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o.provides.build: CMakeFiles/DBoW2.di
 CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o: CMakeFiles/DBoW2.dir/flags.make
 CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o: ../src/QueryResults.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o -c /Users/stan/constellation/DBoW2/src/QueryResults.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o -c /Users/stan/constellation/DBoW2/src/QueryResults.cpp
 
 CMakeFiles/DBoW2.dir/src/QueryResults.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBoW2.dir/src/QueryResults.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/src/QueryResults.cpp > CMakeFiles/DBoW2.dir/src/QueryResults.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/src/QueryResults.cpp > CMakeFiles/DBoW2.dir/src/QueryResults.cpp.i
 
 CMakeFiles/DBoW2.dir/src/QueryResults.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBoW2.dir/src/QueryResults.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/src/QueryResults.cpp -o CMakeFiles/DBoW2.dir/src/QueryResults.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/src/QueryResults.cpp -o CMakeFiles/DBoW2.dir/src/QueryResults.cpp.s
 
 CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o.requires:
 
@@ -204,15 +204,15 @@ CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o.provides.build: CMakeFiles/DBoW2.dir
 CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.o: CMakeFiles/DBoW2.dir/flags.make
 CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.o: ../src/ScoringObject.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.o -c /Users/stan/constellation/DBoW2/src/ScoringObject.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.o -c /Users/stan/constellation/DBoW2/src/ScoringObject.cpp
 
 CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/src/ScoringObject.cpp > CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/src/ScoringObject.cpp > CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.i
 
 CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/src/ScoringObject.cpp -o CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/src/ScoringObject.cpp -o CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.s
 
 CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.o.requires:
 
@@ -246,23 +246,26 @@ libDBoW2.dylib: CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o
 libDBoW2.dylib: CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o
 libDBoW2.dylib: CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.o
 libDBoW2.dylib: CMakeFiles/DBoW2.dir/build.make
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_videostab.3.1.0.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_superres.3.1.0.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_stitching.3.1.0.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_shape.3.1.0.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_photo.3.1.0.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_objdetect.3.1.0.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_calib3d.3.1.0.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_videostab.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_ts.a
+libDBoW2.dylib: /usr/local/lib/libopencv_superres.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_stitching.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_contrib.2.4.13.dylib
 libDBoW2.dylib: dependencies/install/lib/libDLib.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_features2d.3.1.0.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_ml.3.1.0.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_highgui.3.1.0.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_videoio.3.1.0.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_imgcodecs.3.1.0.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_flann.3.1.0.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_video.3.1.0.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_imgproc.3.1.0.dylib
-libDBoW2.dylib: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_core.3.1.0.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_nonfree.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_ocl.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_gpu.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_photo.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_objdetect.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_legacy.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_video.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_ml.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_calib3d.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_features2d.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_highgui.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_imgproc.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_flann.2.4.13.dylib
+libDBoW2.dylib: /usr/local/lib/libopencv_core.2.4.13.dylib
 libDBoW2.dylib: CMakeFiles/DBoW2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/stan/constellation/DBoW2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library libDBoW2.dylib"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DBoW2.dir/link.txt --verbose=$(VERBOSE)

@@ -60,15 +60,15 @@ include CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/demo/demo.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/demo/demo.cpp.o: ../demo/demo.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stan/constellation/DBoW2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/demo.dir/demo/demo.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/demo/demo.cpp.o -c /Users/stan/constellation/DBoW2/demo/demo.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/demo/demo.cpp.o -c /Users/stan/constellation/DBoW2/demo/demo.cpp
 
 CMakeFiles/demo.dir/demo/demo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo.dir/demo/demo.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/demo/demo.cpp > CMakeFiles/demo.dir/demo/demo.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stan/constellation/DBoW2/demo/demo.cpp > CMakeFiles/demo.dir/demo/demo.cpp.i
 
 CMakeFiles/demo.dir/demo/demo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/demo/demo.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/demo/demo.cpp -o CMakeFiles/demo.dir/demo/demo.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stan/constellation/DBoW2/demo/demo.cpp -o CMakeFiles/demo.dir/demo/demo.cpp.s
 
 CMakeFiles/demo.dir/demo/demo.cpp.o.requires:
 
@@ -91,23 +91,26 @@ demo_EXTERNAL_OBJECTS =
 demo: CMakeFiles/demo.dir/demo/demo.cpp.o
 demo: CMakeFiles/demo.dir/build.make
 demo: libDBoW2.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_videostab.3.1.0.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_superres.3.1.0.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_stitching.3.1.0.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_shape.3.1.0.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_photo.3.1.0.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_objdetect.3.1.0.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_calib3d.3.1.0.dylib
+demo: /usr/local/lib/libopencv_videostab.2.4.13.dylib
+demo: /usr/local/lib/libopencv_ts.a
+demo: /usr/local/lib/libopencv_superres.2.4.13.dylib
+demo: /usr/local/lib/libopencv_stitching.2.4.13.dylib
+demo: /usr/local/lib/libopencv_contrib.2.4.13.dylib
 demo: dependencies/install/lib/libDLib.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_video.3.1.0.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_features2d.3.1.0.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_ml.3.1.0.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_highgui.3.1.0.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_videoio.3.1.0.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_imgcodecs.3.1.0.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_imgproc.3.1.0.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_flann.3.1.0.dylib
-demo: /usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_core.3.1.0.dylib
+demo: /usr/local/lib/libopencv_nonfree.2.4.13.dylib
+demo: /usr/local/lib/libopencv_ocl.2.4.13.dylib
+demo: /usr/local/lib/libopencv_gpu.2.4.13.dylib
+demo: /usr/local/lib/libopencv_photo.2.4.13.dylib
+demo: /usr/local/lib/libopencv_objdetect.2.4.13.dylib
+demo: /usr/local/lib/libopencv_legacy.2.4.13.dylib
+demo: /usr/local/lib/libopencv_video.2.4.13.dylib
+demo: /usr/local/lib/libopencv_ml.2.4.13.dylib
+demo: /usr/local/lib/libopencv_calib3d.2.4.13.dylib
+demo: /usr/local/lib/libopencv_features2d.2.4.13.dylib
+demo: /usr/local/lib/libopencv_highgui.2.4.13.dylib
+demo: /usr/local/lib/libopencv_imgproc.2.4.13.dylib
+demo: /usr/local/lib/libopencv_flann.2.4.13.dylib
+demo: /usr/local/lib/libopencv_core.2.4.13.dylib
 demo: CMakeFiles/demo.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/stan/constellation/DBoW2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo.dir/link.txt --verbose=$(VERBOSE)

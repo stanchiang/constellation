@@ -34,10 +34,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.6.1/CMakeSystem.cmake"
   "dependencies/install/lib/cmake/DLib/DLibConfig.cmake"
   "../src/DBoW2.cmake.in"
-  "/usr/local/Cellar/opencv3/3.1.0_3/share/OpenCV/OpenCVConfig-version.cmake"
-  "/usr/local/Cellar/opencv3/3.1.0_3/share/OpenCV/OpenCVConfig.cmake"
-  "/usr/local/Cellar/opencv3/3.1.0_3/share/OpenCV/OpenCVModules-release.cmake"
-  "/usr/local/Cellar/opencv3/3.1.0_3/share/OpenCV/OpenCVModules.cmake"
+  "/usr/local/share/OpenCV/OpenCVConfig-version.cmake"
+  "/usr/local/share/OpenCV/OpenCVConfig.cmake"
+  "/usr/local/share/OpenCV/OpenCVModules-release.cmake"
+  "/usr/local/share/OpenCV/OpenCVModules.cmake"
   )
 
 # The corresponding makefile is:

@@ -36,7 +36,7 @@ CMAKE_BUILD_TYPE:STRING=Release
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+CMAKE_CXX_COMPILER:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 
 //Flags used by the compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -194,7 +194,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 DBoW2_BINARY_DIR:STATIC=/Users/stan/constellation/DBoW2/build
 
 //Dependencies for the target
-DBoW2_LIB_DEPENDS:STATIC=general;opencv_videostab;general;opencv_videoio;general;opencv_video;general;opencv_superres;general;opencv_stitching;general;opencv_shape;general;opencv_photo;general;opencv_objdetect;general;opencv_ml;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_highgui;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_calib3d;general;/Users/stan/constellation/DBoW2/build/dependencies/install/lib/libDLib.dylib;
+DBoW2_LIB_DEPENDS:STATIC=general;opencv_videostab;general;opencv_video;general;opencv_ts;general;opencv_superres;general;opencv_stitching;general;opencv_photo;general;opencv_ocl;general;opencv_objdetect;general;opencv_nonfree;general;opencv_ml;general;opencv_legacy;general;opencv_imgproc;general;opencv_highgui;general;opencv_gpu;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_contrib;general;opencv_calib3d;general;/Users/stan/constellation/DBoW2/build/dependencies/install/lib/libDLib.dylib;
 
 //Value Computed by CMake
 DBoW2_SOURCE_DIR:STATIC=/Users/stan/constellation/DBoW2
@@ -208,12 +208,6 @@ DLib_INCLUDE_DIR:PATH=/Users/stan/constellation/DBoW2/build/dependencies/install
 //Path to a library.
 DLib_LIBRARY:FILEPATH=/Users/stan/constellation/DBoW2/build/dependencies/install/lib/libDLib.dylib
 
-//Download DLib dependency
-DOWNLOAD_DLib_dependency:BOOL=ON
-
-//Git command line client
-GIT_EXECUTABLE:FILEPATH=/usr/bin/git
-
 //Path where debug 3rdpaty OpenCV dependencies are located
 OpenCV_3RDPARTY_LIB_DIR_DBG:PATH=
 
@@ -223,7 +217,7 @@ OpenCV_3RDPARTY_LIB_DIR_OPT:PATH=
 OpenCV_CONFIG_PATH:FILEPATH=/usr/local/share/OpenCV
 
 //The directory containing a CMake configuration file for OpenCV.
-OpenCV_DIR:PATH=/usr/local/Cellar/opencv3/3.1.0_3/share/OpenCV
+OpenCV_DIR:PATH=/usr/local/share/OpenCV
 
 //Path where debug OpenCV libraries are located
 OpenCV_LIB_DIR_DBG:PATH=
@@ -369,8 +363,6 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GIT_EXECUTABLE
-GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_DBG
 OpenCV_3RDPARTY_LIB_DIR_DBG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_OPT

@@ -18,7 +18,9 @@
 // OpenCV
 #include <opencv2/core.hpp>
 #include <opencv2/highgui.hpp>
-#include <opencv2/xfeatures2d/nonfree.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/features2d/features2d.hpp>
+// #include <opencv2/xfeatures2d/nonfree.hpp>
 
 
 using namespace DBoW2;
@@ -73,7 +75,7 @@ void loadFeatures(vector<vector<vector<float> > > &features)
   features.clear();
   features.reserve(NIMAGES);
 
-  cv::Ptr<cv::xfeatures2d::SURF> surf = cv::xfeatures2d::SURF::create(400, 4, 2, EXTENDED_SURF);
+  cv::Ptr<cv::ORB> orb = cv::ORB::create("ORB");
 
   cout << "Extracting SURF features..." << endl;
   for(int i = 0; i < NIMAGES; ++i)
@@ -86,10 +88,10 @@ void loadFeatures(vector<vector<vector<float> > > &features)
     vector<cv::KeyPoint> keypoints;
     vector<float> descriptors;
 
-    surf->detectAndCompute(image, mask, keypoints, descriptors);
+    orb->detect(image, keypoints);
 
     features.push_back(vector<vector<float> >());
-    changeStructure(descriptors, features.back(), surf->descriptorSize());
+    changeStructure(descriptors, features.back(), orb->descriptorSize());
   }
 }
 
