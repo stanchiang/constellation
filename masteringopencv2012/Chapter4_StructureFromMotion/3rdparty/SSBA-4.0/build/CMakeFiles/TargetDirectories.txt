@@ -1,0 +1,12 @@
+/Users/stan/constellation/masteringopencv2012/Chapter4_StructureFromMotion/SSBA-4.0/build/CMakeFiles/edit_cache.dir
+/Users/stan/constellation/masteringopencv2012/Chapter4_StructureFromMotion/SSBA-4.0/build/CMakeFiles/rebuild_cache.dir
+/Users/stan/constellation/masteringopencv2012/Chapter4_StructureFromMotion/SSBA-4.0/build/CMakeFiles/V3D.dir
+/Users/stan/constellation/masteringopencv2012/Chapter4_StructureFromMotion/SSBA-4.0/build/CMakeFiles/colamd.dir
+/Users/stan/constellation/masteringopencv2012/Chapter4_StructureFromMotion/SSBA-4.0/build/Apps/CMakeFiles/edit_cache.dir
+/Users/stan/constellation/masteringopencv2012/Chapter4_StructureFromMotion/SSBA-4.0/build/Apps/CMakeFiles/bundle_large_lifted_schur.dir
+/Users/stan/constellation/masteringopencv2012/Chapter4_StructureFromMotion/SSBA-4.0/build/Apps/CMakeFiles/bundle_large_triggs.dir
+/Users/stan/constellation/masteringopencv2012/Chapter4_StructureFromMotion/SSBA-4.0/build/Apps/CMakeFiles/rebuild_cache.dir
+/Users/stan/constellation/masteringopencv2012/Chapter4_StructureFromMotion/SSBA-4.0/build/Apps/CMakeFiles/bundle_large.dir
+/Users/stan/constellation/masteringopencv2012/Chapter4_StructureFromMotion/SSBA-4.0/build/Apps/CMakeFiles/bundle_common.dir
+/Users/stan/constellation/masteringopencv2012/Chapter4_StructureFromMotion/SSBA-4.0/build/Apps/CMakeFiles/bundle_varying_nonlinlsq.dir
+/Users/stan/constellation/masteringopencv2012/Chapter4_StructureFromMotion/SSBA-4.0/build/Apps/CMakeFiles/bundle_varying.dir

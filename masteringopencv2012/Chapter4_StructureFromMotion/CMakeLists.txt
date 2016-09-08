@@ -8,7 +8,7 @@ if(EIGEN_INCLUDE_DIRS) # if compiling with PCL, it will bring Eigen with it
 	add_definitions( -DUSE_EIGEN )
 endif()
 
-set(SSBA_LIBRARY_DIR "${CMAKE_SOURCE_DIR}/3rdparty/SSBA-3.0/build" CACHE PATH "Directory to find SSBA libs")
+set(SSBA_LIBRARY_DIR "${CMAKE_SOURCE_DIR}/3rdparty/SSBA-4.0/build" CACHE PATH "Directory to find SSBA libs")
 
 find_package(OpenCV REQUIRED)
 find_package(OpenMP REQUIRED)

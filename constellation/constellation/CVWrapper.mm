@@ -68,7 +68,7 @@
     
     fx = std::abs(CGFloat(dim.width) / (2 * tan(HFOV / 180 * CGFloat(M_PI) / 2)));
     fy = std::abs(CGFloat(dim.height) / (2 * tan(VFOV / 180 * CGFloat(M_PI) / 2)));
-//    printf("fx=%f cx=%f fy=%f cy=%f\n", fx, cx, fy, cy);
+    printf("fx=%f cx=%f fy=%f cy=%f\n", fx, cx, fy, cy);
     
     trackCurrentFrame = false;
     isTrackingCustomFrame = false;

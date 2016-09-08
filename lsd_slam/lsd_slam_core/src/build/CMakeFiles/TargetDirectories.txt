@@ -1,0 +1,4 @@
+/Users/stan/constellation/lsd_slam/lsd_slam_core/src/build/CMakeFiles/edit_cache.dir
+/Users/stan/constellation/lsd_slam/lsd_slam_core/src/build/CMakeFiles/rebuild_cache.dir
+/Users/stan/constellation/lsd_slam/lsd_slam_core/src/build/CMakeFiles/LSD.dir
+/Users/stan/constellation/lsd_slam/lsd_slam_core/src/build/CMakeFiles/lsdslam.dir
