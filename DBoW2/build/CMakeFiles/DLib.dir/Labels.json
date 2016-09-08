@@ -1,0 +1,51 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "/Users/stan/constellation/DBoW2/build/CMakeFiles/DLib"
+		},
+		
+		{
+			"file" : "/Users/stan/constellation/DBoW2/build/CMakeFiles/DLib.rule"
+		},
+		
+		{
+			"file" : "/Users/stan/constellation/DBoW2/build/CMakeFiles/DLib-complete.rule"
+		},
+		
+		{
+			"file" : "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-stamp/DLib-install.rule"
+		},
+		
+		{
+			"file" : "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-stamp/DLib-mkdir.rule"
+		},
+		
+		{
+			"file" : "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-stamp/DLib-download.rule"
+		},
+		
+		{
+			"file" : "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-stamp/DLib-update.rule"
+		},
+		
+		{
+			"file" : "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-stamp/DLib-patch.rule"
+		},
+		
+		{
+			"file" : "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-stamp/DLib-configure.rule"
+		},
+		
+		{
+			"file" : "/Users/stan/constellation/DBoW2/build/dependencies/src/DLib-stamp/DLib-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "DLib" ],
+		"name" : "DLib"
+	}
+}

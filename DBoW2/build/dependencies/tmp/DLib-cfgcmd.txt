@@ -1,0 +1,1 @@
+cmd='/Applications/CMake.app/Contents/bin/cmake;-DCMAKE_INSTALL_PREFIX=<INSTALL_DIR>;-GUnix Makefiles;/Users/stan/constellation/DBoW2/build/dependencies/src/DLib'
